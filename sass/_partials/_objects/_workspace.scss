@@ -1,0 +1,21 @@
+.workspace{
+    display:block;
+    position:relative;
+    width:960px;
+    height:auto;
+    margin:8px auto;
+    margin-top:42px;
+    padding:0px;
+}
+
+.texte--central{
+    width:100%;
+    margin:16px 0px;
+    text-align:center;
+}
+
+.lien{
+    color:$textColor;
+    font-weight:300;
+    margin:0px 8px;
+}

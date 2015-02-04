@@ -1,0 +1,84 @@
+
+.partie{
+    width:290px;
+    height:240px;
+    background-color:$primaryColorDark;
+    // border:solid 1px $border;
+    @include material-shadow();
+    margin:8px;
+    float:left;
+}
+
+.plusPartie{
+    width:290px;
+    height:240px;
+    float:left;
+    margin:8px;
+}
+
+.plusPartie .message__primary{
+    padding:44px 16px 8px 16px;
+    font-size:21px;
+}
+.plusPartie .message__secondary input{
+    padding-left:0px;
+    padding-right:0px;
+    width:288px;
+}
+
+.plusPartie .message__secondary a{
+    display:block;
+    width:272px;
+    margin:8px 8px;
+}
+
+
+.paneauAction{
+    border-top:solid 1px $border;
+    height:48px;
+    background-color:$white;
+}
+
+.paneauAction a i.fa-play{
+    padding:16px;
+    width:16px;
+    font-size:16px;
+    color:$primaryColor;
+    text-align:center;
+}
+.paneauAction a:hover i.fa-play, .paneauAction a:hover span.titre, .paneauAction a:hover span.logo{
+    background-color:$primaryColorDark;
+    color:$white;
+    cursor:pointer;
+}
+
+.paneauAction a span.logo{
+    position:relative;
+    display:block;
+    padding:8px;
+    height:32px;
+    width:32px;
+    float:left;
+}
+
+.paneauAction a span.logo i{
+    position:relative;
+    background-color:$primaryColor;
+    padding:8px;
+    width:16px;
+    text-align:center;
+    font-size:16px;
+    border-radius:16px;
+    color:$white;
+}
+
+.paneauAction span.titre{
+    position:relative;
+    display:block;
+    height:16px;
+    padding:16px 8px;
+    font-size:16px;
+    width:178px;
+    float:left;
+}
+

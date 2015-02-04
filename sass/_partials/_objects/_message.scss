@@ -1,0 +1,43 @@
+.message{
+    margin-top:64px;
+    font-weight:200;
+    text-align:center
+}
+
+.message__primary{
+    padding-top:16px;
+    font-size:34px;
+    padding-bottom:8px;
+}
+.message__secondary{
+    padding-top:8px;
+    margin-bottom:32px;
+    font-size:18px;
+}
+
+.message__secondary input{
+    width:auto;
+    display:inline;
+}
+.message__secondary a{
+    position:relative;
+    display:inline;
+    width:auto;
+    height:14px;
+    border:none;
+    border-radius:2px;
+    padding:12px 8px;
+    cursor:pointer;
+    color:$white;
+    font-size:14px;
+    font-family:"roboto";
+    font-weight:500;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color:$primaryColor;
+}
+
+.message i{
+    font-size:120px;
+    color:$border;
+}

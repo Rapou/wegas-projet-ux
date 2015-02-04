@@ -1,0 +1,159 @@
+.menu--workspace{
+    display:block;
+    position:relative;
+    width:50px;
+    height:50px;
+    background-color:$color-menus-bg;
+    color: $color-app-txt;
+    transition: $transition;
+    overflow:hidden;
+    z-index:70;
+
+    .menu__head{
+        background: $color-menus-header-bg;
+        display:block;
+        position:relative;
+        width:340px;
+        margin:0px;
+        padding:0px;
+        height:50px;
+        transition: $transition;
+        .title{
+            display:block;
+            position:absolute;
+            top:0px;
+            left:50px;
+            width:274px;
+            margin:16px 8px; 
+            visibility:hidden;
+            opacity:0;
+            font-size:14px;
+            color:$color-menus-header-txt;
+            transition:visibility 0s linear 0.2s,opacity 0.2s linear;
+            transition-delay:0s;
+        }
+
+        .grid-button {
+            display:block;
+            padding: $base*2; 
+            cursor: pointer;
+            user-select: none;
+            margin: 0;
+            border:none;
+            background:none;
+            background-color:none;
+
+            &:focus { outline:none; }
+
+            .label{
+                display:block;
+                position:absolute;
+                color:$color-menus-header-txt;
+                top:0px;
+                left:50px;
+                padding:16px 8px;
+                font-size:14px;
+                visibility:visible;
+                opacity:1;
+                transition:visibility 0s linear 0.5s,opacity 0.5s linear;
+                transition-delay:0s;
+            }
+
+            .grid{
+                display:block;
+                width: $base;
+                height: $base;
+                background: $color-menus-header-txt;
+                color: $color-menus-header-txt;
+                transition: $transition;
+                box-shadow:
+                    -($base+$space) 0,
+                    -($base+$space) ($base+$space),
+                    $base+$space 0,
+                    ($base+$space) (-($base+$space)),
+                    0 0 -($base+$space),
+                    -($base+$space) 0 -($base+$space),
+                    0 ($base+$space),
+                    ($base+$space) ($base+$space);
+
+            }
+        }
+
+
+        .grid-button.close{
+            .label{
+                visibility:hidden;
+                opacity:0;
+                transition:visibility 0s linear 0.5s,opacity 0.5s linear;
+                transition-delay:0s;
+            }
+
+            .grid{
+                -webkit-transform: rotate3d(0,0,1,-45deg)  scale3d(.8,.8,.8);
+                transform: rotate3d(0,0,1,-45deg)  scale3d(.8,.8,.8);
+                box-shadow:
+                    -$base 0,
+                    0 0 transparent,
+                    $base 0,
+                    0 0 transparent,
+                    0 0 -$base,
+                    0 0 transparent,
+                    0 $base,
+                    0 0 transparent;
+            }
+        }
+    }
+    .menu__list{
+        list-style-type: none;
+        margin:8px 0px;
+        padding:0px;
+
+        li{
+            a{
+                display:block;
+                width:100%;
+                text-decoration:none;
+
+                &:hover{
+                    display:block;
+                    width:100%;
+                    text-decoration:none;
+                    background-color:$color-link-hover-bg;
+                    color:$color-link-hover-txt;
+                }
+                i{
+                    color:$color-app-txt;
+                    font-size:16px;
+                    padding:16px;
+                }
+                span{
+                    color:$color-app-txt;
+                    font-size:16px;
+                    padding:16px 10px;
+                }
+            }
+
+        }
+    }
+}
+
+.menu--workspace:hover{
+    width:150px;
+    transition: $transition;
+}
+
+
+.menu--workspace.open{
+    width: 340px;
+    height: 210px;
+    transition: $transition;
+    .menu__head{
+        background-color:$color-primary;
+        transition: $transition;
+        .title{
+            visibility:visible;
+            opacity:1;
+            transition-delay:0.2s;
+        }
+    }
+}

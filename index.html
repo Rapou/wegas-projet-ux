@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="wegasApp">
+    <head>
+        <title>Login</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500,300,100,900' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/app.css" />
+    </head>
+    <body class="page page--login">
+        <form method="post" name="login" action="joueur_sansPartie.html">
+            <div class="form form--login">
+                <h1 class="form__titre">Wegas - Connexion</h1>
+                <input type="text" placeholder="email ou nom d'utilisateur" />
+                <input type="password" placeholder="mot de passe" />
+                <div class="form__separation">&nbsp;</div>
+                <input type="submit" value="se connecter" />
+            </div>
+        </form>
+        <div class="texte texte--central">
+            <a class="lien" href="signin.html">Créer un compte</a> 
+            <a class="lien" href="#">Mot de passe oublié</a>
+        </div>
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/angular.min.js"></script>
+        <script src="js/app.js"></script>        
+        <script src="js/directives/wegasDirectives.js"></script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="wegasApp">
+    <head>
+        <title>Wegas - My Sessions</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500,300,100,900' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/app.css" />
+        <link rel="stylesheet" href="css/grid.css" />
+    </head>
+    <body class="page page--lobby" ng-controller="ManagingSessionsController">
+        <div class="bar bar--status">&nbsp;</div>
+        <div class="bar bar--actions" data-titre="{{titre}}"></div>
+        <div class="workspace">
+            <div class="tools--sessions">
+                <h3>Active sessions</h3>
+                <div class="filter">
+                    <a class="filter__btn" href="#"><i class="fa fa-caret-down"></i></a>
+                    <ul class="filter__menu">
+                        <li><a href="#"><i class="fa fa-dashboard"></i>Active sessions</a></li>
+                        <li><a href="#"><i class="fa fa-archive"></i>Archived sessions</a></li>
+                    </ul>
+                </div>
+                <input type="text" name="search" placeholder="Search a session"/>
+            </div>
+            <div class="collection--sessions">
+                <div class="session"></div>
+                <div class="session"></div>
+                <div class="session"></div>
+                <div class="session"></div>
+                <div class="session"></div>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/angular.min.js"></script>
+        <script src="js/app.js"></script>        
+        <script src="js/directives/wegasDirectives.js"></script>
+        <script src="js/grid.js"></script>        
+    </body>
+</html>

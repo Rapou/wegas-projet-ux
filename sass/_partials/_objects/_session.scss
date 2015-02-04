@@ -1,0 +1,134 @@
+.tools--sessions{
+    display:block;
+    position:relative;
+    width:320px;
+    float:left;
+}
+
+.collection--sessions{
+    display:block;
+    position:relative;
+    width:640px;
+    float:right;
+}
+
+.session{
+    display:block;
+    position:relative;
+    width:604px;
+    margin:8px 16px;
+    height:62px;
+    padding:0px;
+    background-color:white;
+    @include material-shadow();
+    clear:both;
+    overflow:hidden;
+    transition: all 0.5s linear;
+}
+
+.session .illustration{
+    position:relative;
+    display:block;
+    background-color:#00BCD4;
+    width:46px;
+    height:46px;
+    text-align:center;
+    font-size:23px;
+    border-radius:23px;
+    margin:8px;
+    color:white;
+    float:left;
+    overflow:hidden;
+}
+.session .illustration img{
+    height:100%;
+    width:auto;
+}
+
+.session .illustration i{
+    display:none;
+}
+
+.session .infos{
+    float:left;
+    width:400px;
+}
+
+.session span {
+    position:relative;
+    display:block;
+    font-size:14px;
+    padding:0px 8px;
+}
+
+.session .nom{
+    font-weight:400;
+    margin-bottom:8px;
+}
+.session .scenario{
+    font-size:13px;
+}
+.tools--sessions  h3{
+    display:block;
+    position:relative;
+    width:200px;
+    height:48px;
+    padding:24px 16px 8px 16px;
+    margin:0px;
+    font-size:24px;
+    float:left;
+}
+
+.tools--sessions .filter{
+    display:block;
+    position:relative;
+    width:50px;
+    float:left;
+    height:48px;
+    font-size:24px;
+    line-height:36px;
+    margin-top:16px;
+}
+
+.filter__menu{
+    display:none;
+    position:absolute;
+    width:210px;
+    padding:16px;
+    background-color:$white;
+    top:40px;
+    right:32px;
+    z-index:9;
+    font-size:14px;
+    @include material-shadow(2);
+}
+
+.filter__menu a{
+    text-decoration: none;
+}
+
+.filter__menu a i{
+    font-size:16px;
+    margin-right:8px;
+}
+
+.filter:hover .filter__menu{
+    display:block;
+}
+
+.session__tools{
+    display:none;
+    height:62px;
+    float:right;
+    line-height:62px;
+    margin:0px 0px;
+}
+
+.session__tools .tool{
+    display:block;
+    position:relative;
+    padding:0px 8px;
+    float:left;
+    border-left:solid 1px $border;
+}
+

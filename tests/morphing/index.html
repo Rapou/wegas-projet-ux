@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wegas - V2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/app.css" />
+
+    </head>
+    <body>
+        <div class="menu menu--collapse menu--workspace">
+            <div class="menu__head">
+                <button class="grid-button collapse" type="button" role="button" aria-label="Toggle Navigation" >
+                    <span class="grid"></span>
+                    <span class="label">
+                        Workspaces
+                    </span>
+                </button>
+                <div class="title">
+                    Move to another workspace ?
+                </div>
+
+            </div>
+            <ul class="menu__list">
+                <li>
+                    <a href="#"><i class="fa fa-gamepad"></i><span>Access to playing sessions</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-tachometer"></i><span>Access to managing sessions</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-puzzle-piece"></i><span>Create scenarios</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="menu menu--collapse menu--settings">
+            <div class="menu__head">
+                <button class="dots-button arrow" type="button" role="button" aria-label="Toggle Navigation" >
+                    <span class="dots"></span>
+                    <span class="label">
+                        Exit and settings
+                    </span>
+                </button>
+                <div class="title">
+                    Exit and settings
+                </div>
+            </div>
+            <div class="menu__body">
+                <div class="section">
+                    <h3><i class="fa fa-pencil-square-o"></i><span>Profil</span></h3>
+                    <div class="section__panel">
+                        <div class="field field--menu">
+                            <input id="firstname" name="firstname" type="text" value="Raphaël" />
+                            <label for="firstname">Firstname</label>
+                        </div>
+                        <div class="field field--menu">
+                            <input id="lastname" name="lastname" type="text" value="Schmutz" />
+                            <label for="lastname">Lastname</label>
+                        </div>
+                        <div class="field field--menu">
+                            <input id="username" name="username" type="text" value="rschmutz" />
+                            <label for="username">Username</label>
+                        </div>
+                        <div class="field field--menu">
+                            <input id="pw1" name="pw1" type="password" value="" />
+                            <label for="pw1">Change password</label>
+                        </div>
+                        <div class="field field--menu">
+                            <input id="pw2" name="pw2" type="password" value="" />
+                            <label for="pw2">New password again</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <h3><i class="fa fa-user"></i><span>Manage users</span></h3>
+                    <div class="section__panel">
+                        <p>Manage users for admin</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <h3><i class="fa fa-group"></i><span>Manage groups</span></h3>
+                    <div class="section__panel">
+                        <p>Manage groups for admin</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <h3><i class="fa fa-anchor"></i><span>Exit Wegas</span></h3>
+                    <div class="section__panel">
+                        <p>Leave Wegas</p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div class="workspace">
+            <div class="title"><i class="fa fa-puzzle-piece"></i>Create scenarios</div>
+            <div class="sub-title">Your last creations</div>
+            <ul class="list list--scenarios">
+                <li class="list__contenu media media--scenario">
+                    <div class="media__illustration"><img src="img/pmg.png"></div>
+                    <div class="media__description media__description--1lines">
+                        PMG Artos
+                    </div>
+                    <div class="media__nav">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </li>
+                <li class="list__contenu media media--scenario">
+                    <div class="media__illustration"><img src="img/GrCat.jpg"></div>
+                    <div class="media__description media__description--2lines">
+                        <span class="description__line-top">EvalCliniqueCardiaque</span>
+                        <span class="description__line-bottom">La Source</span>
+                    </div>
+                    <div class="media__nav">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </li>
+                <li class="list__contenu media media--scenario">
+                    <div class="media__illustration"><img src="img/proggame.png"></div>
+                    <div class="media__description media__description--2lines">
+                        <span class="description__line-top">Programming Game</span>
+                        <span class="description__line-bottom">Learn Javascript by coding your way through the game.</span>
+                    </div>
+                    <div class="media__nav">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </li>
+            </ul>
+            <a href="#" class="button button--more">More</a>
+        </div>
+        <div class="shadow"></div>
+        <div class="shadow2"></div>
+        <div class="shadow1"><i class="fa fa-times"></i></div>
+        <div class="more more--scenario">
+            <div class="more__module more__search">
+                <div class="module__titre">Search a scenario<span class="folders"><i class="fa fa-folder"></i> <i class="fa fa-caret-down"></i></span></div>
+                <div class="researcher"><i class="fa fa-search"></i></div>
+                <ul class="list list--scenarios list--more">
+                    <li class="list__contenu media media--scenario">
+                        <div class="media__illustration"><img src="img/pmg.png"></div>
+                        <div class="media__description media__description--1lines">
+                            PMG Artos
+                        </div>
+                        <div class="media__nav">
+                            <i class="fa fa-angle-right"></i>
+                        </div>
+                    </li>
+                    <li class="list__contenu media media--scenario">
+                        <div class="media__illustration"><img src="img/GrCat.jpg"></div>
+                        <div class="media__description media__description--2lines">
+                            <span class="description__line-top">EvalCliniqueCardiaque</span>
+                            <span class="description__line-bottom">La Source</span>
+                        </div>
+                        <div class="media__nav">
+                            <i class="fa fa-angle-right"></i>
+                        </div>
+                    </li>
+                    <li class="list__contenu media media--scenario">
+                        <div class="media__illustration"><img src="img/proggame.png"></div>
+                        <div class="media__description media__description--2lines">
+                            <span class="description__line-top">Programming Game</span>
+                            <span class="description__line-bottom">Learn Javascript by coding your way through the game.</span>
+                        </div>
+                        <div class="media__nav">
+                            <i class="fa fa-angle-right"></i>
+                        </div>
+                    </li>
+                    <li class="list__contenu media media--scenario">
+                        <div class="media__illustration"><img src="img/GrCat.jpg"></div>
+                        <div class="media__description media__description--2lines">
+                            <span class="description__line-top">EvalCliniqueCardiaque</span>
+                            <span class="description__line-bottom">La Source</span>
+                        </div>
+                        <div class="media__nav">
+                            <i class="fa fa-angle-right"></i>
+                        </div>
+                    </li>
+                    <li class="list__contenu media media--scenario">
+                        <div class="media__illustration"><img src="img/proggame.png"></div>
+                        <div class="media__description media__description--2lines">
+                            <span class="description__line-top">Programming Game</span>
+                            <span class="description__line-bottom">Learn Javascript by coding your way through the game.</span>
+                        </div>
+                        <div class="media__nav">
+                            <i class="fa fa-angle-right"></i>
+                        </div>
+                    </li>
+                    <li class="list__contenu media media--scenario">
+                        <div class="media__illustration"><img src="img/pmg.png"></div>
+                        <div class="media__description media__description--1lines">
+                            PMG Artos
+                        </div>
+                        <div class="media__nav">
+                            <i class="fa fa-angle-right"></i>
+                        </div>
+                    </li>
+                </ul>
+                <div class="module__pagination">
+                    <span class="pagination__page">1</span>
+                    <span class="pagination__page">2</span>
+                    <span class="pagination__page">3</span>
+                    <span class="pagination__page"><i class="fa fa-caret-right"></i></span>
+                    
+                </div>
+            </div>
+            <div class="more__module more__create">
+                <div class="module__titre">Create a new scenario</div>
+                <div class="field field--menu">
+                    <input id="name" name="name" type="text" value="" />
+                    <label for="name">Name</label>
+                </div>
+                <div class="field field--menu">
+                    <input id="name" name="name" type="text" value="" />
+                    <label for="name">Scenario Model</label>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <a href="#" class="button button--new">Create</a>
+            </div>
+        </div>
+
+        <script src="js/jquery-1.11.2.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

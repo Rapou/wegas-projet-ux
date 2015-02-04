@@ -1,0 +1,47 @@
+<div class="bar__left">
+    <a class="btn btn--menu" href="#"><i class="fa fa-bars"></i><span>{{titre}}</span></a>
+</div>
+<div class="bar__right">
+    <a class="btn btn--parametres" href="#"><i class="fa fa-user"></i></a>
+</div>
+<div class="menu menu--workspace">
+    <p class="menu__head"><a href="#"><i class="fa fa-times"></i>Move to another workspace</a></p>
+    <a class="btn btn--nav btn__active" href="joueur_sansPartie.html"><i class="fa fa-gamepad"></i>Access playing sessions</a>
+    <a class="btn btn--nav " href="manager.html"><i class="fa fa-dashboard"></i>Manage training sessions</a>
+    <a class="btn btn--nav" href="#"><i class="fa fa-puzzle-piece"></i>Create game scenarios</a>
+</div>
+<div class="bar__infos">
+    <p class="info"></p>
+</div>
+<div class="menu menu--parametres">
+    <a class="btn--profil" href="#"><div class="profil">
+            <div class="avatar">
+                <i class="fa fa-pencil"></i>
+                <img src="img/grumpy.png" />
+            </div>
+            <div class="infos"> 
+                <div class="username">rschmutz</div>
+                <div class="email">raphael.schmutz@heig-vd.ch</div>
+            </div>
+        </div></a>
+    <div class="menu__separation">&nbsp;</div>
+    <p class="menu__sous-titre">Administration</p>
+    <a class="btn btn--nav" href="#"><i class="fa fa-user"></i>Users</a>
+    <a class="btn btn--nav" href="#"><i class="fa fa-group"></i>Groups</a>
+    <div class="menu__separation">&nbsp;</div>
+    <a class="btn btn--nav" href="index.html"><i class="fa fa-sign-out"></i>Logout</a>
+</div>
+<div class="modal--hide modal--profil">
+    <div class="modal__contenu">
+        <div class="avatar avatar--edit">
+            <i class="fa fa-pencil"></i>
+            <img src="img/grumpy.png" />
+        </div>
+        <input type="text" name="username" value="rschmutz" />
+        <input type="text" name="email" value="raphael.schmutz@heig-vd.ch" />
+        <input type="text" name="prenom" value="Raphaël" />
+        <input type="text" name="prenom" value="Schmutz" />
+        <a href="#" class="btn modal__btn">Save</a>
+        <a href="#" class="btn modal__btn">Cancel</a>
+    </div>
+</div>

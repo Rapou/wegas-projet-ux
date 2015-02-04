@@ -1,0 +1,39 @@
+.menu{
+    position:absolute;
+    top:0px;
+    left:0;
+    padding:0px 0px;
+    width:260px;
+    background-color:$white; // rgb(90, 66, 56);
+    @include material-shadow();
+    z-index:999;
+}
+
+
+.menu__head a{
+    color:white;
+    text-decoration:none;
+}
+
+.menu__separation{
+    display:block;
+    position:relative;
+    width:100%;
+    height:1px;
+    margin:8px 0px;
+    padding:0px;
+    background-color:$border;
+}
+
+.menu__sous-titre{
+    font-size:14px;
+    color:darken($border, 20%);
+    font-weight:500;
+    padding:0px 16px;
+}
+
+.menu--parametres{
+    left:auto;
+    right:0px;
+    top:50px;
+}

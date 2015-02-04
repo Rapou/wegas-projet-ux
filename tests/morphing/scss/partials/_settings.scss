@@ -1,0 +1,30 @@
+// Couleurs de bases
+$white:#FFFFFF;
+$black:#222222;
+$light-black:#444444;
+$dark-smoke: #DEDEDE;
+$normal-smoke:rgb(238, 238, 238);
+$color-primary:#00BCD4;
+$color-border:rgb(210, 210, 210);
+
+// Font
+$font:'Roboto', Arial, sans-serif;
+$fontWeight:300;
+
+// Couleurs liées à l'app
+$color-app-txt: $light-black;
+$color-app-bg:$dark-smoke;
+$color-link-normal-bg:$color-primary;
+$color-link-hover-bg:$normal-smoke;
+$color-link-hover-txt:$light-black;
+// Couleurs liées aux menus
+$color-menus-bg:$white;
+$color-menus-header-bg:$dark-smoke;
+$color-menus-header-txt :$white;
+
+// Métriques
+$base : 10px;
+$space : $base/4;
+$btn-workspace-size : 50px; 
+$btn-settings-size : 35px; 
+$transition:0.3s;

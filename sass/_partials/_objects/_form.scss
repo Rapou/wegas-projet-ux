@@ -1,0 +1,32 @@
+.form{
+    display:block;
+    background-color:$white;
+    border-radius:2px;
+    padding:16px 0px;
+    @include material-shadow();
+   // border:solid 1px $border;
+   // border-bottom: solid 2px $border;
+}
+
+.form--login, .form--signin{
+    width:320px;
+    margin:44px auto;
+    margin-bottom:0px;
+}
+
+.form__titre{
+    padding:16px;
+    font-size:1.8em;
+    font-weight:200;
+    color:$secondaryColorDark;
+}
+
+.form__separation{
+    display:block;
+    position:relative;
+    width:100%;
+    height:1px;
+    margin:40px 0px 24px 0px;
+    padding:0px;
+    background-color:$border;
+}

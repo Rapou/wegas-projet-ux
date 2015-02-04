@@ -1,0 +1,40 @@
+.list{
+    display:block;
+    position:relative;
+    list-style-type: none;
+    padding:0px;
+    margin:0px;
+}
+
+.list--scenarios{
+    .list__contenu{
+        &:hover{
+            cursor:pointer;
+        }
+    }
+    &.list--more{
+        .list__contenu.media{
+            .media__description{
+                &.media__description--1lines{
+                    color:$white;
+                }
+                &.media__description--2lines{
+                    .description__line-top{
+                        color:$white;
+                    }
+                    .description__line-bottom{
+                        color:$white;
+                    }
+                }
+            }
+            .media__nav{
+                color:$white;
+            }
+            &:hover{
+                .media__nav{
+                    color:$color-primary;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,122 @@
+input[type=text]:focus, input[type=password]:focus{
+    border-bottom:solid 2px $primaryColor;
+    padding-bottom:6px;
+    color:$textColor;
+}
+
+input[type=submit]:hover{
+    background-color:$primaryColorDark;
+    color:$white;
+}
+
+$placeHolderInputTxt: darken($border, 10%);
+::-webkit-input-placeholder { color:$placeHolderInputTxt; }
+::-moz-placeholder { color:$placeHolderInputTxt; } /* firefox 19+ */
+:-ms-input-placeholder { color:$placeHolderInputTxt; } /* ie */
+input:-moz-placeholder { color:$placeHolderInputTxt; }
+
+.btn--action.btn__active{
+    height:47px;
+    border-bottom:solid 4px $primaryColor; 
+}
+
+.btn--action:hover{
+    height:47px;
+    color:$primaryColorDark;
+    border-bottom:solid 4px $primaryColorDark; 
+}
+.btn--menu.btn__active i{
+    color:$white;
+}
+
+.btn--menu.btn__active {
+    background-color:$primaryColor;
+    border-right:solid 1px $primaryColor;
+    color:$white;
+    border-bottom:solid 1px $primaryColor;
+
+}
+.btn--menu:hover i, .menu__head i, .btn--parametres:hover i, .btn--parametres.active i{
+    color:$white;
+}
+
+.btn--menu:hover, .menu__head{
+    background-color:$primaryColorDark;
+    color:$white;
+    border-right:solid 1px $primaryColorDark;
+    border-bottom:solid 1px $primaryColorDark;
+}
+
+.btn--parametres:hover, .btn--parametres.active{
+    background-color:$primaryColorDark;
+    color:$white;
+    border-left:solid 1px $primaryColorDark;
+    border-bottom:solid 1px $primaryColorDark;
+}
+
+.btn--nav:hover{
+    color:$primaryColorDark;
+    border-left:solid 4px $primaryColorDark; 
+}
+.btn--nav:hover i{
+    color:$primaryColorDark;
+    padding-left:12px;
+}
+
+.btn--nav.btn__active, .btn--nav:hover.btn__active{
+    background-color:$border;
+    color:$textColor;
+    cursor:default;
+    border:none;
+}
+.btn--nav:hover.btn__active i{
+    color:$textColor;
+    padding-left:16px;
+}
+
+.btn--parametres.active{
+    background-image:URL("../img/btn-parametres.png");
+    background-repeat:no-repeat;
+    background-position:bottom center;
+    background-size:40%;
+}
+
+a:hover .avatar i, .avatar:hover i{
+    display:block;
+    font-size:18px;
+    line-height:44px;
+    color:white;
+}
+
+a:hover .avatar img, .avatar:hover img{
+    display:none;
+}
+
+.tool:hover{
+    background-color:$primaryColorDark;
+}
+.tool:hover i{
+    color:$white;
+}
+
+.session:hover .session__tools{
+    display:block;
+}
+
+.filter__menu a:hover{
+    width:100%;
+    color: $primaryColor;
+}
+
+.filter__menu a:hover i{
+    color: $primaryColor;
+}
+
+.session.session--selected{
+    height:500px;
+    transition: all 0.5s linear;
+}
+
+.modal--hide{
+    display:none;
+}

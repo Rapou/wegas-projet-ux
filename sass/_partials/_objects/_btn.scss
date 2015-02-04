@@ -1,0 +1,32 @@
+.btn{
+    position:relative;
+    display:block;
+    text-decoration: none;
+}
+
+.btn--menu{
+    float:left;
+}
+.btn--action{
+    float:left;
+    padding:0px 16px
+}
+
+.btn--menu{
+    width:260px;
+    border-right:solid 1px $border;
+}
+
+.btn--parametres{
+    border-left:solid 1px $border;
+}
+
+.btn i, .menu__head i{
+    padding:0px 16px;
+}
+
+.btn--nav{
+    height:16px;
+    padding:16px 0px;
+    line-height:16px;
+}

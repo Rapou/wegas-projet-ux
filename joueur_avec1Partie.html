@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="wegasApp">
+    <head>
+        <title>Wegas - Mes parties</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500,300,100,900' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/app.css" />
+    </head>
+    <body ng-controller="PlayingSessionsController" class="page page--lobby">
+        <div class="bar bar--status">&nbsp;</div>
+        <div class="bar bar--actions" data-titre="{{titre}}"></div>
+        <div class="workspace">
+            <div class="partie" data-illustration="{{game.illustration}}" data-nom="{{game.titre}}"></div>
+            <div class="plusPartie">
+                <p class="message__primary">Join a new playing session</p>
+                <p class="message__secondary"><input type="text" placeholder="Enter an access key" /></p>
+                <p class="message__secondary lien"><a href="joueur_avec2Partie.html">Join session</a></p>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/angular.min.js"></script>
+        <script src="js/app.js"></script>        
+        <script src="js/directives/wegasDirectives.js"></script>
+    </body> 
+</html>

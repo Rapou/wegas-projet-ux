@@ -1,0 +1,15 @@
+*{
+    font-family: $font; 
+    font-weight: $fontWeight;
+}
+
+html, body { height: 100%; }
+
+body{
+    display:block;
+    position:relative;
+    width:100%;
+    margin:0px;
+    padding:0px;
+    background-color:$color-app-bg;
+}
