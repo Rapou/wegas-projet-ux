@@ -1,0 +1,72 @@
+fieldset{
+    display:block;
+    position:relative;
+    border:none;
+    margin:0px;
+    padding:0px;
+}
+
+legend{
+    margin:0px;
+    padding:0px;
+    font-size:24px;
+    padding-top:8px;
+    padding-bottom:16px;
+    position:relative;
+    display:block;
+}
+
+label{
+    display:block;
+    position:relative;
+    margin:0px;
+    font-weight:400;
+    font-size:12px;
+    padding:16px 16px 4px 16px;
+    z-index:9;
+}
+
+input{
+    display:block;
+    position:relative;
+    width:100%;
+    background-color:$background-default;
+    border:solid 1px $border;
+    border-radius:5px;
+    padding:8px 16px;
+    margin:4px 0px;
+    transition: 0.8s;
+    outline:none;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display:block;
+    position:relative;
+    width:100%;
+    background-color:$background-default;
+    border:solid 1px $border;
+    border-radius:5px;
+    padding:8px 16px;
+    margin:4px 0px;
+    transition: 0.8s;
+    outline:none;
+}
+
+textarea{
+    width:100%;
+    height:240px;
+    background:none;
+    margin:4px 0px;
+    padding:16px;
+    border-radius:5px;
+    border:solid 1px $border;
+    outline:none;
+}
+
+textarea:focus{
+    background:white;
+    transition:0.5s;
+}

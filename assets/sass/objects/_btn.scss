@@ -1,0 +1,36 @@
+.btn{
+    position:relative;
+    display:block;
+    float:left;
+    background: none;
+    background-color:$default-color-light;
+    border:none;
+    color:white;
+    border-radius:5px;
+    padding:8px 16px;
+    margin:4px;
+    transition: 0.8s;
+    -webkit-user-select: none;
+    outline: none;
+}
+.btn:hover{
+    color:white;
+    text-decoration: none;
+}
+
+.btn-primary{
+    background-color:$primary-color;
+}
+.btn-success{
+    background-color:$success-color;
+}
+.btn-info{
+    background-color:$secondary-color;
+}
+.btn-warning{
+    background-color:$warning-color;
+}
+.btn-danger{
+    background-color:$danger-color;
+}
+
