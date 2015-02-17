@@ -3730,18 +3730,61 @@ textarea {
   outline: none; }
 
 textarea:focus {
-  background: white;
+  background: #fefefe;
   -webkit-transition: 0.5s;
   transition: 0.5s; }
 
-.btn {
+.application {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.application--absolute {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  overflow: hidden; }
+
+.sheet {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+  padding: 0px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background: #ebebeb;
+  z-index: 4; }
+
+.sheet--menu {
+  background: #fefefe;
+  z-index: 3; }
+
+.sheet--public {
+  background: #FA6942;
+  z-index: 2; }
+
+.sheet--public-interaction {
+  background: #FF7752;
+  z-index: 1; }
+
+.sheet--out-bottom {
+  top: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+
+.btn, .btn:visited {
   position: relative;
   display: block;
   float: left;
   background: none;
   background-color: #4C4C4C;
   border: none;
-  color: white;
+  color: #fefefe;
   border-radius: 5px;
   padding: 8px 16px;
   margin: 4px;
@@ -3751,7 +3794,7 @@ textarea:focus {
   outline: none; }
 
 .btn:hover {
-  color: white;
+  color: #fefefe;
   text-decoration: none; }
 
 .btn-primary {
@@ -3821,7 +3864,7 @@ textarea:focus {
   color: #4caf50; }
 
 input:focus, input.focus {
-  background-color: white;
+  background-color: #fefefe;
   border: solid 1px #d7d7d7;
   border-radius: 5px;
   -webkit-transition: 0.8s;
@@ -3856,7 +3899,7 @@ input[type="checkbox"] + label span.checkbox__box {
   border: none;
   padding: 0px;
   cursor: pointer;
-  background: white;
+  background: #fefefe;
   float: left;
   -webkit-transition: 0.4s;
   transition: 0.4s; }
@@ -3884,5 +3927,5 @@ input[type="checkbox"] + label {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   width: 100%;
   margin: 0p 16px;
-  background: white;
+  background: #fefefe;
   border-radius: 2px; }

@@ -1,19 +1,26 @@
+// Fonts 
 $font-family: "Lato", "Helvetica", "Arial", sans-serif;
-
+$font-weight-default: 300;
+// ---- Colors -----
+$white: #fefefe;
 $primary-color:#FA6942;
 $primary-color-light:#FF7752;
 $secondary-color:#41D2FA;
 $secondary-color-light:#AFEAFA;
 $secondary-color-dark:#38B6D9;
+
+// ---- Background -----
 $background-default:#ebebeb;
-$background-secondary:#ebebeb;
+$background-reverse:$primary-color;
+$background-reverse-light:$primary-color-light;
+$background-white:$white;
+
+// ---- Text -----
 $default-color:#272727;
 $default-color-light:#4C4C4C;
 $border:#d7d7d7;
+
+// ---- Infos -----
 $danger-color:#e51c23;
 $success-color:#4caf50;
 $warning-color:#ff9800;
-
-
-$blue: #3bbfce;
-$margin: 16px;

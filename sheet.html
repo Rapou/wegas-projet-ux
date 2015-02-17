@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Web game authoring system - Wegas</title
+        <!--[if lt IE 9]>
+        <script src="./assets/js/html5shiv.js"></script>
+        <![endif]-->
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./assets/css/application.css" /> 
+    </head>
+    <body class="application application--absolute">
+        <div class="sheet sheet--public"></div>
+        <div class="sheet sheet--public-interaction"></div>
+        <div class="sheet sheet--workspace sheet--out-bottom"></div>
+        <div class="sheet sheet--menu sheet--out-bottom"></div>
+        <script type="text/javascript" src="assets/js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".sheet--workspace").removeClass("sheet--out-bottom");
+            });
+        </script>
+    </body>
+</html>

@@ -61,7 +61,7 @@
 
 
 input:focus, input.focus{
-    background-color:white;
+    background-color:$white;
     border:solid 1px $border;
     border-radius:5px;
     transition: 0.8s;
@@ -100,7 +100,7 @@ input[type="checkbox"] + label span.checkbox__box {
     border:none;
     padding:0px;
     cursor:pointer;
-    background: white;
+    background:$white;
     float:left;
     transition:0.4s;
 }
