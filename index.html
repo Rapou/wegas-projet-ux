@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <title>Web game authoring system - Wegas</title
+        <title>Web game authoring system - Wegas</title>
         <!--[if lt IE 9]>
         <script src="./assets/js/html5shiv.js"></script>
         <![endif]-->
@@ -167,6 +167,8 @@
                             <div class="input input--password">
                                 <label for="inputPassword" class="control-label">Password</label>
                                 <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                            </div>
+                            <div class="input input--checkbox">
                                 <input type="checkbox" id="checkMe"><label for="checkMe"><span class="checkbox__box"></span><span class="checkbox__label">Checkbox</span></label>
                             </div>
                             <div class="input input--textarea">
@@ -192,7 +194,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div>
                                 <label for="select" class="control-label">Selects</label>
                                 <select class="form-control" id="select">
                                     <option>1</option>
@@ -236,14 +238,20 @@
             </div>
             <hr />
             <div class="row">
-                <div class="col-lg-12">
-                    <h1>Card</h1>
-                    <div class="card">
-                        Card Basics
-                    </div>
+                <h1>Card</h1>
+                <div class="card card--col4">
+                    Card Basics
                 </div>
             </div>
             <hr />
         </div>
+        <script type="text/javascript" src="assets/js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".card").delay(5000).queue(function(){
+                      $(".card").removeClass("card--col4").addClass("card--col8");
+                  });
+            });
+        </script>
     </body>
 </html>

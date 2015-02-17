@@ -1,4 +1,4 @@
-.btn, .btn:visited{
+.btn{
     position:relative;
     display:block;
     float:left;
@@ -12,25 +12,39 @@
     transition: 0.8s;
     -webkit-user-select: none;
     outline: none;
-}
-.btn:hover{
-    color:$white;
-    text-decoration: none;
+    
+    &:hover{
+        color:$white;
+        text-decoration:none;
+    }
+    &:visited{
+        color:$white;
+        text-decoration:none;
+    }
 }
 
 .btn-primary{
+    @extend .btn;
     background-color:$primary-color;
 }
+
 .btn-success{
+    @extend .btn;
     background-color:$success-color;
 }
+
 .btn-info{
+    @extend .btn;
     background-color:$secondary-color;
 }
+
 .btn-warning{
+    @extend .btn;
     background-color:$warning-color;
 }
+
 .btn-danger{
+    @extend .btn;
     background-color:$danger-color;
 }
 
