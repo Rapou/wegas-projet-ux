@@ -28,9 +28,6 @@
         line-height:16px;
     }
     
-    &.card--inline{
-        float:left;
-    }
     .card__illustration{
         display:block;
         position:relative;
@@ -40,7 +37,9 @@
         margin:0px;
         float:left;
         overflow:hidden;
-        border-radius:2px;
+        border-top-left-radius:2px;
+        border-bottom-left-radius:2px;
+
         text-align:center;
         img{
             position: absolute;
@@ -54,7 +53,6 @@
             -webkit-transform: translateY(-50%) translateX(-50%);
         }
     } 
-    
     
     .card__description{
         width:auto;
@@ -71,6 +69,13 @@
             padding:0px;
         }
     }
+    
+    .card__description--secondary{
+        p{
+            color:$default-color-light;
+        }
+    }
+    
     .card__actions{
         float:right;
         display:block;
@@ -85,18 +90,26 @@
         }
     }
     
-    &.card--col4{
-        @include make-lg-column(4);
-        transition:0.5s;
-    }
-    &.card--col6{
-        @include make-lg-column(6);
-        transition:0.5s;
-    }
-    &.card--col8{
-        @include make-lg-column(8);
-        transition-delay: 5s;
-        transition:0.5s;
+    .card__access{
+        display:block;
+        position:relative;
+        width:80px;
+        float:right;
     }
     
+    &.card--archive{
+        .card__description{
+            h4, p{
+                color:$default-color-light;
+            }
+        }
+        .card__illustration{
+            line-height:48px;
+            text-align:center;
+            background:$default-color-button;
+            i{
+                color:white;
+            }
+        }
+    }
 }

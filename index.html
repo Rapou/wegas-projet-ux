@@ -147,7 +147,11 @@
                                 <input type="password" class="form-control" id="inputPassword" placeholder="Password">
                             </div>
                             <div class="input input--checkbox">
-                                <input type="checkbox" id="checkMe"><label for="checkMe"><span class="checkbox__box"></span><span class="checkbox__label">Checkbox</span></label>
+                                <input type="checkbox" id="checkMe">
+                                <label for="checkMe">
+                                    <span class="checkbox__box"></span>
+                                    <span class="checkbox__label">Checkbox</span>
+                                </label>
                             </div>
                             <div class="input input--textarea">
                                 <label for="textArea" class="control-label">Textarea</label>
@@ -250,14 +254,28 @@
                             <p>Card Description</p>
                         </div>
                         <ul class="card__actions list-inline">
-                            <li class="action"><a href="#" class="btn btn--icon btn--main"><i class="fa fa-play"></i></a></li>
-                            <li class="action"><a href="#" class="btn btn--icon"><i class="fa fa-users"></i></a></li>
-                            <li class="action"><a href="#" class="btn btn--icon"><i class="fa fa-archive"></i></a></li>
+                            <li class="action"><a href="#" class="btn btn--icon btn--play btn--main"><span class="label">Monitoring</span></a></li>
+                            <li class="action"><a href="#" class="btn btn--icon btn--users"><span class="label">Manage users</span></a></li>
+                            <li class="action"><a href="#" class="btn btn--icon btn--archive"><span class="label">Archive</span></a></li>
                         </ul>
                     </div>
+                    <div class="card card--archive">
+                        <div class="card__illustration">
+                            <i class="fa fa-archive"></i>
+                        </div>
+                        <div class="card__description">
+                            <h4>Card Titre</h4>
+                            <p>Card Description</p>
+                        </div>
+                        <ul class="card__actions list-inline">
+                            <li class="action"><a href="#" class="btn btn--icon btn--unarchive"><span class="label">Unarchive</span></a></li>
+                            <li class="action"><a href="#" class="btn btn--icon btn--trash btn--danger"><span class="label">Delete</span></a></li>
+                        </ul>
+                    </div>
+                    
 
                 </div>
-                </div>
+            </div>
             <div class="row">
                 <div class="col-lg-6">
                     <div class="card">
@@ -273,13 +291,37 @@
                             <p>Date</p>
                         </div>
                         <ul class="card__actions list-inline">
-                            <li class="action"><a href="#" class="btn btn--icon btn--main"><i class="fa fa-play"></i></a></li>
-                            <li class="action"><a href="#" class="btn btn--icon"><i class="fa fa-users"></i></a></li>
-                            <li class="action"><a href="#" class="btn btn--icon"><i class="fa fa-archive"></i></a></li>
+                            <li class="action"><a href="#" class="btn btn--icon btn--play btn--main"><span class="label">Monitoring</span></a></li>
+                            <li class="action"><a href="#" class="btn btn--icon btn--users"><span class="label">Manage users</span></a></li>
+                            <li class="action"><a href="#" class="btn btn--icon btn--archive"><span class="label">Archive</span></a></li>
                         </ul>
                     </div>
+                    <div class="card">
+                        <div class="card__illustration">
+                            <img src="assets/img/proggame-thumb-1.png" />
+                        </div>
+                        <div class="card__description">
+                            <h4>Card Titre</h4>
+                            <p>Card Description</p>
+                        </div>
+                        <div class="card__description card__description--secondary">
+                            <p>Scenario name</p>
+                            <p>Date</p>
+                        </div>
+                        <ul class="card__actions list-inline">
+                            <li class="action"><a href="#" class="btn btn--icon btn--play btn--main"><span class="label">Monitoring</span></a></li>
+                            <li class="action"><a href="#" class="btn btn--icon btn--users"><span class="label">Manage users</span></a></li>
+                            <li class="action"><a href="#" class="btn btn--icon btn--archive"><span class="label">Archive</span></a></li>
+                        </ul>
+                        <div class="card__access">
+                            <input type="checkbox" id="checkMe2">
+                            <label for="checkMe2">
+                                <span class="checkbox__label">Checkbox</span>
+                                <span class="checkbox__box"></span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
-
             </div>
             <hr />
         </div>

@@ -1,7 +1,25 @@
 @mixin setBtn($base-color){
     background-color:$base-color;
+    &:hover, &:active &:focus{
+        background-color:darken($base-color, 10%);
+    }
     &.btn--disabled{
         background-color:lighten($base-color, 20%);
         cursor:default;
+    }
+}
+
+@mixin setIconBtn($icon, $clr:$default-color, $clrHover:$white){
+    &:after{
+        font-family:"FontAwesome";
+        font-weight:normal;
+        font-size:14px;
+        color:$clr;
+        content:$icon;
+    }
+    &:hover{
+        &:after{
+            color:$clrHover;
+        }
     }
 }
