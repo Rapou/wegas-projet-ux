@@ -2,6 +2,15 @@ h1{
     font-weight: 100;
 }
 
-h2, h3, h4, h5, h6{
+h2{
+    font-weight:300;
+    @include make-lg-column(12);
+}
+h3{
+    color: $primary-color-light;
+    font-weight: 300;
+}
+
+h4, h5, h6{
     font-weight: 300;
 }

@@ -1,7 +1,7 @@
 @mixin setBtn($base-color){
     background-color:$base-color;
     &:hover, &:active &:focus{
-        background-color:darken($base-color, 10%);
+        background-color:darken($base-color, 15%);
     }
     &.btn--disabled{
         background-color:lighten($base-color, 20%);

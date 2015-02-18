@@ -121,6 +121,25 @@ input[type="checkbox"] + label {
     height:34px;
 }
 
+.input--select{
+    display:block;
+    position:relative;
+    &:after{
+        display:block;
+        position:absolute;
+        top:0px;
+        width:16px;
+        height:16px;
+        font-size:14px;
+        line-height: 16px;
+        right:0px;
+        margin:10px 8px;
+        color:$border;
+        font-family:"FontAwesome";
+        content:$fa-var-sort;
+    }
+}
+
 .input--warning input:focus, .input--danger input:focus, .input--success input:focus{
     color:$default-color;
 }
