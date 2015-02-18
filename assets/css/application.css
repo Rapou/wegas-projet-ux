@@ -3686,7 +3686,8 @@ body {
   background-color: #ebebeb; }
 
 hr {
-  border-color: #d7d7d7; }
+  border-color: #d7d7d7;
+  clear: both; }
 
 a {
   color: #38B6D9;
@@ -3867,6 +3868,31 @@ textarea:focus {
     .btn.btn--danger.btn--disabled {
       background-color: #ef787c;
       cursor: default; }
+  .btn.btn--icon {
+    background-color: #fefefe;
+    border: solid 1px #d7d7d7;
+    height: 36px;
+    line-height: 36px;
+    font-size: 13px;
+    margin: 0px 2px;
+    padding: 0px 12px; }
+    .btn.btn--icon.btn--disabled {
+      background-color: white;
+      cursor: default; }
+    .btn.btn--icon.btn--main {
+      border: solid 1px #0fc6f9;
+      background: #41D2FA; }
+      .btn.btn--icon.btn--main i {
+        margin: 0px;
+        padding: 0px;
+        color: white;
+        font-size: 13px; }
+    .btn.btn--icon:hover {
+      border: solid 1px #f94210;
+      background: #FA6942; }
+      .btn.btn--icon:hover i {
+        color: white;
+        font-size: 13px; }
 
 .input--disabled input:hover {
   cursor: text; }
@@ -3979,39 +4005,110 @@ input[type="checkbox"] + label {
 .input--warning input:focus, .input--danger input:focus, .input--success input:focus {
   color: #272727; }
 
-.card, .card--col4, .card--col8 {
+.card {
+  position: relative;
+  display: block;
+  width: auto;
+  height: 48px;
+  padding: 0px;
+  margin: 8px 0px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 2px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  width: 100%;
-  height: 240px;
-  margin: 0p 16px;
-  background: #fefefe;
-  border-radius: 2px; }
-
-.card--col4 {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s; }
-  @media (min-width: 1200px) {
-    .card--col4 {
-      float: left;
-      width: 33.33333%; } }
-
-.card--col8 {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  -webkit-transition-delay: 5s;
-  transition-delay: 5s;
-  -webkit-transition: 0.5s;
-  transition: 0.5s; }
-  @media (min-width: 1200px) {
-    .card--col8 {
-      float: left;
-      width: 66.66667%; } }
+  background: #fefefe; }
+  .card h4 {
+    height: 16px;
+    margin: 0px;
+    padding: 16px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700; }
+  .card p {
+    height: 16px;
+    margin: 0px;
+    padding: 16px;
+    font-size: 13px;
+    line-height: 16px; }
+  .card.card--inline {
+    float: left; }
+  .card .card__illustration {
+    display: block;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    overflow: hidden;
+    border-radius: 2px;
+    text-align: center; }
+    .card .card__illustration img {
+      position: absolute;
+      width: auto;
+      height: 100%;
+      border: none;
+      margin: 0px;
+      padding: 0px;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translateY(-50%) translateX(-50%); }
+  .card .card__description {
+    width: auto;
+    height: 48px;
+    box-sizing: border-box;
+    padding: 8px 16px;
+    float: left; }
+    .card .card__description h4 {
+      padding: 0px; }
+    .card .card__description p {
+      padding: 0px; }
+  .card .card__actions {
+    float: right;
+    display: block;
+    position: relative;
+    width: auto;
+    height: 48px;
+    padding: 6px 4px;
+    margin: 0px; }
+    .card .card__actions .action {
+      margin: 0px;
+      padding: 0px; }
+  .card.card--col4 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
+    @media (min-width: 1200px) {
+      .card.card--col4 {
+        float: left;
+        width: 33.33333%; } }
+  .card.card--col6 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
+    @media (min-width: 1200px) {
+      .card.card--col6 {
+        float: left;
+        width: 50%; } }
+  .card.card--col8 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    -webkit-transition-delay: 5s;
+    transition-delay: 5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
+    @media (min-width: 1200px) {
+      .card.card--col8 {
+        float: left;
+        width: 66.66667%; } }
 
 @-webkit-keyframes moveToBottom {
 

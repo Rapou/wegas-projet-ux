@@ -1,21 +1,102 @@
 .card{
-    @include material-shadow();
-    width:100%;
-    height:240px;
-    margin:0p 16px;
-    background:$white;
+    position:relative;
+    display:block;
+    width:auto;
+    height:48px;
+    padding:0px;
+    margin:8px 0px;
+    border:none;
+    box-sizing: border-box;
     border-radius:2px;
-}
+    @include material-shadow();
+    background:$white;
+    
+    h4{
+        height:16px;
+        margin:0px;
+        padding:16px;
+        font-size:12px;
+        line-height:16px;
+        font-weight:700;
+    }
+    
+    p{
+        height:16px;
+        margin:0px;
+        padding:16px;
+        font-size:13px;
+        line-height:16px;
+    }
+    
+    &.card--inline{
+        float:left;
+    }
+    .card__illustration{
+        display:block;
+        position:relative;
+        width:48px;
+        height:48px;
+        padding:0px;
+        margin:0px;
+        float:left;
+        overflow:hidden;
+        border-radius:2px;
+        text-align:center;
+        img{
+            position: absolute;
+            width:auto;
+            height:100%;
+            border:none;
+            margin:0px;
+            padding:0px;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translateY(-50%) translateX(-50%);
+        }
+    } 
+    
+    
+    .card__description{
+        width:auto;
+        height:48px;
+        box-sizing: border-box;
+        padding:8px 16px;  
+        float:left;
 
-.card--col4{
-    @extend .card;
-    @include make-lg-column(4);
-    transition:0.5s;
-}
-
-.card--col8{
-    @extend .card;
-    @include make-lg-column(8);
-    transition-delay: 5s;
-    transition:0.5s;
+        h4{
+            padding:0px;
+        }
+        
+        p{
+            padding:0px;
+        }
+    }
+    .card__actions{
+        float:right;
+        display:block;
+        position:relative;
+        width:auto;
+        height:48px;
+        padding:6px 4px;
+        margin:0px;
+        .action{
+            margin:0px;
+            padding:0px;
+        }
+    }
+    
+    &.card--col4{
+        @include make-lg-column(4);
+        transition:0.5s;
+    }
+    &.card--col6{
+        @include make-lg-column(6);
+        transition:0.5s;
+    }
+    &.card--col8{
+        @include make-lg-column(8);
+        transition-delay: 5s;
+        transition:0.5s;
+    }
+    
 }

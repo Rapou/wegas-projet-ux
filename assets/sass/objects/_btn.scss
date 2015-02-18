@@ -41,5 +41,32 @@
     &.btn--danger{
         @include setBtn($danger-color);
     }
+    &.btn--icon{
+        @include setBtn($white);
+        border:solid 1px $border;
+        height:36px;
+        line-height:36px;
+        font-size:13px;
+        margin:0px 2px;
+        padding:0px 12px;
+        &.btn--main{
+            border:solid 1px darken($secondary-color, 10%);
+            background:$secondary-color;
+            i{
+                margin:0px;
+                padding:0px;
+                color:white;
+                font-size:13px;
+            }
+        }
+        &:hover{
+            border:solid 1px darken($primary-color, 10%);
+            background:$primary-color;
+            i{
+                color:white;
+                font-size:13px;
+            }
+        }
+    }
 }
 

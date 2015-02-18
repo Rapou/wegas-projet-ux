@@ -11,7 +11,8 @@ body{
 
 hr{
     border-color:$border;
-}
+    clear:both;
+} 
 
 a{
     color:$secondary-color-dark;
