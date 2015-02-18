@@ -13,38 +13,33 @@
     -webkit-user-select: none;
     outline: none;
     
-    &:hover{
+    &:hover, &:active, &:focus{
         color:$white;
         text-decoration:none;
     }
+    
     &:visited{
         color:$white;
         text-decoration:none;
     }
-}
-
-.btn-primary{
-    @extend .btn;
-    background-color:$primary-color;
-}
-
-.btn-success{
-    @extend .btn;
-    background-color:$success-color;
-}
-
-.btn-info{
-    @extend .btn;
-    background-color:$secondary-color;
-}
-
-.btn-warning{
-    @extend .btn;
-    background-color:$warning-color;
-}
-
-.btn-danger{
-    @extend .btn;
-    background-color:$danger-color;
+    &.btn--default{
+        @include setBtn($default-color-light);
+    }
+    
+    &.btn--primary{
+        @include setBtn($primary-color);
+    }
+    &.btn--success{
+        @include setBtn($success-color);
+    }
+    &.btn--info{
+        @include setBtn($secondary-color);
+    }
+    &.btn--warning{
+        @include setBtn($warning-color);
+    }
+    &.btn--danger{
+        @include setBtn($danger-color);
+    }
 }
 

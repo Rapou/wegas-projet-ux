@@ -1,0 +1,7 @@
+@mixin setBtn($base-color){
+    background-color:$base-color;
+    &.btn--disabled{
+        background-color:lighten($base-color, 20%);
+        cursor:default;
+    }
+}

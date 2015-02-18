@@ -18,7 +18,7 @@ a{
     transition: all 0.5s ease;
 }
 
-a:hover{
+a:hover, a:active{
     color:$secondary-color;
     transition: all 0.5s ease;
 }
