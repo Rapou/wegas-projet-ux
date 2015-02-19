@@ -43,41 +43,39 @@
     }
     &.btn--icon{
         @include setBtn($white);
-        border:solid 1px $border;
-        width:40px;
-        height:36px;
-        line-height:36px;
-        text-align:center;
-        font-size:13px;
-        margin:0px 2px;
-        padding:0px 2px;
-        
-        &.btn--main{
-            border:solid 1px darken($secondary-color, 10%);
-            background:$secondary-color;
-        }
+        width:32px;
+        height:32px;
+        line-height:32px;
+        margin:4px;
         &.btn--trash{
-            @include setIconBtn($fa-var-trash)
+            @include setIconBtn($fa-var-trash, $danger-color)
         }
 
         &.btn--archive{
-            @include setIconBtn($fa-var-archive)
+            @include setIconBtn($fa-var-archive, lighten($default-color-button, 10%))
+        }
+        
+        &.btn--manage{
+            @include setIconBtn($fa-var-tachometer, $secondary-color, $iconSize:18px)
         }
         
         &.btn--play{
-            @include setIconBtn($fa-var-play, $white)
+            @include setIconBtn($fa-var-play, $secondary-color)
         }
         &.btn--users{
-            @include setIconBtn($fa-var-users)
+            @include setIconBtn($fa-var-users, lighten($default-color-button, 10%))
         }
         &.btn--user{
             @include setIconBtn($fa-var-user)
         }
         &.btn--unarchive{
-            @include setIconBtn($fa-var-undo)
+            @include setIconBtn($fa-var-undo, lighten($default-color-button, 10%))
         }
         &.btn--sign-out{
             @include setIconBtn($fa-var-sign-out)
+        }
+        &.btn--workspaces{
+            @include setIconBtn($fa-var-th)
         }
 
         .label{
@@ -96,27 +94,6 @@
             box-sizing: normal;
             background-color:$default-color;
             transition:0.5s;
-        }
-        
-        &:hover .label:hover{
-            display:none;
-        }
-        &.btn--danger{
-            &:hover{
-                border:solid 1px darken($danger-color, 10%);
-                background:$danger-color;
-            }
-        }
-        
-        &:hover{
-            border:solid 1px darken($primary-color, 10%);
-            background:$primary-color;
-            
-            .label{
-                display:block;
-                opacity:1;
-                transition:opacity 0.5s;
-            }
         }
     }
 }

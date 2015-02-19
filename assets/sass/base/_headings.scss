@@ -5,12 +5,19 @@ h1{
 h2{
     font-weight:300;
     @include make-lg-column(12);
+    margin:44px 0px 0px 0px;
 }
 h3{
     color: $primary-color-light;
     font-weight: 300;
+    margin:36px 0px 32px 0px
 }
 
-h4, h5, h6{
+h4{
+    font-weight: 300;
+    padding:0px;
+}
+
+h5, h6{
     font-weight: 300;
 }

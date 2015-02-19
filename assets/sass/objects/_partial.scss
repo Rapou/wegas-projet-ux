@@ -9,13 +9,21 @@
         border-top:solid 7px $primary-color;
         border-bottom:solid 1px $border;
         background:$white;
-        .partial--menu__workspace{
+        
+        .partial--menu__workspaces{
             float:left;
+            margin:4px 0px 4px -8px;
         }
+        
         .partial--menu__action{
             float:right;
             height:48px;
-            margin:6px
+            padding:4px 12px;
+            margin:0px;
+            list-style-type: none;
+            > *{
+                float:left;
+            }
         }
     }
 }

@@ -1,29 +1,34 @@
 <!DOCTYPE html>
-<html class="no-js test-view" lang="fr">
+<html class="no-js" lang="fr">
     <head>
         <title>Web game authoring system - Wegas</title>
         <!--[if lt IE 9]>
         <script src="./assets/js/html5shiv.js"></script>
         <![endif]-->
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link rel="stylesheet" href="./assets/css/application.css" /> 
     </head>
     <body>
         <div class="wegas">
             <div id="view-player" class="view view--workspace view--active"> 
                 <div class="partial partial--menu partial--open">
-                    <div class="partial--menu__workspace">Menu Workspace</div> 
-                    <ul class="partial--menu__action list-inline">
-                        <li class="action"><a href="#" class="btn btn--icon btn--user"><span class="label">Profil</span></a></li>
-                        <li class="action"><a href="#" class="btn btn--icon btn--sign-out"><span class="label">Logout</span></a></li>
-                    </ul>
+                    <div class="container">
+                        <div class="partial--menu__workspaces"><a href="#" class="btn btn--icon btn--workspaces"><span class="label">Workspaces</span></a></div> 
+                        <ul class="partial--menu__action">
+                            <li class="action"><a href="#" class="btn btn--icon btn--user"><span class="label">Profil</span></a></li>
+                            <li class="action"><a href="#" class="btn btn--icon btn--sign-out"><span class="label">Logout</span></a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="partial partial--workspace partial--open">
                     <div class="container">
                         <div class="row">
+                            
                             <h2>Training sessions</h2>
-                            <div class="col-md-4">
-                                <h3>New session</h3>
+                            <div class="col-md-5">
+                                <h3>Create new session</h3>
                                 <form>
                                     <div class="input input--text">
                                         <label for="name">Session name</label>
@@ -39,7 +44,9 @@
                                             </select>
                                         </div>
                                     </div>
-
+                                    <div class="input input--submit">
+                                        <input type="submit" class="btn btn--primary" id="send" value="New session" />
+                                    </div>
                                 </form>
 
                             </div>
@@ -53,8 +60,8 @@
                                         <h4>Card Titre</h4>
                                         <p>Card Description</p>
                                     </div>
-                                    <ul class="card__actions list-inline">
-                                        <li class="action"><a href="#" class="btn btn--icon btn--play btn--main"><span class="label">Monitoring</span></a></li>
+                                    <ul class="card__actions">
+                                        <li class="action"><a href="#" class="btn btn--icon btn--manage"><span class="label">Monitoring</span></a></li>
                                         <li class="action"><a href="#" class="btn btn--icon btn--users"><span class="label">Manage users</span></a></li>
                                         <li class="action"><a href="#" class="btn btn--icon btn--archive"><span class="label">Archive</span></a></li>
                                     </ul>
@@ -67,8 +74,8 @@
                                         <h4>Card Titre</h4>
                                         <p>Card Description</p>
                                     </div>
-                                    <ul class="card__actions list-inline">
-                                        <li class="action"><a href="#" class="btn btn--icon btn--play btn--main"><span class="label">Monitoring</span></a></li>
+                                    <ul class="card__actions">
+                                        <li class="action"><a href="#" class="btn btn--icon btn--manage"><span class="label">Monitoring</span></a></li>
                                         <li class="action"><a href="#" class="btn btn--icon btn--users"><span class="label">Manage users</span></a></li>
                                         <li class="action"><a href="#" class="btn btn--icon btn--archive"><span class="label">Archive</span></a></li>
                                     </ul>
@@ -81,23 +88,22 @@
                                         <h4>Card Titre</h4>
                                         <p>Card Description</p>
                                     </div>
-                                    <ul class="card__actions list-inline">
-                                        <li class="action"><a href="#" class="btn btn--icon btn--play btn--main"><span class="label">Monitoring</span></a></li>
+                                    <ul class="card__actions">
+                                        <li class="action"><a href="#" class="btn btn--icon btn--manage"><span class="label">Monitoring</span></a></li>
                                         <li class="action"><a href="#" class="btn btn--icon btn--users"><span class="label">Manage users</span></a></li>
                                         <li class="action"><a href="#" class="btn btn--icon btn--archive"><span class="label">Archive</span></a></li>
                                     </ul>
                                 </div>
                                 <div class="card card--archive">
                                     <div class="card__illustration">
-                                        <i class="fa fa-archive"></i>
                                     </div>
                                     <div class="card__description">
                                         <h4>Card Titre</h4>
                                         <p>Card Description</p>
                                     </div>
-                                    <ul class="card__actions list-inline">
+                                    <ul class="card__actions">
                                         <li class="action"><a href="#" class="btn btn--icon btn--unarchive"><span class="label">Unarchive</span></a></li>
-                                        <li class="action"><a href="#" class="btn btn--icon btn--trash btn--danger"><span class="label">Delete</span></a></li>
+                                        <li class="action"><a href="#" class="btn btn--icon btn--trash"><span class="label">Delete</span></a></li>
                                     </ul>
                                 </div>
                             </div>
