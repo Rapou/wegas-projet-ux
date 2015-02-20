@@ -4,8 +4,8 @@
         background-color:$background-default;
         border:solid 1px $border;
         border-radius:5px;
-        padding:8px 16px;
-        margin:4px 0px;
+        padding:($grid-gutter-width/4) ($grid-gutter-width/2);
+        margin:$grid-gutter-width/8 0px;
         transition: 0.8s;
         &:focus, &.focus{
             background-color:$white;
@@ -23,15 +23,15 @@
     label{
         height:$input-height;
         line-height:$input-height;
-        padding-left:$box-size + 16;
+        padding-left:$box-size + ($grid-gutter-width/2);
         span{
             position:absolute;
             display:block;
             top:50%;
-            left:16px;
+            left:$grid-gutter-width/2;
             width:$box-size;
             height:$box-size;
-            margin:(-$box-size/2) 16px 0 0;
+            margin:(-$box-size/2) ($grid-gutter-width/2) 0 0;
             background-color:$white;
             cursor:pointer; 
             border:solid 2px $border; 

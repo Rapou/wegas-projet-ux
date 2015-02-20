@@ -43,7 +43,7 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  "Lato", "Helvetica", "Arial", sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
@@ -67,7 +67,7 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    inherit !default;
-$headings-font-weight:    500 !default;
+$headings-font-weight:    300 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
 
@@ -157,7 +157,7 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 //** Number of columns in the grid.
 $grid-columns:              12 !default;
 //** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         30px !default;
+$grid-gutter-width:         32px !default;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
 $grid-float-breakpoint:     $screen-sm-min !default;
@@ -175,12 +175,12 @@ $container-tablet:             (720px + $grid-gutter-width) !default;
 $container-sm:                 $container-tablet !default;
 
 // Medium screen / desktop
-$container-desktop:            (940px + $grid-gutter-width) !default;
+$container-desktop:            (944px + $grid-gutter-width) !default;
 //** For `$screen-md-min` and up.
 $container-md:                 $container-desktop !default;
 
 // Large screen / wide desktop
-$container-large-desktop:      (1140px + $grid-gutter-width) !default;
+$container-large-desktop:      (928px + $grid-gutter-width) !default;
 //** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
 

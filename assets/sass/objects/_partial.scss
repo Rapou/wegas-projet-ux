@@ -12,7 +12,13 @@
         
         .partial--menu__workspaces{
             float:left;
-            margin:4px 0px 4px -8px;
+            margin:4px 0px 4px 8px;
+            i{
+                display:block;
+                position:relative;
+                padding:10px;
+                font-size:21px;
+            }
         }
         
         .partial--menu__action{
@@ -26,4 +32,27 @@
             }
         }
     }
+
+    &.partial--workspace{
+        padding-top:72px;
+    }
+
+    &.partial--create-session{
+        @include make-md-column(4);
+        @include make-md-column-offset(0);
+    }
+    &.partial--newest-sessions{
+        @include make-md-column(6);
+        @include make-md-column-offset(2);
+
+    }
+    &.partial--join-session{
+        @include make-md-column(4);
+        @include make-md-column-offset(0);
+    }
+    &.partial--newest-session{
+        @include make-md-column(6);
+        @include make-md-column-offset(1);
+    }
+
 }

@@ -134,7 +134,7 @@
             </div>
             <hr />
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-md-6">
                     <form>
                         <fieldset>
                             <legend>Legend</legend>
@@ -170,6 +170,60 @@
                                 </div>
                             </div>
                             <div class="input input--select">
+                                <label class="input__label" for="select">Selects</label>
+                                <div class="input__entry">
+                                    <select id="select">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input input--submit">
+                                <button type="submit" class="btn btn--info btn--right">Submit</button>
+                                <button type="reset" class="btn btn--default btn--right">Cancel</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="col-md-4 col-md-offset-2">
+                    <form>
+                        <fieldset>
+                            <legend>Legend</legend>
+                            <div class="input input--text input--label-off">
+                                <label class="input__label" for="name">Login</label>
+                                <input class="input__entry" type="text" class="form-control" id="name" placeholder="Enter your login">
+                            </div>
+                            <div class="input input--password input--label-off">
+                                <label class="input__label" for="password">Scenario name</label>
+                                <input class="input__entry" type="password" class="form-control" id="password" placeholder="Enter your pass">
+                            </div>
+                            <div class="input input--checkbox input--label-off">
+                                <div class="input__entry">
+                                    <input type="checkbox" id="checkMe">
+                                    <label for="checkMe"><span></span>Check the checkbox</label>                                  
+                                </div>
+                            </div>
+                            <div class="input input--textarea input--label-off">
+                                <label class="input__label" for="textArea">Textarea</label>
+                                <textarea class="input__entry" id="textArea"></textarea>
+                            </div>
+                            <div class="input input--radios-group">
+                                <label class="input__label">Bouton radio </label>
+                                <div class="input__entry">
+                                    <div class="input__radio">
+                                        <input type="radio" id="btnradio" name="radio" value="2" checked />
+                                        <label for="btnradio"><span></span>Option one is this</label>
+                                    </div>
+                                    <div class="input__radio">
+                                        <input type="radio" id="btnradio2" name="radio" value="1" />
+                                        <label for="btnradio2"><span></span>Other option is here</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input input--select input--label-off">
                                 <label class="input__label" for="select">Selects</label>
                                 <div class="input__entry">
                                     <select id="select">

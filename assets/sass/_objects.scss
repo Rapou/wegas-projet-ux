@@ -14,7 +14,12 @@
     -webkit-perspective: 1200px;
     -moz-perspective: 1200px;
     perspective: 1200px;
-    overflow:hidden;
+    overflow-x:hidden;
+    overflow-y:hidden;
+    @media screen and (max-width: $screen-sm) {
+        overflow-x:hidden;
+        overflow-y:auto;
+    }
 }
 
 

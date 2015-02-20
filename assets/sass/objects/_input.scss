@@ -3,8 +3,7 @@
     margin:4px 0px;
     .input__label{
         @include make-xs-column(12);
-        @include make-md-column(3);
-        @include make-lg-column(4);
+        @include make-md-column(4);
         display:block;
         width:auto;
         display:block;
@@ -14,13 +13,22 @@
         height:$input-height;
         line-height:$input-height;
         padding:0px;
-        margin:4px 0px;
+        margin:$grid-gutter-width/8 0px;
     } 
+
     .input__entry{
         @include make-xs-column(12);
-        @include make-md-column(9);
-        @include make-lg-column(8);
+        @include make-md-column(8);
     }
+    &.input--label-off{
+        .input__label{
+            display:none;
+        }
+        .input__entry{
+            @include make-md-column(12);
+        }
+    }
+
     &.input--text{
         @extend %default-input;
     }
@@ -41,11 +49,13 @@
                 -moz-appearance: none;
                 appearance: none;
                 display:block;
-                position:relative;
+                position:absolute;
+                top:0px;
+                left:0px;
                 width:100%;
                 height:100%;
                 background-color:$background-default;
-                padding:0px;
+                padding:0px 16px;
                 margin:0px;
                 border:none;
                 transition: 0.8s;
@@ -57,12 +67,12 @@
                 display:block;
                 position:absolute;
                 top:0px;
-                width:$input-height/2;
-                height:$input-height/2;
+                width:$input-height/4;
+                height:$input-height/4;
                 font-size:14px;
                 line-height: 16px;
                 right:0px;
-                margin:10px $input-height/4;
+                margin:10px $input-height/8;
                 color:$border;
                 font-family:"FontAwesome";
                 content:$fa-var-sort;

@@ -3,9 +3,10 @@ h1{
 }
 
 h2{
+    float:left;
+    font-size:16px;
     font-weight:300;
-    @include make-lg-column(12);
-    margin:44px 0px 0px 0px;
+    margin:16px 0px 16px 8px;
 }
 h3{
     color: $primary-color-light;
