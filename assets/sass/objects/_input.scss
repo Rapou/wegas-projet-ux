@@ -1,9 +1,97 @@
-.input--text{
+.input{
     @include make-row(0);
     margin:4px 0px;
+    .input__label{
+        @include make-xs-column(12);
+        @include make-md-column(3);
+        @include make-lg-column(4);
+        display:block;
+        width:auto;
+        display:block;
+        position:relative;
+        font-weight:400;
+        font-size:13px;
+        height:$input-height;
+        line-height:$input-height;
+        padding:0px;
+        margin:4px 0px;
+    } 
+    .input__entry{
+        @include make-xs-column(12);
+        @include make-md-column(9);
+        @include make-lg-column(8);
+    }
+    &.input--text{
+        @extend %default-input;
+    }
+    &.input--password{
+        @extend %default-input;
+    }
+    &.input--textarea{
+        @extend %default-input;
+        .input__entry{
+            height:3*$input-height;
+        }
+    }
+    &.input--select{
+        @extend %default-input;
+        .input__entry{
+            select{
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                display:block;
+                position:relative;
+                width:100%;
+                height:100%;
+                background-color:$background-default;
+                padding:0px;
+                margin:0px;
+                border:none;
+                transition: 0.8s;
+                outline:none;
+                cursor:pointer;
+            }
+
+            &:after{
+                display:block;
+                position:absolute;
+                top:0px;
+                width:$input-height/2;
+                height:$input-height/2;
+                font-size:14px;
+                line-height: 16px;
+                right:0px;
+                margin:10px $input-height/4;
+                color:$border;
+                font-family:"FontAwesome";
+                content:$fa-var-sort;
+            }
+        }
+    }
+    &.input--checkbox{
+        .input__entry{
+            @include make-md-column-offset(3);
+            @include make-lg-column-offset(4);
+            @extend %default-box;
+        }
+    }
+    &.input--radios-group{
+        .input__entry{
+            padding-left:0px;
+            padding-right:0px;
+            .input__radio{
+                @include make-md-column(6, 32px);
+                @extend %default-box;
+                input + label span{
+                    border-radius:50%;
+                }
+            }
+        }
+    }
 }
 
-
+/*
 .input--disabled input:hover{
     cursor:text;
 }
@@ -42,7 +130,6 @@
     content:$fa-var-exclamation-circle;
 }
 
-
 .input--danger input{
     color:$danger-color;
 }
@@ -63,35 +150,8 @@
 .input--success input{
     color:$success-color;
 }
-.input--submit{
-    display:block;
-    position:relative;
-    @include make-md-column-offset(8);
-    @include make-md-column(4, 8px);
-    margin-top:2px;
-}
-
-.input--select{
-    display:block;
-    position:relative;
-    border:solid 1px $border;
-    border-radius:5px;
-    &:after{
-        display:block;
-        position:absolute;
-        top:0px;
-        width:16px;
-        height:16px;
-        font-size:14px;
-        line-height: 16px;
-        right:0px;
-        margin:10px 8px;
-        color:$border;
-        font-family:"FontAwesome";
-        content:$fa-var-sort;
-    }
-}
 
 .input--warning input:focus, .input--danger input:focus, .input--success input:focus{
     color:$default-color;
 }
+*/

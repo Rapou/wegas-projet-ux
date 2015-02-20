@@ -30,12 +30,12 @@
                                 <h3>Create new scenario</h3>
                                 <form>
                                     <div class="input input--text">
-                                        <label for="name">Scenario name</label>
-                                        <input type="text" class="form-control" id="name" placeholder="Enter a name">
+                                        <label class="input__label" for="name">Scenario name</label>
+                                        <input class="input__entry" type="text" class="form-control" id="name" placeholder="Enter a name">
                                     </div>
-                                    <div>
-                                        <label for="select">Based on</label>
-                                        <div class="input--select">
+                                    <div class="input input--select">
+                                        <label class="input__label" for="select">Based on</label>
+                                        <div class="input__entry">
                                             <select id="select">
                                                 <option>Empty scenario</option>
                                                 <option>Programming game</option>
@@ -43,8 +43,21 @@
                                             </select>
                                         </div>
                                     </div>
+                                    <div class="input input--radios-group">
+                                        <label class="input__label">Played </label>
+                                        <div class="input__entry">
+                                            <div class="input__radio">
+                                                <input type="radio" id="joingroup" name="radio" value="group" checked />
+                                                <label for="joingroup"><span></span>in teams</label>
+                                            </div>
+                                            <div class="input__radio">
+                                                <input type="radio" id="joinsolo" name="radio" value="individual" />
+                                                <label for="joinsolo"><span></span>individualy</label>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="input input--submit">
-                                        <input type="submit" class="btn btn--primary" id="send" value="New scenario" />
+                                        <input type="submit" class="btn btn--primary btn--right" id="send" value="New scenario" />
                                     </div>
                                 </form>
 

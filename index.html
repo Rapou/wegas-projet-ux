@@ -139,56 +139,51 @@
                         <fieldset>
                             <legend>Legend</legend>
                             <div class="input input--text">
-                                <label for="inputEmail">Email</label>
-                                <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                                <label class="input__label" for="name">Login</label>
+                                <input class="input__entry" type="text" class="form-control" id="name" placeholder="Enter your login">
                             </div>
                             <div class="input input--password">
-                                <label for="inputPassword" class="control-label">Password</label>
-                                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                <label class="input__label" for="password">Scenario name</label>
+                                <input class="input__entry" type="password" class="form-control" id="password" placeholder="Enter your pass">
                             </div>
                             <div class="input input--checkbox">
-                                <input type="checkbox" id="checkMe">
-                                <label for="checkMe">
-                                    <span class="checkbox__box"></span>
-                                    <span class="checkbox__label">Checkbox</span>
-                                </label>
+                                <div class="input__entry">
+                                    <input type="checkbox" id="checkMe">
+                                    <label for="checkMe"><span></span>Check the checkbox</label>                                  
+                                </div>
                             </div>
                             <div class="input input--textarea">
-                                <label for="textArea" class="control-label">Textarea</label>
-                                <textarea id="textArea"></textarea>
+                                <label class="input__label" for="textArea">Textarea</label>
+                                <textarea class="input__entry" id="textArea"></textarea>
                             </div>
-                            <div class="input input--radios">
-                                <label>Bouton radio</label>
-                                <div class="input--radios__selection">
+                            <div class="input input--radios-group">
+                                <label class="input__label">Bouton radio </label>
+                                <div class="input__entry">
                                     <div class="input__radio">
-                                        <input type="radio" name="optionsRadios" id="optRadio1" value="option1" checked="">
-                                        <label for="optRadio1">
-                                            <span class="checkbox__box"></span>
-                                            <span class="checkbox__label">Option one is this</span>
-                                        </label>
+                                        <input type="radio" id="btnradio" name="radio" value="2" checked />
+                                        <label for="btnradio"><span></span>Option one is this</label>
                                     </div>
                                     <div class="input__radio">
-                                        <input type="radio" name="optionsRadios" id="optRadio1" value="option2" checked="">
-                                        <label for="optRadio1">
-                                            <span class="checkbox__box"></span>
-                                            <span class="checkbox__label">Other option is here</span>
-                                        </label>
+                                        <input type="radio" id="btnradio2" name="radio" value="1" />
+                                        <label for="btnradio2"><span></span>Other option is here</label>
                                     </div>
                                 </div>
                             </div>
-                            <div>
-                                <label for="select" class="control-label">Selects</label>
-                                <select class="form-control" id="select">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
+                            <div class="input input--select">
+                                <label class="input__label" for="select">Selects</label>
+                                <div class="input__entry">
+                                    <select id="select">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <button type="reset" class="btn btn-default">Cancel</button>
-                                <button type="submit" class="btn btn-info">Submit</button>
+                            <div class="input input--submit">
+                                <button type="submit" class="btn btn--info btn--right">Submit</button>
+                                <button type="reset" class="btn btn--default btn--right">Cancel</button>
                             </div>
                         </fieldset>
                     </form>
@@ -222,13 +217,13 @@
             <h1>Card</h1>
             <div class="row">
                 <div class="col-md-5">
-                    <div class="card">
+                    <div class="card card--inline">
                         <p>Card Description</p>
                     </div>
-                    <div class="card">
+                    <div class="card card--inline">
                         <h4>Card Titre</h4>
                     </div>
-                    <div class="card">
+                    <div class="card card--inline">
                         <div class="card__description">
                             <h4>Card Titre</h4>
                             <p>Card Description</p>
@@ -236,7 +231,7 @@
                     </div>
                 </div>
                 <div class="col-md-5 col-md-offset-2">
-                    <div class="card">
+                    <div class="card card--inline">
                         <div class="card__illustration">
                             <img src="assets/img/proggame-thumb-1.png" />
                         </div>
@@ -245,7 +240,7 @@
                             <p>Card Description</p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card card--inline">
                         <div class="card__illustration">
                             <img src="assets/img/proggame-thumb-1.png" />
                         </div>
@@ -259,7 +254,7 @@
                             <li class="action"><a href="#" class="btn btn--icon btn--archive"><span class="label">Archive</span></a></li>
                         </ul>
                     </div>
-                    <div class="card card--archive">
+                    <div class="card card--inline card--archive">
                         <div class="card__illustration"></div>
                         <div class="card__description">
                             <h4>Card Titre</h4>
@@ -274,7 +269,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="card">
+                    <div class="card card--inline">
                         <div class="card__illustration">
                             <img src="assets/img/proggame-thumb-1.png" />
                         </div>
@@ -292,7 +287,7 @@
                             <li class="action"><a href="#" class="btn btn--icon btn--archive"><span class="label">Archive</span></a></li>
                         </ul>
                     </div>
-                    <div class="card">
+                    <div class="card  card--inline">
                         <div class="card__illustration">
                             <img src="assets/img/proggame-thumb-1.png" />
                         </div>

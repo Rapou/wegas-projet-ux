@@ -1,6 +1,8 @@
 %initIconBtn{
     width:32px;
     height:32px;
+    margin:4px;
+
     &:after{
         display:block;
         position:absolute;
@@ -32,14 +34,15 @@
 }
 
 @mixin setIconBtn($icon, $clr:$default-color, $clrHover:$white, $iconSize:16px){
-    @extend %initIconBtn;
     background-color:$white;
     border:solid 1px $white;
+    
     &:after{
         font-size:$iconSize;
         color:$clr;
         content:$icon;
     }
+    
     &:hover{
         border:solid 1px darken($clr, 10%);
         background:$clr;

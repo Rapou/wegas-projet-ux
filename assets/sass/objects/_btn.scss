@@ -13,6 +13,10 @@
     -webkit-user-select: none;
     outline: none;
 
+    &.btn--right{
+        float:right;
+    }
+
     &:hover, &:active, &:focus{
         color:$white;
         text-decoration:none;
@@ -22,6 +26,8 @@
         color:$white;
         text-decoration:none;
     }
+
+
     &.btn--default{
         @include setBtn($default-color-button);
     }
@@ -43,22 +49,16 @@
     }
     &.btn--icon{
         @include setBtn($white);
-        width:32px;
-        height:32px;
-        line-height:32px;
-        margin:4px;
+        @extend %initIconBtn;
         &.btn--trash{
             @include setIconBtn($fa-var-trash, $danger-color)
         }
-
         &.btn--archive{
             @include setIconBtn($fa-var-archive, lighten($default-color-button, 10%))
         }
-        
         &.btn--manage{
             @include setIconBtn($fa-var-tachometer, $secondary-color, $iconSize:18px)
         }
-        
         &.btn--play{
             @include setIconBtn($fa-var-play, $secondary-color)
         }
