@@ -1,3 +1,25 @@
+%initIconBtn{
+    width:32px;
+    height:32px;
+    &:after{
+        display:block;
+        position:absolute;
+        left:0px;
+        top:0px;
+        width:32px;
+        height:32px;
+        line-height:32px;
+        text-align:center;
+        font-family:"FontAwesome";
+        font-weight:normal;
+    }
+    &:hover{
+        width:32px;
+        border-radius:16px;
+        opacity:0.8;
+    }
+}
+
 @mixin setBtn($base-color){
     background-color:$base-color;
     &:hover, &:active &:focus{
@@ -10,31 +32,17 @@
 }
 
 @mixin setIconBtn($icon, $clr:$default-color, $clrHover:$white, $iconSize:16px){
-    width:32px;
-    height:32px;
+    @extend %initIconBtn;
     background-color:$white;
     border:solid 1px $white;
     &:after{
-        display:block;
-        position:absolute;
-        left:0px;
-        top:0px;
-        width:32px;
-        height:32px;
-        line-height:32px;
-        text-align:center;
-        font-family:"FontAwesome";
-        font-weight:normal;
         font-size:$iconSize;
         color:$clr;
         content:$icon;
     }
     &:hover{
-        width:32px;
         border:solid 1px darken($clr, 10%);
         background:$clr;
-        border-radius:16px;
-        opacity:0.8;
         &:after{
             color:$clrHover;
         }

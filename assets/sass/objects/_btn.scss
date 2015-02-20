@@ -62,6 +62,12 @@
         &.btn--play{
             @include setIconBtn($fa-var-play, $secondary-color)
         }
+        &.btn--edit{
+            @include setIconBtn($fa-var-pencil, $secondary-color)
+        }
+        &.btn--copy{
+            @include setIconBtn($fa-var-folder,  lighten($default-color-button, 10%))
+        }
         &.btn--users{
             @include setIconBtn($fa-var-users, lighten($default-color-button, 10%))
         }
