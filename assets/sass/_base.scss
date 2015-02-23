@@ -16,12 +16,8 @@ body{
     -moz-perspective: 1200px;
     perspective: 1200px;
     overflow-x:hidden;
-    overflow-y:hidden;
+    overflow-y:auto;
     -webkit-backface-visibility: hidden;
-    @media screen and (max-width: $screen-sm) {
-        overflow-x:hidden;
-        overflow-y:auto;
-    }
 
     &.guideline{
         overflow:auto;

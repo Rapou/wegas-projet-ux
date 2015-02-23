@@ -126,10 +126,12 @@ $zone-player-secondary:(100%-$zone-player-primary);
             border-left:solid 1px $border;
             background:#F9F9F9;
             z-index:2;
+            overflow-x:hidden;
+            overflow-y:auto;
             .partial--list-sessions{
                 display:block;
                 top:120px;
-                @include container-fixed();
+                @include container-fixed(128px);
 
 
                 .partial--played-session{
@@ -148,7 +150,7 @@ $zone-player-secondary:(100%-$zone-player-primary);
                             width:$grid-gutter-width * 2;
                             height:$grid-gutter-width * 2;
                             margin:$grid-gutter-width/2 auto;
-                            border-radius: 5px;
+                            border-radius: 50%;
                             overflow:hidden;
                             img{
                                 position: absolute;
@@ -196,4 +198,81 @@ $zone-player-secondary:(100%-$zone-player-primary);
             }
         }
     }
+    &.partial--choose-group{
+        display:block;
+        position:absolute;
+        width:$zone-player-secondary;
+        height:100%;
+        min-height: 440px;
+        top:0px;
+        left:0px;
+        z-index:3;
+        h3{
+            position:absolute;
+            display:block;
+            width:100%;
+            top:140px - 0.5*$grid-gutter-width;
+            margin:0px;
+            padding:$grid-gutter-width;
+            text-align:right;
+        }
+        .session-name{
+            position:absolute;
+            display:block;
+            width:100%;
+            top:110px - 0.5*$grid-gutter-width;
+            margin:0px;
+            padding:$grid-gutter-width;
+            text-align:right;
+        }
+        .input--text{
+            position:absolute;
+            display:block;
+            width:280px;
+            top:50%;
+            margin-top:-24px;
+            right:32px;
+        }
+
+    }
+
+    &.partial--group{
+        display:block;
+        position:absolute;
+        width:$zone-player-primary;
+        height:100%;
+        min-height: 440px;
+        top:0px;
+        left:$zone-player-secondary;
+        border-left:solid 1px $border;
+        background:#F9F9F9;
+        z-index:2;
+        overflow-x:hidden;
+        overflow-y:auto;
+        .message{
+            @include container-fixed(128px);
+            position:absolute;
+            display:block;
+            width:100%;
+            top:50%;
+            margin-top:-12px;
+            left:0px;
+            font-weight:500;
+            a{
+                display:inline;
+                float:none;
+                margin-left:32px;
+            }
+        }
+        .partial--group--list{
+            position:absolute;
+            display:block;
+width:100%;
+            top:50%;
+            @include container-fixed(128px);
+            background:white;
+        }
+    }
+
+    
 }

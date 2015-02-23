@@ -3766,12 +3766,8 @@ body {
   -webkit-perspective: 1200px;
   perspective: 1200px;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto;
   -webkit-backface-visibility: hidden; }
-  @media screen and (max-width: 768px) {
-    body {
-      overflow-x: hidden;
-      overflow-y: auto; } }
   body.guideline {
     overflow: auto; }
 
@@ -4138,14 +4134,16 @@ input[type="checkbox"] + label {
     left: 30%;
     border-left: solid 1px #d7d7d7;
     background: #F9F9F9;
-    z-index: 2; }
+    z-index: 2;
+    overflow-x: hidden;
+    overflow-y: auto; }
     .partial.partial--newest-session.v2 .partial--list-sessions {
       display: block;
       top: 120px;
       margin-right: auto;
       margin-left: auto;
-      padding-left: 16px;
-      padding-right: 16px; }
+      padding-left: 64px;
+      padding-right: 64px; }
       .partial.partial--newest-session.v2 .partial--list-sessions:before, .partial.partial--newest-session.v2 .partial--list-sessions:after {
         content: " ";
         display: table; }
@@ -4179,7 +4177,7 @@ input[type="checkbox"] + label {
             width: 64px;
             height: 64px;
             margin: 16px auto;
-            border-radius: 5px;
+            border-radius: 50%;
             overflow: hidden; }
             .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session .partial__illustration .illustration img {
               position: absolute;
@@ -4223,6 +4221,87 @@ input[type="checkbox"] + label {
             float: left; }
         .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session:last-child .partial__description, .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session:last-child .partial__actions {
           border: none; }
+  .partial.partial--choose-group {
+    display: block;
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    min-height: 440px;
+    top: 0px;
+    left: 0px;
+    z-index: 3; }
+    .partial.partial--choose-group h3 {
+      position: absolute;
+      display: block;
+      width: 100%;
+      top: 124px;
+      margin: 0px;
+      padding: 32px;
+      text-align: right; }
+    .partial.partial--choose-group .session-name {
+      position: absolute;
+      display: block;
+      width: 100%;
+      top: 94px;
+      margin: 0px;
+      padding: 32px;
+      text-align: right; }
+    .partial.partial--choose-group .input--text {
+      position: absolute;
+      display: block;
+      width: 280px;
+      top: 50%;
+      margin-top: -24px;
+      right: 32px; }
+  .partial.partial--group {
+    display: block;
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    min-height: 440px;
+    top: 0px;
+    left: 30%;
+    border-left: solid 1px #d7d7d7;
+    background: #F9F9F9;
+    z-index: 2;
+    overflow-x: hidden;
+    overflow-y: auto; }
+    .partial.partial--group .message {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 64px;
+      padding-right: 64px;
+      position: absolute;
+      display: block;
+      width: 100%;
+      top: 50%;
+      margin-top: -12px;
+      left: 0px;
+      font-weight: 500; }
+      .partial.partial--group .message:before, .partial.partial--group .message:after {
+        content: " ";
+        display: table; }
+      .partial.partial--group .message:after {
+        clear: both; }
+      .partial.partial--group .message a {
+        display: inline;
+        float: none;
+        margin-left: 32px; }
+    .partial.partial--group .partial--group--list {
+      position: absolute;
+      display: block;
+      width: 100%;
+      top: 50%;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 64px;
+      padding-right: 64px;
+      background: white; }
+      .partial.partial--group .partial--group--list:before, .partial.partial--group .partial--group--list:after {
+        content: " ";
+        display: table; }
+      .partial.partial--group .partial--group--list:after {
+        clear: both; }
 
 .card {
   position: relative;
