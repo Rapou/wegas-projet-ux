@@ -1,3 +1,6 @@
+$zone-player-primary:70%;
+$zone-player-secondary:(100%-$zone-player-primary);
+
 .partial{
     display:block;
     position:relative;
@@ -9,6 +12,12 @@
         border-top:solid 7px $primary-color;
         border-bottom:solid 1px $border;
         background:$white;
+
+        &.v2{
+             border-bottom:none;
+             @include material-shadow();
+            z-index:4;
+        }
         
         .partial--menu__workspaces{
             float:left;
@@ -34,7 +43,15 @@
     }
 
     &.partial--workspace{
-        padding-top:72px;
+        &.v2{
+            display:block;
+            position:absolute;
+            width:100%;
+            height:100%;
+            top:0px;
+            left:0px;
+            z-index:3;
+        }
     }
 
     &.partial--create-session{
@@ -46,13 +63,110 @@
         @include make-md-column-offset(2);
 
     }
+
     &.partial--join-session{
-        @include make-md-column(4);
-        @include make-md-column-offset(0);
+        &.v1{
+            @include make-md-column(4);
+            @include make-md-column-offset(0);
+        }
+        &.v2{
+            display:block;
+            position:absolute;
+            width:$zone-player-secondary;
+            height:100%;
+            min-height: 440px;
+            top:0px;
+            left:0px;
+            z-index:3;
+            > * {
+            
+            }
+            h3{
+                position:absolute;
+                display:block;
+                width:100%;
+                top:140px - 0.5*$grid-gutter-width;
+                margin:0px;
+                padding:$grid-gutter-width;
+                text-align:right;
+            }
+            h4{
+                position:absolute;
+                display:block;
+                width:100%;
+                bottom:96px;
+                text-align:right;
+                margin:0px;
+                padding:($grid-gutter-width - 12) $grid-gutter-width;
+            }
+            .input--new{
+                position:absolute;
+                display:block;
+                bottom:96px;
+                right:-24px;
+
+                &.active{
+                    right:-296px;
+                }
+            }
+
+        }
     }
     &.partial--newest-session{
-        @include make-md-column(6);
-        @include make-md-column-offset(1);
+        &.v1{
+            @include make-md-column(6);
+            @include make-md-column-offset(1);
+        }
+        &.v2{
+            display:block;
+            position:absolute;
+            width:$zone-player-primary;
+            height:100%;
+            min-height: 440px;
+            top:0px;
+            left:$zone-player-secondary;
+            border-left:solid 1px $border;
+            background:#F9F9F9;
+            z-index:2;
+
+
+            .partial--played-session{
+                display:block;
+                position:absolute;
+                top:140px - $grid-gutter-width;
+                width:100%;
+                height:64px;
+                .partial__illustration{
+                    display:block;
+                    position:relative;
+                    width:$grid-gutter-width * 2;
+                    height:$grid-gutter-width * 2;
+                    margin:$grid-gutter-width (2*$grid-gutter-width);
+                    float:left;
+                    border-radius: 6px;
+                    overflow:hidden;
+                    img{
+                        position: absolute;
+                        border:none;
+                        height:100%;
+                        width:auto;
+                        margin:0px;
+                        padding:0px;
+                        left: 50%;
+                        top: 50%;
+                        -webkit-transform: translateY(-50%) translateX(-50%);
+                    }
+                }
+                .partial__description{
+                    width:480px;
+                    float:left;
+                    margin:$grid-gutter-width 0px;
+                    h3{
+                        width:100%;
+                    }
+                }
+            }
+        }
     }
 
 }

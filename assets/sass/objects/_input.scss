@@ -1,3 +1,5 @@
+$taille-btn: 48px;
+
 .input{
     @include make-row(0);
     margin:4px 0px;
@@ -97,6 +99,61 @@
                     border-radius:50%;
                 }
             }
+        }
+    }
+
+    &.input--new{
+        display:block;
+        position:absolute;
+        width:$taille-btn;
+        height:$taille-btn;
+        border-radius: $taille-btn/2;
+        overflow:hidden;
+        transition:.4s;
+        @include material-shadow(2);
+
+        .input__group{
+            display:block;
+            position:absolute;
+            width:320px;
+            height:$taille-btn;
+            top:0px;
+            right:0px;
+            input[type="text"]{
+                width:272px;
+                height:$taille-btn;
+                float:left;
+                padding:0px $grid-gutter-width;
+                margin:0px;
+                border:none;
+                outline: none;
+            }
+            input[type="submit"], a{
+                width:48px;
+                height:48px;
+                float:right;
+                padding:0px;
+                margin:0px;
+                border-radius: 0px;
+                &:before{
+                    content:$fa-var-plus;
+                    width:48px;
+                    height:48px;
+                    display:block;
+                    position:absolute;
+                    top:0px;
+                    left:0px;
+                    text-align:center;
+                    line-height:48px;
+                    font-size:14px;
+                    font-family: "FontAwesome";
+                }
+            }
+        }
+
+        &.active{
+            width:320px;
+            transition:.4s;
         }
     }
 }
