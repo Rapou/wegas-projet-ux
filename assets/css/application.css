@@ -4141,49 +4141,87 @@ input[type="checkbox"] + label {
     z-index: 2; }
     .partial.partial--newest-session.v2 .partial--list-sessions {
       display: block;
-      position: absolute;
-      padding: 16px 0px;
-      top: 104px;
-      width: 100%; }
+      top: 120px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 16px;
+      padding-right: 16px; }
+      .partial.partial--newest-session.v2 .partial--list-sessions:before, .partial.partial--newest-session.v2 .partial--list-sessions:after {
+        content: " ";
+        display: table; }
+      .partial.partial--newest-session.v2 .partial--list-sessions:after {
+        clear: both; }
       .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session {
         display: block;
         position: relative;
-        width: 100%;
-        height: 64px;
+        margin-left: -16px;
+        margin-right: -16px;
+        height: 96px;
         clear: both; }
+        .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session:before, .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session:after {
+          content: " ";
+          display: table; }
+        .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session:after {
+          clear: both; }
         .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session .partial__illustration {
           display: block;
           position: relative;
-          width: 64px;
-          height: 64px;
-          margin: 16px 64px;
-          float: left;
-          border-radius: 6px;
-          overflow: hidden; }
-          .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session .partial__illustration img {
-            position: absolute;
-            border: none;
-            height: 100%;
-            width: auto;
-            margin: 0px;
-            padding: 0px;
-            left: 50%;
-            top: 50%;
-            -webkit-transform: translateY(-50%) translateX(-50%); }
-        .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session .partial__description {
-          width: 560px;
-          float: left;
-          padding: 16px 0px 16px 0px;
+          min-height: 1px;
+          padding-left: 16px;
+          padding-right: 16px; }
+          @media (min-width: 768px) {
+            .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session .partial__illustration {
+              float: left;
+              width: 16.66667%; } }
+          .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session .partial__illustration .illustration {
+            display: block;
+            position: relative;
+            width: 64px;
+            height: 64px;
+            margin: 16px auto;
+            border-radius: 5px;
+            overflow: hidden; }
+            .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session .partial__illustration .illustration img {
+              position: absolute;
+              border: none;
+              height: 100%;
+              width: auto;
+              margin: 0px;
+              padding: 0px;
+              left: 50%;
+              top: 50%;
+              -webkit-transform: translateY(-50%) translateX(-50%); }
+        .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session .partial__actions, .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session .partial__description {
           border-bottom: solid 1px #d7d7d7; }
-          .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session .partial__description .description__infos {
-            width: 380px;
+        .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session .partial__description {
+          position: relative;
+          min-height: 1px;
+          padding-left: 16px;
+          padding-right: 16px;
+          height: 96px;
+          padding-top: 16px;
+          padding-bottom: 16px; }
+          @media (min-width: 768px) {
+            .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session .partial__description {
+              float: left;
+              width: 50%; } }
+          .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session .partial__description p {
+            margin: 0px;
+            padding: 0px; }
+        .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session .partial__actions {
+          position: relative;
+          min-height: 1px;
+          padding-left: 16px;
+          padding-right: 16px;
+          height: 96px; }
+          @media (min-width: 768px) {
+            .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session .partial__actions {
+              float: left;
+              width: 33.33333%; } }
+          .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session .partial__actions a.btn {
+            margin: 24px;
             float: left; }
-          .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session .partial__description .description__actions {
-            width: 160px;
-            float: right; }
-            .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session .partial__description .description__actions a.btn {
-              float: left; }
-        .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session:last-child .partial__description {
+        .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session:last-child .partial__description, .partial.partial--newest-session.v2 .partial--list-sessions .partial--played-session:last-child .partial__actions {
           border: none; }
 
 .card {

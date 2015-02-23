@@ -128,59 +128,67 @@ $zone-player-secondary:(100%-$zone-player-primary);
             z-index:2;
             .partial--list-sessions{
                 display:block;
-                position:absolute;
-                padding:$grid-gutter-width/2 0px;
-                top:104px;
-                width:100%;
+                top:120px;
+                @include container-fixed();
 
 
                 .partial--played-session{
                     display:block;
                     position:relative;
-                    width:100%;
-                    height:64px;
+                    @include make-row();
+                    height:96px;
                     clear:both;
+
                     .partial__illustration{
                         display:block;
-                        position:relative;
-                        width:$grid-gutter-width * 2;
-                        height:$grid-gutter-width * 2;
-                        margin:$grid-gutter-width/2 (2*$grid-gutter-width);
-                        float:left;
-                        border-radius: 6px;
-                        overflow:hidden;
-                        img{
-                            position: absolute;
-                            border:none;
-                            height:100%;
-                            width:auto;
-                            margin:0px;
-                            padding:0px;
-                            left: 50%;
-                            top: 50%;
-                            -webkit-transform: translateY(-50%) translateX(-50%);
+                        @include make-sm-column(2);
+                        .illustration{
+                            display:block;
+                            position:relative;
+                            width:$grid-gutter-width * 2;
+                            height:$grid-gutter-width * 2;
+                            margin:$grid-gutter-width/2 auto;
+                            border-radius: 5px;
+                            overflow:hidden;
+                            img{
+                                position: absolute;
+                                border:none;
+                                height:100%;
+                                width:auto;
+                                margin:0px;
+                                padding:0px;
+                                left: 50%;
+                                top: 50%;
+                                -webkit-transform: translateY(-50%) translateX(-50%);
+                            }
                         }
                     }
-                    .partial__description{
-                        width:560px;
-                        float:left;
-                        padding:$grid-gutter-width/2 0px $grid-gutter-width/2 0px;
+                    .partial__actions, .partial__description {
                         border-bottom:solid 1px $border;
-                        .description__infos{
-                            width:380px;
-                            float:left;
+                    }
+
+                    .partial__description{
+                        @include make-sm-column(6);
+                        height:96px;
+                        padding-top:$grid-gutter-width/2;
+                        padding-bottom:$grid-gutter-width/2;
+                        p{
+                            margin:0px;
+                            padding:0px;
                         }
-                        .description__actions{
-                            width:160px;
-                            float:right;
-                            a.btn{ 
-                                float:left; 
-                            }
+                    }
+
+                    .partial__actions{
+                        @include make-sm-column(4);
+                        height:96px;
+                        a.btn{
+                            margin: 3*$grid-gutter-width/4;
+                            float:left; 
                         }
                     }
 
                     &:last-child {
-                        .partial__description{
+                        .partial__description, .partial__actions{
                             border:none;
                         }
                     }
@@ -188,5 +196,4 @@ $zone-player-secondary:(100%-$zone-player-primary);
             }
         }
     }
-
 }
