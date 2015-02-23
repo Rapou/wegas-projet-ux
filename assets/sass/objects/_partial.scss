@@ -14,8 +14,8 @@ $zone-player-secondary:(100%-$zone-player-primary);
         background:$white;
 
         &.v2{
-             border-bottom:none;
-             @include material-shadow();
+            border-bottom:none;
+            @include material-shadow();
             z-index:4;
         }
         
@@ -78,9 +78,7 @@ $zone-player-secondary:(100%-$zone-player-primary);
             top:0px;
             left:0px;
             z-index:3;
-            > * {
-            
-            }
+
             h3{
                 position:absolute;
                 display:block;
@@ -94,7 +92,7 @@ $zone-player-secondary:(100%-$zone-player-primary);
                 position:absolute;
                 display:block;
                 width:100%;
-                bottom:96px;
+                bottom:120px;
                 text-align:right;
                 margin:0px;
                 padding:($grid-gutter-width - 12) $grid-gutter-width;
@@ -102,8 +100,8 @@ $zone-player-secondary:(100%-$zone-player-primary);
             .input--new{
                 position:absolute;
                 display:block;
-                bottom:96px;
-                right:-24px;
+                bottom:64px;
+                right:-49px;
 
                 &.active{
                     right:-296px;
@@ -128,43 +126,65 @@ $zone-player-secondary:(100%-$zone-player-primary);
             border-left:solid 1px $border;
             background:#F9F9F9;
             z-index:2;
-
-
-            .partial--played-session{
+            .partial--list-sessions{
                 display:block;
                 position:absolute;
-                top:140px - $grid-gutter-width;
+                padding:$grid-gutter-width/2 0px;
+                top:104px;
                 width:100%;
-                height:64px;
-                .partial__illustration{
+
+
+                .partial--played-session{
                     display:block;
                     position:relative;
-                    width:$grid-gutter-width * 2;
-                    height:$grid-gutter-width * 2;
-                    margin:$grid-gutter-width (2*$grid-gutter-width);
-                    float:left;
-                    border-radius: 6px;
-                    overflow:hidden;
-                    img{
-                        position: absolute;
-                        border:none;
-                        height:100%;
-                        width:auto;
-                        margin:0px;
-                        padding:0px;
-                        left: 50%;
-                        top: 50%;
-                        -webkit-transform: translateY(-50%) translateX(-50%);
+                    width:100%;
+                    height:64px;
+                    clear:both;
+                    .partial__illustration{
+                        display:block;
+                        position:relative;
+                        width:$grid-gutter-width * 2;
+                        height:$grid-gutter-width * 2;
+                        margin:$grid-gutter-width/2 (2*$grid-gutter-width);
+                        float:left;
+                        border-radius: 6px;
+                        overflow:hidden;
+                        img{
+                            position: absolute;
+                            border:none;
+                            height:100%;
+                            width:auto;
+                            margin:0px;
+                            padding:0px;
+                            left: 50%;
+                            top: 50%;
+                            -webkit-transform: translateY(-50%) translateX(-50%);
+                        }
                     }
-                }
-                .partial__description{
-                    width:480px;
-                    float:left;
-                    margin:$grid-gutter-width 0px;
-                    h3{
-                        width:100%;
+                    .partial__description{
+                        width:560px;
+                        float:left;
+                        padding:$grid-gutter-width/2 0px $grid-gutter-width/2 0px;
+                        border-bottom:solid 1px $border;
+                        .description__infos{
+                            width:380px;
+                            float:left;
+                        }
+                        .description__actions{
+                            width:160px;
+                            float:right;
+                            a.btn{ 
+                                float:left; 
+                            }
+                        }
                     }
-                }
+
+                    &:last-child {
+                        .partial__description{
+                            border:none;
+                        }
+                    }
+                }   
             }
         }
     }
