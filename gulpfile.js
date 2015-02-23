@@ -31,12 +31,15 @@ gulp.task('sass', function () {
             cascade: false
         }))
         .pipe(gulp.dest('assets/css'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
         .pipe(rename({
             suffix: '.min'
         }))
         .pipe(minifycss())
         .pipe(gulp.dest('assets/css'))
-        .pipe(reload({
+        .pipe(browserSync.reload({
             stream: true
         }));
 });
@@ -46,5 +49,6 @@ gulp.task('sass', function () {
 // - Surveille les fichiers sass et html
 gulp.task('default', ['sass', 'browser-sync'], function () {
     gulp.watch("assets/sass/**/*.scss", ['sass']);
+    gulp.watch("assets/sass/**/**/*.scss", ['sass']);
     gulp.watch("*.html", ['bs-reload']);
 });
