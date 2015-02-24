@@ -269,7 +269,7 @@ $zone-joingrp-secondary:100%-$zone-joingrp-primary;
             }
         }
         .partial--group__list{
-            @include container-fixed(64px);
+            @include container-fixed(0px);
             position:relative;
             display:block;
             height:100%;
@@ -279,31 +279,54 @@ $zone-joingrp-secondary:100%-$zone-joingrp-primary;
             overflow-y:auto;
             overflow-x: auto;
             .list__head{
-                @include make-row();
-                padding-top:32px;
+                @include make-row(0px);
+                padding-top:24px;
                 padding-bottom:16px;
-                background:blue;
+                background:$primary-color;
+                border-bottom:solid 1px lighten($primary-color, 10%);
+                margin-bottom:32px;
                 h4{
                     @include make-md-column-offset(2);
-                    @include make-md-column(10);
-                    font-size:24px;
+                    @include make-md-column(10, 0px);
+                    font-size:24px; 
+                    line-height:48px;
+                    font-weight: 300;
+                    color:$white;
                 }
             }
             .list__item{
-                @include make-row();
+                @include make-row(0px);
                 height:80px;
-                padding-top:16px;
-                padding-bottom:16px;
-                background:red;
                 .item__illustration{
                     @include make-md-column(2);
-                    height:48px;
-                    background:pink;
+                    height:80px;
+                    padding-bottom:16px;
+                    padding-top:16px;
                 }
                 .item__infos{
-                    @include make-md-column(8);
-                    height:48px;
-                    background:pink;
+                    @include make-md-column(8, 0px);
+                    height:80px;
+                    padding-top:16px;
+                    padding-bottom:16px;
+                    line-height:48px;
+                    font-size:18px;
+                    border-bottom:solid 1px $border;
+                }
+                .item__actions{
+                    @include make-md-column(2);
+                    height:80px;
+                    padding-bottom:16px;
+                    padding-top:16px;
+                    .btn{
+                        margin:0px auto;
+                        float:none;
+                    }
+
+                }
+                &:last-child{
+                    .item__infos{
+                        border-bottom:none;
+                    }
                 }
             }
 
