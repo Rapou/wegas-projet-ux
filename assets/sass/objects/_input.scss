@@ -43,6 +43,7 @@ $taille-btn: 48px;
             height:3*$input-height;
         }
     }
+
     &.input--select{
         @extend %default-input;
         .input__entry{
@@ -165,6 +166,13 @@ $taille-btn: 48px;
             width:320px;
             transition:.4s;
         }
+    }
+    &.input--big{
+        height:$input-big-height;
+        .input__entry{
+                height:$input-big-height;
+                padding:0px 16px;
+            }
     }
 }
 

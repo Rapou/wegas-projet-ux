@@ -106,9 +106,9 @@
             background-color:$default-color;
             transition:0.5s;
         }
-        &.btn--shadow{
+    }
+    &.btn--shadow{
             @include material-shadow(2);
         }
-    }
 }
 

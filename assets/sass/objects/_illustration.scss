@@ -1,0 +1,43 @@
+.illustration{
+	display:block;
+    position:relative;
+    padding:0px;
+    margin:0px;
+    overflow:hidden;
+    text-align:center;
+	background:green;
+    img{
+	    position: absolute;
+	    border:none;
+	    width:auto;
+	    height:100%;
+	    margin:0px;
+	    padding:0px;
+	    left: 50%;
+	    top: 50%;
+	    -webkit-transform: translateY(-50%) translateX(-50%);
+	}
+
+	&.illustration--small{
+		width:48px;
+		height:48px;
+	}
+
+	&.illustration--medium{
+		width:64px;
+		height:64px;
+	}
+	&.illustration--big{
+		width:96px;
+		height:96px;
+	}
+	&.illustration--round{
+		border-radius:50%;
+	}
+	&.illustration--round-square{
+		border-radius:5px;
+	}
+	&.illustration--center{
+		margin:0px auto;
+	}
+}

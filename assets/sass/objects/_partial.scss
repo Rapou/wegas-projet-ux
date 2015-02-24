@@ -1,5 +1,8 @@
 $zone-player-primary:70%;
 $zone-player-secondary:(100%-$zone-player-primary);
+$zone-joingrp-primary:60%;
+$zone-joingrp-secondary:100%-$zone-joingrp-primary;
+
 
 .partial{
     display:block;
@@ -201,7 +204,7 @@ $zone-player-secondary:(100%-$zone-player-primary);
     &.partial--choose-group{
         display:block;
         position:absolute;
-        width:$zone-player-secondary;
+        width:$zone-joingrp-secondary;
         height:100%;
         min-height: 440px;
         top:0px;
@@ -239,11 +242,12 @@ $zone-player-secondary:(100%-$zone-player-primary);
     &.partial--group{
         display:block;
         position:absolute;
-        width:$zone-player-primary;
+        width:$zone-joingrp-primary;
         height:100%;
         min-height: 440px;
         top:0px;
-        left:$zone-player-secondary;
+        left:$zone-joingrp-secondary;
+        padding:112px 64px 64px 64px;
         border-left:solid 1px $border;
         background:#F9F9F9;
         z-index:2;
@@ -264,13 +268,45 @@ $zone-player-secondary:(100%-$zone-player-primary);
                 margin-left:32px;
             }
         }
-        .partial--group--list{
-            position:absolute;
+        .partial--group__list{
+            @include container-fixed(64px);
+            position:relative;
             display:block;
-width:100%;
-            top:50%;
-            @include container-fixed(128px);
+            height:100%;
             background:white;
+            @include material-shadow(2);
+            border-radius:2px;
+            overflow-y:auto;
+            overflow-x: auto;
+            .list__head{
+                @include make-row();
+                padding-top:32px;
+                padding-bottom:16px;
+                background:blue;
+                h4{
+                    @include make-md-column-offset(2);
+                    @include make-md-column(10);
+                    font-size:24px;
+                }
+            }
+            .list__item{
+                @include make-row();
+                height:80px;
+                padding-top:16px;
+                padding-bottom:16px;
+                background:red;
+                .item__illustration{
+                    @include make-md-column(2);
+                    height:48px;
+                    background:pink;
+                }
+                .item__infos{
+                    @include make-md-column(8);
+                    height:48px;
+                    background:pink;
+                }
+            }
+
         }
     }
 
