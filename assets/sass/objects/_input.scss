@@ -112,7 +112,6 @@ $taille-btn: 48px;
         overflow:hidden;
         transition:.4s;
         border:solid 1px $border;
- //       @include material-shadow(1);
 
         .input__group{
             display:block;
@@ -167,12 +166,70 @@ $taille-btn: 48px;
             transition:.4s;
         }
     }
+    &.input--join{
+        display:block;
+        position:absolute;
+        width:320px;
+        height:$taille-btn;
+        border-radius:5px;
+        overflow:hidden;
+        transition:.4s;
+        border:solid 1px $border;
+
+        .input__group{
+            display:block;
+            position:absolute;
+            width:320px;
+            height:$taille-btn;
+            top:0px;
+            right:0px;
+            
+            input[type="text"]{
+                width:272px;
+                height:$taille-btn;
+                line-height: $taille-btn;
+                background-color:$background-default;
+                transition: 0.8s;
+                float:left;
+                outline: none;
+                border:none;
+                margin:0px;
+                padding:0px 16px;
+                &:focus, &.focus{
+                    background-color:$white;
+                    outline: none;
+                }
+            }
+            a{
+                width:48px;
+                height:48px;
+                float:right;
+                padding:0px;
+                margin:0px;
+                border-radius: 0px;
+                cursor:pointer;
+                &:before{
+                    content:$fa-var-plus;
+                    width:48px;
+                    height:48px;
+                    display:block;
+                    position:absolute;
+                    top:0px;
+                    left:0px;
+                    text-align:center;
+                    line-height:48px;
+                    font-size:14px;
+                    font-family: "FontAwesome";
+                }
+            }
+        }
+    }
     &.input--big{
         height:$input-big-height;
         .input__entry{
-                height:$input-big-height;
-                padding:0px 16px;
-            }
+            height:$input-big-height;
+            padding:0px 16px;
+        }
     }
 }
 

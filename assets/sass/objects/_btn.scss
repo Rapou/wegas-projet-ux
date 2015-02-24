@@ -114,7 +114,7 @@
         }
     }
     &.btn--shadow{
-            @include material-shadow(2);
-        }
+        @include material-shadow(2);
+    }
 }
 

@@ -146,27 +146,9 @@ $zone-joingrp-secondary:100%-$zone-joingrp-primary;
 
                     .partial__illustration{
                         display:block;
+                        padding-top:16px;
+                        padding-bottom:16px;
                         @include make-sm-column(2);
-                        .illustration{
-                            display:block;
-                            position:relative;
-                            width:$grid-gutter-width * 2;
-                            height:$grid-gutter-width * 2;
-                            margin:$grid-gutter-width/2 auto;
-                            border-radius: 50%;
-                            overflow:hidden;
-                            img{
-                                position: absolute;
-                                border:none;
-                                height:100%;
-                                width:auto;
-                                margin:0px;
-                                padding:0px;
-                                left: 50%;
-                                top: 50%;
-                                -webkit-transform: translateY(-50%) translateX(-50%);
-                            }
-                        }
                     }
                     .partial__actions, .partial__description {
                         border-bottom:solid 1px $border;
@@ -228,13 +210,23 @@ $zone-joingrp-secondary:100%-$zone-joingrp-primary;
             padding:$grid-gutter-width;
             text-align:right;
         }
-        .input--text{
-            position:absolute;
-            display:block;
-            width:280px;
-            top:50%;
-            margin-top:-24px;
-            right:32px;
+        .input{
+            &.input--text{
+                position:absolute;
+                display:block;
+                top:0px;
+                width:262px;
+                right:32px;
+                margin-top:264px;
+            }
+            &.input--new{
+                position:absolute;
+                display:block;
+                top:0px;
+                width:320px;
+                right:-16px;
+                margin-top:264px;
+            }
         }
 
     }
@@ -247,26 +239,20 @@ $zone-joingrp-secondary:100%-$zone-joingrp-primary;
         min-height: 440px;
         top:0px;
         left:$zone-joingrp-secondary;
-        padding:112px 64px 64px 64px;
-        border-left:solid 1px $border;
-        background:#F9F9F9;
+        padding:112px 96px 64px 96px;
         z-index:2;
         overflow-x:hidden;
         overflow-y:auto;
         .message{
-            @include container-fixed(128px);
-            position:absolute;
+            position:relative;
             display:block;
-            width:100%;
-            top:50%;
-            margin-top:-12px;
-            left:0px;
-            font-weight:500;
-            a{
-                display:inline;
-                float:none;
-                margin-left:32px;
-            }
+            width:auto;
+            height:48px;
+            border-radius:2px;
+            margin-top:150px;
+            padding:16px 32px;
+            font-weight:300;
+            text-align:center;
         }
         .partial--group__list{
             @include container-fixed(0px);

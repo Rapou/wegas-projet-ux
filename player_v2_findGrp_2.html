@@ -25,8 +25,11 @@
                     <h3>Choose a team</h3>
                     <p class="session-name">Cours MIT42 - Programming game</p>
                     <form>
-                        <div class="input input--text input--label-off input--big">
-                            <input class="input__entry " type="text" class="form-control" id="name" placeholder="Name of your group" value="Le groupe 3" />
+                        <div class="input input--new">
+                            <div class="input__group">
+                                <input type="text" class="form-control" id="name" placeholder="Enter the name of your team" autocomplete="off">
+                                <a class="btn btn--default" id="send"></a>
+                            </div>
                         </div>
                     </form> 
                 </div>
@@ -41,7 +44,7 @@
                                     <img src="assets/img/tardis.png">
                                 </div>
                             </div>
-                            <div class="item__infos"><p>The Doctor</p></div>
+                            <div class="item__infos"><p class="me">Me</p></div>
                             <div class="item__actions"><a class="btn btn--icon btn--exit btn--big"><span class="label">Quit group</span></a></div>
                         </div>
                         <div class="list__item">
