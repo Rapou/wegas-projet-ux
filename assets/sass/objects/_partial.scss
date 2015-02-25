@@ -1,3 +1,5 @@
+// Deprecated to view V2
+
 $zone-player-primary:70%;
 $zone-player-secondary:(100%-$zone-player-primary);
 $zone-joingrp-primary:60%;
@@ -228,7 +230,6 @@ $zone-joingrp-secondary:100%-$zone-joingrp-primary;
                 margin-top:264px;
             }
         }
-
     }
 
     &.partial--group{
@@ -256,11 +257,11 @@ $zone-joingrp-secondary:100%-$zone-joingrp-primary;
         }
         .partial--group__list{
             @include container-fixed(0px);
+            @include material-shadow(2);
             position:relative;
             display:block;
             height:100%;
             background:white;
-            @include material-shadow(2);
             border-radius:2px;
             overflow-y:auto;
             overflow-x: auto;

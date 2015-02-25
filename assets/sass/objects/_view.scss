@@ -13,78 +13,108 @@
 @keyframes moveFromTop {
     from { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
 }
+.v1{
+    .view {
+        display:block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
 
-.view {
-    display:block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+        &.view--active{
+            visibility: visible;
+            z-index: 1;
+        }
+        &.view--ontop{
+            z-index: 999;
+        }
 
-    &.view--active{
-        visibility: visible;
-        z-index: 1;
-    }
-    &.view--ontop{
-        z-index: 999;
-    }
+        &.view--workspace {
+            background-color:$background-default;
+        }
 
-    &.view--workspace {
-        background-color:$background-default;
-    }
-
-    &.view-moveToBottomEasing {
-        -webkit-animation: moveToBottom .7s ease-in-out both;
-        animation: moveToBottom .7s ease-in-out both;
-    }
-    
-    &.view-moveFromTop {
-        -webkit-animation: moveFromTop .6s ease both;
-        animation: moveFromTop .6s ease both;
+        &.view-moveToBottomEasing {
+            -webkit-animation: moveToBottom .7s ease-in-out both;
+            animation: moveToBottom .7s ease-in-out both;
+        }
+        
+        &.view-moveFromTop {
+            -webkit-animation: moveFromTop .6s ease both;
+            animation: moveFromTop .6s ease both;
+        }
     }
 }
 
-/*
-.pt-page-delay100 {
-        -webkit-animation-delay: .1s;
-        animation-delay: .1s;
+.v2{
+    .view{
+        // Styles de positionnements 
+        &.view--main{
+            display:block;
+            position:relative;
+            width:100%;
+            height:100%;
+            @include make-row(0px);
+        }
+        &.view--menu{
+            display:block;
+            position:relative;
+            @include make-row(0px);
+            width:100%;
+            height:48px;
+            z-index:4;
+        }
+
+        &.view--workspace{
+            display:block;
+            position:relative;
+            @include make-row(0px);
+            width:100%;
+            height:calc(100% - 48px);
+            z-index:3;
+        }
+
+
+        @for $i from 1 through 12 {
+            &.view--size-#{$i}{
+                display:block;
+                position:relative;
+                height:100%;
+                @include make-sm-column($i);
+                @include make-xs-column(12);
+            }
+        } 
+
+        // Styles de décorations
+        @for $i from 1 through 3 {
+            .view--reverse-#{nth($levels, $i)} {
+                background-color: nth($backgrounds-levels-reverse, $i);
+            }
+            .view--#{nth($levels, $i)}{
+                background-color: nth($backgrounds-levels, $i);    
+            }
+        }
+
+        @each $position in $positions {
+          .view--separate-#{$position} {
+            border-#{$position}: solid 1px $border;
+          }
+          .view--separate-#{$position}-reverse {
+            border-#{$position}: solid 1px $border-reverse;
+          }
+        }
+        .view--separate-shadow{
+            @include material-shadow(2);
+        }
+    }
 }
-.pt-page-delay180 {
-        -webkit-animation-delay: .180s;
-        animation-delay: .180s;
-}
-.pt-page-delay200 {
-        -webkit-animation-delay: .2s;
-        animation-delay: .2s;
-}
-.pt-page-delay300 {
-        -webkit-animation-delay: .3s;
-        animation-delay: .3s;
-}
-.pt-page-delay400 {
-        -webkit-animation-delay: .4s;
-        animation-delay: .4s;
-}
-.pt-page-delay500 {
-        -webkit-animation-delay: .5s;
-        animation-delay: .5s;
-}
-.pt-page-delay700 {
-        -webkit-animation-delay: .7s;
-        animation-delay: .7s;
-}
-.pt-page-delay1000 {
-        -webkit-animation-delay: 1s;
-        animation-delay: 1s;
-}*/

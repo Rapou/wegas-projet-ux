@@ -1,5 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
 
+$positions: bottom top left right;
+$sizes : small medium big;
+$height-sizes: 48px 64px 96px; // In order : small, medium, big
+
+$levels : bottom middle top;
+
 // Fonts 
 $font-family: "Lato", "Helvetica", "Arial", sans-serif;
 $font-weight-default: 300;
@@ -8,22 +14,30 @@ $font-weight-default: 300;
 $white: #fefefe;
 $primary-color:#FA6942;
 $primary-color-light:#FF7752;
+$primary-color-dark:darken($primary-color, 10%); 
 $secondary-color:#41D2FA;
 $secondary-color-light:#AFEAFA;
 $secondary-color-dark:#38B6D9; 
 
 // ---- Background -----
-$background-default:#f0f0f0; // ebebeb;
+$background-default:#f0f0f0; // ebebeb; A remplacer par lvl bottom
 $background-default-secondary:#F9F9F9;
-$background-reverse:$primary-color;
-$background-reverse-light:$primary-color-light;
 $background-white:$white;
+
+$backgrounds-levels: $background-default $background-default-secondary $background-white; // In order : bottom, middle, top 
+$backgrounds-levels-reverse: lighten($primary-color-light, 10%) $primary-color-light $primary-color; // In order : bottom, middle, top
+
+$background-reverse:$primary-color; // Remplacer par top
+$background-reverse-light:$primary-color-light; // remplacer par bottom 
 
 // ---- Text -----
 $default-color:#272727;
 $default-color-button:#4C4C4C;
 $default-color-light:#BCBCBC;
+
+// ---- Borders ----
 $border:#d7d7d7;
+$border-reverse:$primary-color-dark;
 
 // ---- Infos -----
 $danger-color:#e51c23;
