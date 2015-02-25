@@ -21,36 +21,35 @@
             </div>
             <div class="partial partial--workspace partial--open v2">
                 <div class="partial partial--join-session v2">
-                    <h3>My session</h3>
+                    <h3>My sessions</h3>
                     <h4>Join a new session</h4>
                     <form>
                         <div class="input input--new">
                         <div class="input__group">
-                            <input type="text" class="form-control" id="name" placeholder="Enter a token">
-                            <a class="btn btn--info" id="send"></a>
+                            <input type="text" class="form-control" id="name" placeholder="Enter a token" autocomplete="off">
+                            <a class="btn btn--default" id="send"></a>
                         </div>
                         </div>
-                    </form>
+                    </form> 
                 </div>
                 <div class="partial partial--newest-session v2">
-                    <div class="partial partial--played-session">
-                        <div class="partial__illustration">
-                            <img src="assets/img/proggame-thumb-1.png" />
+                    <div class="partial partial--list-sessions">
+                       <div class="partial partial--played-session">
+                            <div class="partial__illustration">
+                                <div class="illustration illustration--round illustration--medium illustration--center">
+                                    <img src="assets/img/proggame-thumb-1.png" />
+                                </div>
+                            </div>
+                            <div class="partial__description">
+                                    <h4>Cours MIT42 - Programming game</h4>
+                                    <p>Programming game</p>
+                            </div>
+                            <div class="partial__actions">
+                                <a class="btn btn--icon btn--trash btn--big"><span class="label">Remove</span></a>
+                                <a class="btn btn--shadow btn--icon btn--go btn--big"><span class="label">Play</span></a>
+                            </div> 
                         </div>
-                        <div class="partial__description">
-                            <h4>Cours MIT42 - Programming game</h4>
-                            <p>Programming game</p>
-                        </div>
-                    <!--
-                        
-                        
-                        <ul class="card__actions">
-                            <li class="action"><a href="#" class="btn btn--icon btn--play"><span class="label">Monitoring</span></a></li>
-                            <li class="action"><a href="#" class="btn btn--icon btn--users"><span class="label">Manage users</span></a></li>
-                        </ul>
                     </div>
-                    -->
-
                 </div>
             </div>
         </div>
@@ -59,12 +58,6 @@
         <script type="text/javascript">
             $(document).ready(function () {
                 // Rien
-                $(".input--new").on("click", function(e){
-                    e.preventDefault();
-                    e.stopPropagation();
-                    console.log("plop");
-                    $(this).addClass("active");
-                });
             });
         </script>
     </body>

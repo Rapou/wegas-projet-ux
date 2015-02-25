@@ -43,6 +43,7 @@ $taille-btn: 48px;
             height:3*$input-height;
         }
     }
+
     &.input--select{
         @extend %default-input;
         .input__entry{
@@ -105,12 +106,12 @@ $taille-btn: 48px;
     &.input--new{
         display:block;
         position:absolute;
-        width:$taille-btn;
+        width:320px;
         height:$taille-btn;
-        border-radius: $taille-btn/2;
+        border-radius:5px;
         overflow:hidden;
         transition:.4s;
-        @include material-shadow(2);
+        border:solid 1px $border;
 
         .input__group{
             display:block;
@@ -119,14 +120,22 @@ $taille-btn: 48px;
             height:$taille-btn;
             top:0px;
             right:0px;
+            
             input[type="text"]{
                 width:272px;
                 height:$taille-btn;
+                line-height: $taille-btn;
+                background-color:$background-default;
+                transition: 0.8s;
                 float:left;
-                padding:0px $grid-gutter-width;
-                margin:0px;
-                border:none;
                 outline: none;
+                border:none;
+                margin:0px;
+                padding:0px 16px;
+                &:focus, &.focus{
+                    background-color:$white;
+                    outline: none;
+                }
             }
             input[type="submit"], a{
                 width:48px;
@@ -135,6 +144,7 @@ $taille-btn: 48px;
                 padding:0px;
                 margin:0px;
                 border-radius: 0px;
+                cursor:pointer;
                 &:before{
                     content:$fa-var-plus;
                     width:48px;
@@ -154,6 +164,71 @@ $taille-btn: 48px;
         &.active{
             width:320px;
             transition:.4s;
+        }
+    }
+    &.input--join{
+        display:block;
+        position:absolute;
+        width:320px;
+        height:$taille-btn;
+        border-radius:5px;
+        overflow:hidden;
+        transition:.4s;
+        border:solid 1px $border;
+
+        .input__group{
+            display:block;
+            position:absolute;
+            width:320px;
+            height:$taille-btn;
+            top:0px;
+            right:0px;
+            
+            input[type="text"]{
+                width:272px;
+                height:$taille-btn;
+                line-height: $taille-btn;
+                background-color:$background-default;
+                transition: 0.8s;
+                float:left;
+                outline: none;
+                border:none;
+                margin:0px;
+                padding:0px 16px;
+                &:focus, &.focus{
+                    background-color:$white;
+                    outline: none;
+                }
+            }
+            a{
+                width:48px;
+                height:48px;
+                float:right;
+                padding:0px;
+                margin:0px;
+                border-radius: 0px;
+                cursor:pointer;
+                &:before{
+                    content:$fa-var-plus;
+                    width:48px;
+                    height:48px;
+                    display:block;
+                    position:absolute;
+                    top:0px;
+                    left:0px;
+                    text-align:center;
+                    line-height:48px;
+                    font-size:14px;
+                    font-family: "FontAwesome";
+                }
+            }
+        }
+    }
+    &.input--big{
+        height:$input-big-height;
+        .input__entry{
+            height:$input-big-height;
+            padding:0px 16px;
         }
     }
 }

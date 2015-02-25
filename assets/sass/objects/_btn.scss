@@ -10,6 +10,8 @@
     padding:8px 16px;
     margin:4px;
     transition: 0.8s;
+    font-size:12px;
+    text-transform: uppercase;
     -webkit-user-select: none;
     outline: none;
 
@@ -26,7 +28,7 @@
         color:$white;
         text-decoration:none;
     }
-    
+
     &.btn--default{
         @include setBtn($default-color-button);
     }
@@ -47,10 +49,14 @@
         @include setBtn($danger-color);
     }
     &.btn--icon{
-        @include setBtn($white);
+        @include setBtn(none);
         @extend %initIconBtn;
+
         &.btn--trash{
-            @include setIconBtn($fa-var-trash, $danger-color)
+            @include setIconBtn($fa-var-trash, $danger-color, $white)
+        }
+        &.btn--exit{
+            @include setIconBtn($fa-var-user-times, $danger-color, $white)
         }
         &.btn--archive{
             @include setIconBtn($fa-var-archive, lighten($default-color-button, 10%))
@@ -69,6 +75,12 @@
         }
         &.btn--users{
             @include setIconBtn($fa-var-users, lighten($default-color-button, 10%))
+        }
+        &.btn--go{
+            @include setIconBtn($fa-var-play, $white, $white, 16px, $secondary-color)
+        }
+        &.btn--players{
+            @include setIconBtn($fa-var-users, lighten($default-color-button, 10%), $white, 16px, $background-default-secondary)
         }
         &.btn--user{
             @include setIconBtn($fa-var-user)
@@ -100,6 +112,9 @@
             background-color:$default-color;
             transition:0.5s;
         }
+    }
+    &.btn--shadow{
+        @include material-shadow(2);
     }
 }
 

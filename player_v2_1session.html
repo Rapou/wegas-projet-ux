@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="no-js" lang="fr">
+    <head>
+        <title>Web game authoring system - Wegas</title>
+        <!--[if lt IE 9]>
+        <script src="./assets/js/html5shiv.js"></script>
+        <![endif]-->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./assets/css/application.css" /> 
+    </head>
+    <body>
+        <div id="view-player" class="view view--workspace view--active"> 
+            <div class="partial partial--menu partial--open v2">
+            <div class="partial--menu__workspaces"><i class="fa fa-gamepad"></i></div><h2>Player workspace</h2>
+                    <ul class="partial--menu__action">
+                        <li class="action"><a href="#" class="btn btn--icon btn--user"><span class="label">Profil</span></a></li>
+                        <li class="action"><a href="#" class="btn btn--icon btn--sign-out"><span class="label">Logout</span></a></li>
+                    </ul>
+            </div>
+            <div class="partial partial--workspace partial--open v2">
+                <div class="partial partial--join-session v2">
+                    <h3>My sessions</h3>
+                    <h4>Join a new session</h4>
+                    <form>
+                        <div class="input input--new">
+                        <div class="input__group">
+                            <input type="text" class="form-control" id="name" placeholder="Enter a token" autocomplete="off">
+                            <a class="btn btn--default" id="send"></a>
+                        </div>
+                        </div>
+                    </form> 
+                </div>
+                <div class="partial partial--newest-session v2">
+                    <div class="partial partial--list-sessions">
+                       <div class="partial partial--played-session">
+                            <div class="partial__illustration">
+                                <div class="illustration illustration--round illustration--medium illustration--center">
+                                    <img src="assets/img/proggame-thumb-1.png" />
+                                </div>
+                            </div>
+                            <div class="partial__description">
+                                    <h4>Cours MIT42 - Programming game</h4>
+                                    <p>Programming game</p>
+                            </div>
+                            <div class="partial__actions">
+                                <a class="btn btn--icon btn--players btn--big"><span class="label">Manage</span></a>
+                                <a class="btn btn--shadow btn--icon btn--go btn--big"><span class="label">Play</span></a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="assets/js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="assets/js/modernizr.dev.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                // Rien
+            });
+        </script>
+    </body>
+</html>

@@ -1,6 +1,7 @@
 @import "objects/sheet";
 @import "objects/view"; 
 @import "objects/partial";
+@import "objects/illustration"; 
 @import "objects/card"; 
 @import "objects/action"; 
 @import "objects/btn";
@@ -17,3 +18,6 @@
     }
 } 
 
+.me{
+	font-style: italic;
+}
