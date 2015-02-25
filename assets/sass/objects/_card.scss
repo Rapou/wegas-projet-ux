@@ -45,15 +45,16 @@ $block-height:320px;
             top: 50%;
             -webkit-transform: translateY(-50%) translateX(-50%);
         }
-    } 
-    
+    }
+
     .card__description{
-        width:auto;
+        width: 30%;
         height:$inline-height;
         box-sizing: border-box;
-        padding:16px;  
+        padding: 12px;
+        padding-right: 0;
         float:left;
-        
+
         h4{
             padding:0px;
             margin:2px 0px;
@@ -70,27 +71,61 @@ $block-height:320px;
             line-height: 13px;
         }
     }
-    
+
     .card__description--secondary, .card__access{
         display:none;
     }
 
     .card__actions{
+
         float:right;
         display:block;
         position:relative;
         width:auto;
         height:$inline-height;
-        padding:12px;
+        padding: 0;
         margin:0px;
         list-style-type: none;
+
         > *{
             float:left;
         }
     }
-    
+
+    .card__detailled-actions ~ .card__actions {
+        float: left;
+        height: auto;
+    }
+
+    .card__detailled-actions {
+        margin: 0;
+        padding: 12px;
+        list-style-type: none;
+        float: left;
+        width: 45%;
+        width: calc(70% - 64px);
+        li {
+            padding-left: 15px;
+            position: relative;
+            input {
+                position: absolute;
+                left: 0;
+                top: .25em;
+            }
+        }
+        @media screen and (max-width: 670px) {
+            float: none;
+            clear: both;
+            width: 100%;
+            padding: 1em;
+        }
+    }
+
     &.card--inline{
-        height:$inline-height;
+
+        min-height:$inline-height;
+        overflow: auto;
+        clear: both;
 
         .card__illustration{
             width:$inline-height;
@@ -103,14 +138,14 @@ $block-height:320px;
                 height:100%;
             }
         }
-        
+
         .card__access{
             display:none;
             position:relative;
             width:80px;
             float:right;
         }
-        
+
         &.card--extend{
             .card__description--secondary{
                 display:block;

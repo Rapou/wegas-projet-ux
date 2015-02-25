@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html class="no-js" lang="fr">
+<head>
+    <title>Web game authoring system - Wegas</title>
+        <!--[if lt IE 9]>
+        <script src="./assets/js/html5shiv.js"></script>
+        <![endif]-->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./assets/css/application.css" />
+    </head>
+    <body>
+        <div id="view-player" class="view view--workspace view--active">
+            <div class="partial partial--menu partial--open">
+                <div class="partial--menu__workspaces"><a href="#" class="btn btn--icon btn--workspaces"><span class="label">Workspaces</span></a></div>
+                <h2>Scenarist workspace</h2>
+                <ul class="partial--menu__action">
+                    <li class="action"><a href="#" class="btn btn--icon btn--user"><span class="label">Profil</span></a></li>
+                    <li class="action"><a href="#" class="btn btn--icon btn--sign-out"><span class="label">Logout</span></a></li>
+
+                </ul>
+            </div>
+            <div class="partial partial--workspace partial--open">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                        <a class="btn" href="scenarist.html">Go Back</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h3>Add new user - <em>{{Scenario name}}</em></h3>
+                            <form>
+                                <div class="input input--text">
+                                    <label class="input__label" for="name">Share with</label>
+                                    <input class="input__entry" type="text" id="name" placeholder="mail or username">
+                                </div>
+
+                                <div class="input input--submit">
+                                    <input type="submit" class="btn btn--primary btn--right" id="send" value="Share it!" />
+                                </div>
+                            </form>
+
+                        </div>
+
+                        <div class="col-md-6 col-md-offset-1">
+                            <h3>Actual users</h3>
+
+                            <div class="card card--inline">
+                                <div class="card__illustration">
+                                    <img src="https://randomuser.me/api/portraits/med/men/55.jpg" alt="Alvin Price" />
+                                </div>
+                                <div class="card__description">
+                                    <h4>Alvin Price</h4>
+                                    <p>alvin.price@wegas.com</p>
+                                </div>
+                                <ul class="card__detailled-actions">
+                                    <!-- This is definitly not semantically correct but this allow to use benefits of labels with inputs without generating id's -->
+                                    <li><label><input type="checkbox"> Un utilisateur peut effectuer des tâches vraiment complexes qui permettent de faire des trucs super compliqués</label></li>
+                                    <li><label><input type="checkbox" checked> Edit scenario</label></li>
+                                    <li><label><input type="checkbox"> Create scenarios based on this scenario</label></li>
+                                    <li><label><input type="checkbox"> Create games based on this scenario</label></li>
+                                </ul>
+                                <ul class="card__actions">
+                                    <li class="action"><a href="#" class="btn btn--icon btn--trash"><span class="label">Drop</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="card card--inline">
+                                <div class="card__illustration">
+                                    <img src="https://randomuser.me/api/portraits/med/women/31.jpg" alt="Paula Wallace"/>
+                                </div>
+                                <div class="card__description">
+                                    <h4>Paula Wallace</h4>
+                                </div>
+                                <ul class="card__detailled-actions">
+                                    <li><label><input type="checkbox" checked> Edit scenario</label></li>
+                                    <li><label><input type="checkbox" checked> Create scenarios based on this scenario</label></li>
+                                    <li><label><input type="checkbox" checked> Create games based on this scenario</label></li>
+                                </ul>
+                                <ul class="card__actions">
+                                    <li class="action"><a href="#" class="btn btn--icon btn--trash"><span class="label">Drop</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="card card--inline">
+                                <div class="card__illustration">
+                                    <img src="https://randomuser.me/api/portraits/med/men/37.jpg" alt="Tomothy Torres" />
+                                </div>
+                                <div class="card__description">
+                                    <h4>Tomothy Torres</h4>
+                                </div>
+                                <ul class="card__detailled-actions">
+                                    <li><label><input type="checkbox"> Edit scenario</label></li>
+                                    <li><label><input type="checkbox" checked> Create scenarios based on this scenario</label></li>
+                                    <li><label><input type="checkbox" checked> Create games based on this scenario</label></li>
+                                </ul>
+                                <ul class="card__actions">
+                                    <li class="action"><a href="#" class="btn btn--icon btn--trash"><span class="label">Drop</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="card card--inline">
+                                <div class="card__illustration">
+                                    <img src="https://randomuser.me/api/portraits/med/women/49.jpg" alt="Eva Chavez" />
+                                </div>
+                                <div class="card__description">
+                                    <h4>Eva Chavez</h4>
+                                </div>
+                                <ul class="card__detailled-actions">
+                                    <li><label><input type="checkbox" checked> Edit scenario</label></li>
+                                    <li><label><input type="checkbox" checked> Create scenarios based on this scenario</label></li>
+                                    <li><label><input type="checkbox" checked> Create games based on this scenario</label></li>
+                                </ul>
+                                <ul class="card__actions">
+                                    <li class="action"><a href="#" class="btn btn--icon btn--trash"><span class="label">Drop</span></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="assets/js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="assets/js/modernizr.dev.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(document).on('click', 'a.btn.btn--trash', function () {
+                    $(this).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+                        var $element = $(this);
+                        setTimeout(function ()  {
+                            $element.parents('.card').delay(1000).remove();
+                        }, 1000);
+                    })
+                    $(this).parents('.card').addClass('animated bounceOut');
+                });
+            });
+        </script>
+    </body>
+    </html>
