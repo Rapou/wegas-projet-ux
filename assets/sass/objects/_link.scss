@@ -1,4 +1,4 @@
-.link, .link:visited{
+.link{
 	display:inline-block;
 	position:relative;
 	width:auto;
@@ -14,7 +14,7 @@
 	text-decoration: none;
 	transition: .5s;
 
-	&:hover, &.focus, &.link.active{
+	&:hover, &:focus, &:active{
 		color:darken($secondary-color, 20%);
 		cursor:pointer;
 		text-decoration: none;

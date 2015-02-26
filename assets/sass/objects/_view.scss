@@ -105,6 +105,10 @@
             }
         }
 
+        .view--separate-primary {
+            border-top: solid 5px $primary-color;
+        }
+
         @each $position in $positions {
           .view--separate-#{$position} {
             border-#{$position}: solid 1px $border;
@@ -154,6 +158,15 @@
             top:40%;
             padding:0px 64px;
             margin-top:-136px;
+        }
+
+        .view__form--choose-team{
+            @include make-sm-column(6);
+            @include make-sm-column-offset(3);
+            @include make-md-column(4);
+            @include make-md-column-offset(4);
+            margin-top:128px;
+
         }
 
     }

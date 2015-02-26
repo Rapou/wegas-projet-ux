@@ -7,12 +7,12 @@
         <![endif]-->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <link rel="stylesheet" href="./assets/css/application.css" />
     </head>
-    <body  class="v1">
-        <div id="view-player" class="view view--workspace view--active">
-            <div class="partial--menu__workspaces">
+    <body  class="v2">
+        <div id="view-player" class="view view--main">
+            <div class="view view--menu view--reverse-top view--separate-shadow ">
+                <div class="partial partial--menu__workspaces">
                     <input type="checkbox" class="menu--toggler" id="menu-toggler" />
                     <label class="btn--menu" for="menu-toggler"></label>
                     <div class="menu">
@@ -40,17 +40,17 @@
                     <li class="action"><a href="#" class="btn btn--icon btn--sign-out"><span class="btn__label">Logout</span></a></li>
                 </ul>
             </div>
-            <div class="partial partial--workspace partial--open v2">
-                <div class="partial partial--choose-group">
-
-                    <h3>Choose a team</h3>
-                    <p class="session-name">Cours MIT42 - Programming game</p>
-                    <form>
-                         <div class="input input--text input--label-off input--big">
-                            <input class="input__entry" type="text" class="form-control" id="name" autocomplete="off" placeholder="Name of the team">
-                        </div>
-                    </form>
-                </div>
+            <div class="view view--workspace">
+                <form class="view__form--choose-team form">
+                    <h3 class="form__title">Join a team</h3>
+                    <div class="form__row">
+                        <input class="form__row__entry input input--medium input--primary" type="text" id="login" placeholder="Enter the team name" autocomplete="off">
+                        <p class="form__row__description">Cours MIT42 - Programming game</p>
+                    </div>
+                    <div class="form__row">
+                        <input class="form__row__btn btn btn--icon btn--search" type="submit" id="search" />
+                    </div>
+                </form>
             </div>
         </div>
         <script type="text/javascript" src="assets/js/jquery-1.11.2.min.js"></script>

@@ -3,7 +3,6 @@
 $positions: bottom top left right;
 $sizes : small medium big;
 $height-sizes: 48px 64px 96px; // In order : small, medium, big
-
 $levels : bottom middle top;
 
 // Fonts 
@@ -18,6 +17,7 @@ $primary-color-dark:darken($primary-color, 10%);
 $secondary-color:#41D2FA;
 $secondary-color-light:#AFEAFA;
 $secondary-color-dark:#38B6D9; 
+
 
 // ---- Background -----
 $background-default:#f0f0f0; // ebebeb; A remplacer par lvl bottom
@@ -48,3 +48,7 @@ $warning-color:#ff9800;
 $input-height:38px;
 $input-big-height:48px;
 $box-size:18px;
+
+// --- Buttons -----
+$buttons-types : default primary info success warning danger;
+$buttons-colors : $default-color-button $primary-color $secondary-color $success-color $warning-color $danger-color;
