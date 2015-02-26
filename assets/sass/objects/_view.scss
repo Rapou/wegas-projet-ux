@@ -58,17 +58,18 @@
 
 .v2{
     .view{
+        display:block;
+        position:relative;
+        overflow-x:hidden;
+        overflow-y:auto;
+        
         // Styles de positionnements 
         &.view--main{
-            display:block;
-            position:relative;
             width:100%;
             height:100%;
             @include make-row(0px);
         }
         &.view--menu{
-            display:block;
-            position:relative;
             @include make-row(0px);
             width:100%;
             height:48px;
@@ -76,22 +77,20 @@
         }
 
         &.view--workspace{
-            display:block;
-            position:relative;
             @include make-row(0px);
             width:100%;
             height:calc(100% - 48px);
             z-index:3;
         }
 
-
         @for $i from 1 through 12 {
             &.view--size-#{$i}{
-                display:block;
-                position:relative;
                 height:100%;
                 @include make-sm-column($i);
                 @include make-xs-column(12);
+                @media screen and (max-width: $screen-sm) {
+                    height: auto;
+                }
             }
         } 
 
@@ -99,6 +98,7 @@
         @for $i from 1 through 3 {
             .view--reverse-#{nth($levels, $i)} {
                 background-color: nth($backgrounds-levels-reverse, $i);
+                color:$white;
             }
             .view--#{nth($levels, $i)}{
                 background-color: nth($backgrounds-levels, $i);    
@@ -116,5 +116,40 @@
         .view--separate-shadow{
             @include material-shadow(2);
         }
+
+        // Elements 
+
+        .view__first-header{
+            display:block;
+            position:relative;
+            top:40%;
+            margin-top:-22px;
+            padding:0px 32px;
+            text-align:right;
+        }
+
+        .view__public-nav{
+            display:block;
+            position:relative;
+            top:40%;
+            margin-top:48px;
+            padding:0px 32px;
+            text-align:right;
+            a{
+                display:inline-block;
+                padding:0px 20px;
+                color:white;
+                &:last-child{
+                    padding-right:0px;
+                }
+            }
+        }
+        .view__login-form{
+            width:100%;
+            top:40%;
+            padding:0px 64px;
+            margin-top:-22px;
+        }
+
     }
 }

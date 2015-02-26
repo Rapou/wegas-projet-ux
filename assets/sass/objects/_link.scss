@@ -1,0 +1,9 @@
+.link{
+	color:$secondary-color-dark;
+	&:hover{
+		color:$secondary-color;
+	}
+	&.link--reverse{
+
+	}
+}

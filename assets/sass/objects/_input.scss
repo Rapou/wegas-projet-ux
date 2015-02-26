@@ -308,6 +308,8 @@ $taille-btn: 48px; // Replaced by $height-small-btn
         outline:none;
         border:solid 1px $border;
         box-sizing: border-box;
+        width:100%;
+        color:$default-color;
         height:$taille-btn;
         padding:0px $taille-btn/2;
         font-size: $taille-btn/3;
@@ -319,11 +321,11 @@ $taille-btn: 48px; // Replaced by $height-small-btn
         @for $i from 1 through 3 {
             &.input--#{nth($sizes, $i)}{
                 height: nth($height-sizes, $i);
-                padding:0px nth($height-sizes, $i)/2;
-                font-size: nth($height-sizes, $i) / 3;
-                line-height: nth($height-sizes, $i);
+                padding:nth($height-sizes, $i)/4 nth($height-sizes, $i)/2;
+                font-size: nth($height-sizes, $i) / 4;
+                line-height: nth($height-sizes, $i)/2;
                 border-radius: nth($height-sizes, $i)/8;
-                
+
                 &.input--multi-lines{
                     height: nth($height-sizes, $i) * 3;
                 }

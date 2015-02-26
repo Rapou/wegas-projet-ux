@@ -6850,290 +6850,329 @@ input[type="checkbox"] + label {
     -webkit-animation: moveFromTop .6s ease both;
     animation: moveFromTop .6s ease both; }
 
-.v2 .view.view--main {
+.v2 .view {
   display: block;
   position: relative;
-  width: 100%;
-  height: 100%;
-  margin-left: 0px;
-  margin-right: 0px; }
-  .v2 .view.view--main:before, .v2 .view.view--main:after {
-    content: " ";
-    display: table; }
-  .v2 .view.view--main:after {
-    clear: both; }
-.v2 .view.view--menu {
-  display: block;
-  position: relative;
-  margin-left: 0px;
-  margin-right: 0px;
-  width: 100%;
-  height: 48px;
-  z-index: 4; }
-  .v2 .view.view--menu:before, .v2 .view.view--menu:after {
-    content: " ";
-    display: table; }
-  .v2 .view.view--menu:after {
-    clear: both; }
-.v2 .view.view--workspace {
-  display: block;
-  position: relative;
-  margin-left: 0px;
-  margin-right: 0px;
-  width: 100%;
-  height: calc(100% - 48px);
-  z-index: 3; }
-  .v2 .view.view--workspace:before, .v2 .view.view--workspace:after {
-    content: " ";
-    display: table; }
-  .v2 .view.view--workspace:after {
-    clear: both; }
-.v2 .view.view--size-1 {
-  display: block;
-  position: relative;
-  height: 100%;
-  position: relative;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px; }
-  @media (min-width: 768px) {
-    .v2 .view.view--size-1 {
-      float: left;
-      width: 8.33333%; } }
-.v2 .view.view--size-2 {
-  display: block;
-  position: relative;
-  height: 100%;
-  position: relative;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px; }
-  @media (min-width: 768px) {
-    .v2 .view.view--size-2 {
-      float: left;
-      width: 16.66667%; } }
-.v2 .view.view--size-3 {
-  display: block;
-  position: relative;
-  height: 100%;
-  position: relative;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px; }
-  @media (min-width: 768px) {
-    .v2 .view.view--size-3 {
-      float: left;
-      width: 25%; } }
-.v2 .view.view--size-4 {
-  display: block;
-  position: relative;
-  height: 100%;
-  position: relative;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px; }
-  @media (min-width: 768px) {
-    .v2 .view.view--size-4 {
-      float: left;
-      width: 33.33333%; } }
-.v2 .view.view--size-5 {
-  display: block;
-  position: relative;
-  height: 100%;
-  position: relative;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px; }
-  @media (min-width: 768px) {
-    .v2 .view.view--size-5 {
-      float: left;
-      width: 41.66667%; } }
-.v2 .view.view--size-6 {
-  display: block;
-  position: relative;
-  height: 100%;
-  position: relative;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px; }
-  @media (min-width: 768px) {
-    .v2 .view.view--size-6 {
-      float: left;
-      width: 50%; } }
-.v2 .view.view--size-7 {
-  display: block;
-  position: relative;
-  height: 100%;
-  position: relative;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px; }
-  @media (min-width: 768px) {
-    .v2 .view.view--size-7 {
-      float: left;
-      width: 58.33333%; } }
-.v2 .view.view--size-8 {
-  display: block;
-  position: relative;
-  height: 100%;
-  position: relative;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px; }
-  @media (min-width: 768px) {
-    .v2 .view.view--size-8 {
-      float: left;
-      width: 66.66667%; } }
-.v2 .view.view--size-9 {
-  display: block;
-  position: relative;
-  height: 100%;
-  position: relative;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px; }
-  @media (min-width: 768px) {
-    .v2 .view.view--size-9 {
-      float: left;
-      width: 75%; } }
-.v2 .view.view--size-10 {
-  display: block;
-  position: relative;
-  height: 100%;
-  position: relative;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px; }
-  @media (min-width: 768px) {
-    .v2 .view.view--size-10 {
-      float: left;
-      width: 83.33333%; } }
-.v2 .view.view--size-11 {
-  display: block;
-  position: relative;
-  height: 100%;
-  position: relative;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px; }
-  @media (min-width: 768px) {
-    .v2 .view.view--size-11 {
-      float: left;
-      width: 91.66667%; } }
-.v2 .view.view--size-12 {
-  display: block;
-  position: relative;
-  height: 100%;
-  position: relative;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 16px;
-  padding-right: 16px; }
-  @media (min-width: 768px) {
-    .v2 .view.view--size-12 {
-      float: left;
-      width: 100%; } }
-.v2 .view .view--reverse-bottom {
-  background-color: #ff9f85; }
-.v2 .view .view--bottom {
-  background-color: #f0f0f0; }
-.v2 .view .view--reverse-middle {
-  background-color: #FF7752; }
-.v2 .view .view--middle {
-  background-color: #F9F9F9; }
-.v2 .view .view--reverse-top {
-  background-color: #FA6942; }
-.v2 .view .view--top {
-  background-color: #fefefe; }
-.v2 .view .view--separate-bottom {
-  border-bottom: solid 1px #d7d7d7; }
-.v2 .view .view--separate-bottom-reverse {
-  border-bottom: solid 1px #f94210; }
-.v2 .view .view--separate-top {
-  border-top: solid 1px #d7d7d7; }
-.v2 .view .view--separate-top-reverse {
-  border-top: solid 1px #f94210; }
-.v2 .view .view--separate-left {
-  border-left: solid 1px #d7d7d7; }
-.v2 .view .view--separate-left-reverse {
-  border-left: solid 1px #f94210; }
-.v2 .view .view--separate-right {
-  border-right: solid 1px #d7d7d7; }
-.v2 .view .view--separate-right-reverse {
-  border-right: solid 1px #f94210; }
-.v2 .view .view--separate-shadow {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
+  overflow-x: hidden;
+  overflow-y: auto; }
+  .v2 .view.view--main {
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+    margin-right: 0px; }
+    .v2 .view.view--main:before, .v2 .view.view--main:after {
+      content: " ";
+      display: table; }
+    .v2 .view.view--main:after {
+      clear: both; }
+  .v2 .view.view--menu {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    height: 48px;
+    z-index: 4; }
+    .v2 .view.view--menu:before, .v2 .view.view--menu:after {
+      content: " ";
+      display: table; }
+    .v2 .view.view--menu:after {
+      clear: both; }
+  .v2 .view.view--workspace {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    height: calc(100% - 48px);
+    z-index: 3; }
+    .v2 .view.view--workspace:before, .v2 .view.view--workspace:after {
+      content: " ";
+      display: table; }
+    .v2 .view.view--workspace:after {
+      clear: both; }
+  .v2 .view.view--size-1 {
+    height: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px; }
+    @media (min-width: 768px) {
+      .v2 .view.view--size-1 {
+        float: left;
+        width: 8.33333%; } }
+    @media screen and (max-width: 768px) {
+      .v2 .view.view--size-1 {
+        height: auto; } }
+  .v2 .view.view--size-2 {
+    height: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px; }
+    @media (min-width: 768px) {
+      .v2 .view.view--size-2 {
+        float: left;
+        width: 16.66667%; } }
+    @media screen and (max-width: 768px) {
+      .v2 .view.view--size-2 {
+        height: auto; } }
+  .v2 .view.view--size-3 {
+    height: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px; }
+    @media (min-width: 768px) {
+      .v2 .view.view--size-3 {
+        float: left;
+        width: 25%; } }
+    @media screen and (max-width: 768px) {
+      .v2 .view.view--size-3 {
+        height: auto; } }
+  .v2 .view.view--size-4 {
+    height: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px; }
+    @media (min-width: 768px) {
+      .v2 .view.view--size-4 {
+        float: left;
+        width: 33.33333%; } }
+    @media screen and (max-width: 768px) {
+      .v2 .view.view--size-4 {
+        height: auto; } }
+  .v2 .view.view--size-5 {
+    height: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px; }
+    @media (min-width: 768px) {
+      .v2 .view.view--size-5 {
+        float: left;
+        width: 41.66667%; } }
+    @media screen and (max-width: 768px) {
+      .v2 .view.view--size-5 {
+        height: auto; } }
+  .v2 .view.view--size-6 {
+    height: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px; }
+    @media (min-width: 768px) {
+      .v2 .view.view--size-6 {
+        float: left;
+        width: 50%; } }
+    @media screen and (max-width: 768px) {
+      .v2 .view.view--size-6 {
+        height: auto; } }
+  .v2 .view.view--size-7 {
+    height: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px; }
+    @media (min-width: 768px) {
+      .v2 .view.view--size-7 {
+        float: left;
+        width: 58.33333%; } }
+    @media screen and (max-width: 768px) {
+      .v2 .view.view--size-7 {
+        height: auto; } }
+  .v2 .view.view--size-8 {
+    height: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px; }
+    @media (min-width: 768px) {
+      .v2 .view.view--size-8 {
+        float: left;
+        width: 66.66667%; } }
+    @media screen and (max-width: 768px) {
+      .v2 .view.view--size-8 {
+        height: auto; } }
+  .v2 .view.view--size-9 {
+    height: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px; }
+    @media (min-width: 768px) {
+      .v2 .view.view--size-9 {
+        float: left;
+        width: 75%; } }
+    @media screen and (max-width: 768px) {
+      .v2 .view.view--size-9 {
+        height: auto; } }
+  .v2 .view.view--size-10 {
+    height: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px; }
+    @media (min-width: 768px) {
+      .v2 .view.view--size-10 {
+        float: left;
+        width: 83.33333%; } }
+    @media screen and (max-width: 768px) {
+      .v2 .view.view--size-10 {
+        height: auto; } }
+  .v2 .view.view--size-11 {
+    height: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px; }
+    @media (min-width: 768px) {
+      .v2 .view.view--size-11 {
+        float: left;
+        width: 91.66667%; } }
+    @media screen and (max-width: 768px) {
+      .v2 .view.view--size-11 {
+        height: auto; } }
+  .v2 .view.view--size-12 {
+    height: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 16px;
+    padding-right: 16px; }
+    @media (min-width: 768px) {
+      .v2 .view.view--size-12 {
+        float: left;
+        width: 100%; } }
+    @media screen and (max-width: 768px) {
+      .v2 .view.view--size-12 {
+        height: auto; } }
+  .v2 .view .view--reverse-bottom {
+    background-color: #ff9f85;
+    color: #fefefe; }
+  .v2 .view .view--bottom {
+    background-color: #f0f0f0; }
+  .v2 .view .view--reverse-middle {
+    background-color: #FF7752;
+    color: #fefefe; }
+  .v2 .view .view--middle {
+    background-color: #F9F9F9; }
+  .v2 .view .view--reverse-top {
+    background-color: #FA6942;
+    color: #fefefe; }
+  .v2 .view .view--top {
+    background-color: #fefefe; }
+  .v2 .view .view--separate-bottom {
+    border-bottom: solid 1px #d7d7d7; }
+  .v2 .view .view--separate-bottom-reverse {
+    border-bottom: solid 1px #f94210; }
+  .v2 .view .view--separate-top {
+    border-top: solid 1px #d7d7d7; }
+  .v2 .view .view--separate-top-reverse {
+    border-top: solid 1px #f94210; }
+  .v2 .view .view--separate-left {
+    border-left: solid 1px #d7d7d7; }
+  .v2 .view .view--separate-left-reverse {
+    border-left: solid 1px #f94210; }
+  .v2 .view .view--separate-right {
+    border-right: solid 1px #d7d7d7; }
+  .v2 .view .view--separate-right-reverse {
+    border-right: solid 1px #f94210; }
+  .v2 .view .view--separate-shadow {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
+  .v2 .view .view__first-header {
+    display: block;
+    position: relative;
+    top: 40%;
+    margin-top: -22px;
+    padding: 0px 32px;
+    text-align: right; }
+  .v2 .view .view__public-nav {
+    display: block;
+    position: relative;
+    top: 40%;
+    margin-top: 48px;
+    padding: 0px 32px;
+    text-align: right; }
+    .v2 .view .view__public-nav a {
+      display: inline-block;
+      padding: 0px 20px;
+      color: white; }
+      .v2 .view .view__public-nav a:last-child {
+        padding-right: 0px; }
+  .v2 .view .view__login-form {
+    width: 100%;
+    top: 40%;
+    padding: 0px 64px;
+    margin-top: -22px; }
 
 .partial {
   display: block;
@@ -7950,6 +7989,98 @@ input[type="checkbox"] + label {
       line-height: inherit;
       margin-top: -0.1em; }
 
+.form {
+  display: block;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 16px;
+  padding-right: 16px; }
+  .form:before, .form:after {
+    content: " ";
+    display: table; }
+  .form:after {
+    clear: both; }
+  .form .form__row {
+    display: block;
+    position: relative;
+    margin-left: -16px;
+    margin-right: -16px;
+    margin: 12px 0px; }
+    .form .form__row:before, .form .form__row:after {
+      content: " ";
+      display: table; }
+    .form .form__row:after {
+      clear: both; }
+    .form .form__row .form__row__label {
+      display: none; }
+    .form .form__row .form__row__entry {
+      display: block;
+      position: relative;
+      position: relative;
+      float: left;
+      width: 100%;
+      min-height: 1px;
+      padding-left: 16px;
+      padding-right: 16px; }
+    .form .form__row .form__row__btn {
+      display: block;
+      float: right; }
+    .form .form__row.form__row--with-label .form__row__label {
+      display: block;
+      text-align: right;
+      position: relative;
+      float: left;
+      width: 100%;
+      min-height: 1px;
+      padding-left: 16px;
+      padding-right: 16px;
+      position: relative;
+      min-height: 1px;
+      padding-left: 16px;
+      padding-right: 16px; }
+      @media (min-width: 992px) {
+        .form .form__row.form__row--with-label .form__row__label {
+          float: left;
+          width: 33.33333%; } }
+      .form .form__row.form__row--with-label .form__row__label.form__row__label--small {
+        height: 48px;
+        padding: 16px 24px;
+        font-size: 16px;
+        line-height: 16px;
+        border-radius: 6px; }
+      .form .form__row.form__row--with-label .form__row__label.form__row__label--medium {
+        height: 64px;
+        padding: 21.33333px 32px;
+        font-size: 21.33333px;
+        line-height: 21.33333px;
+        border-radius: 8px; }
+      .form .form__row.form__row--with-label .form__row__label.form__row__label--big {
+        height: 96px;
+        padding: 32px 48px;
+        font-size: 32px;
+        line-height: 32px;
+        border-radius: 12px; }
+      .form .form__row.form__row--with-label .form__row__label.form__row__label--reverse {
+        color: #fefefe; }
+    .form .form__row.form__row--with-label .form__row__entry {
+      display: block;
+      position: relative;
+      position: relative;
+      float: left;
+      width: 100%;
+      min-height: 1px;
+      padding-left: 16px;
+      padding-right: 16px;
+      position: relative;
+      min-height: 1px;
+      padding-left: 16px;
+      padding-right: 16px; }
+      @media (min-width: 992px) {
+        .form .form__row.form__row--with-label .form__row__entry {
+          float: left;
+          width: 66.66667%; } }
+
 .v1 .input {
   margin-left: 0;
   margin-right: 0;
@@ -8246,6 +8377,8 @@ input[type="checkbox"] + label {
   outline: none;
   border: solid 1px #d7d7d7;
   box-sizing: border-box;
+  width: 100%;
+  color: #272727;
   height: 48px;
   padding: 0px 24px;
   font-size: 16px;
@@ -8256,25 +8389,25 @@ input[type="checkbox"] + label {
   transition: .8s; }
   .v2 .input.input--small {
     height: 48px;
-    padding: 0px 24px;
-    font-size: 16px;
-    line-height: 48px;
+    padding: 12px 24px;
+    font-size: 12px;
+    line-height: 24px;
     border-radius: 6px; }
     .v2 .input.input--small.input--multi-lines {
       height: 144px; }
   .v2 .input.input--medium {
     height: 64px;
-    padding: 0px 32px;
-    font-size: 21.33333px;
-    line-height: 64px;
+    padding: 16px 32px;
+    font-size: 16px;
+    line-height: 32px;
     border-radius: 8px; }
     .v2 .input.input--medium.input--multi-lines {
       height: 192px; }
   .v2 .input.input--big {
     height: 96px;
-    padding: 0px 48px;
-    font-size: 32px;
-    line-height: 96px;
+    padding: 24px 48px;
+    font-size: 24px;
+    line-height: 48px;
     border-radius: 12px; }
     .v2 .input.input--big.input--multi-lines {
       height: 288px; }
