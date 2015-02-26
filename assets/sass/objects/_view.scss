@@ -118,7 +118,6 @@
         }
 
         // Elements 
-
         .view__first-header{
             display:block;
             position:relative;
@@ -142,6 +141,13 @@
             top:40%;
             padding:0px 64px;
             margin-top:-22px;
+        } 
+
+        .view__password-form{
+            width:100%;
+            top:40%;
+            padding:0px 64px;
+            margin-top:-72px;
         }
         .view__signup-form{
             width:100%;

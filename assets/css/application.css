@@ -7168,6 +7168,11 @@ input[type="checkbox"] + label {
     top: 40%;
     padding: 0px 64px;
     margin-top: -22px; }
+  .v2 .view .view__password-form {
+    width: 100%;
+    top: 40%;
+    padding: 0px 64px;
+    margin-top: -72px; }
   .v2 .view .view__signup-form {
     width: 100%;
     top: 40%;
