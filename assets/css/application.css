@@ -6653,18 +6653,19 @@ hr {
   border-color: #d7d7d7;
   clear: both; }
 
-a {
+.v1 a {
   color: #38B6D9;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
-
-a:hover, a:active {
+.v1 a:hover, .v1 a:active {
   color: #41D2FA;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
 
 h1 {
-  font-weight: 100; }
+  font-weight: 100;
+  font-size: 44px;
+  margin-top: 16px; }
 
 h2 {
   float: left;
@@ -7162,17 +7163,16 @@ input[type="checkbox"] + label {
     margin-top: 48px;
     padding: 0px 32px;
     text-align: right; }
-    .v2 .view .view__public-nav a {
-      display: inline-block;
-      padding: 0px 20px;
-      color: white; }
-      .v2 .view .view__public-nav a:last-child {
-        padding-right: 0px; }
   .v2 .view .view__login-form {
     width: 100%;
     top: 40%;
     padding: 0px 64px;
     margin-top: -22px; }
+  .v2 .view .view__signup-form {
+    width: 100%;
+    top: 40%;
+    padding: 0px 64px;
+    margin-top: -136px; }
 
 .partial {
   display: block;
@@ -8424,6 +8424,40 @@ input[type="checkbox"] + label {
       -webkit-transition: .8s;
       transition: .8s;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19); }
+
+.link, .link:visited {
+  display: inline-block;
+  position: relative;
+  width: auto;
+  height: 24px;
+  line-height: 12px;
+  color: #41D2FA;
+  padding: 6px 12px 6px 12px;
+  margin: 4px 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-radius: 12px;
+  background-color: #fafafa;
+  text-decoration: none;
+  -webkit-transition: .5s;
+  transition: .5s; }
+  .link:hover, .link.focus, .link.link.active, .link:visited:hover, .link:visited.focus, .link:visited.link.active {
+    color: #05a4d0;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #fefefe;
+    -webkit-transition: .5s;
+    transition: .5s; }
+  .link:first-child, .link:visited:first-child {
+    margin-left: 0px; }
+  .link:last-child, .link:visited:last-child {
+    margin-right: 0px; }
+  .link.link--reverse, .link:visited.link--reverse {
+    color: white;
+    background-color: #fb8160; }
+    .link.link--reverse:hover, .link.link--reverse.focus, .link.link--reverse.link.active, .link:visited.link--reverse:hover, .link:visited.link--reverse.focus, .link:visited.link--reverse.link.active {
+      color: white;
+      background-color: #fc987e; }
 
 .menu--toggler {
   position: absolute;
