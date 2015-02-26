@@ -4,7 +4,9 @@ var gulp        = require('gulp'),
     sass        = require('gulp-sass'),
     minifycss = require('gulp-minify-css'),
     rename = require('gulp-rename'),
-    autoprefixer = require('gulp-autoprefixer')
+    autoprefixer = require('gulp-autoprefixer'),
+    gutil = require('gulp-util'),
+    beep = require('beepbeep')
 ;
 
 // Reload du ou des navigateurs
@@ -26,7 +28,12 @@ gulp.task('browser-sync', function() {
 // - Reload du navigateur
 gulp.task('sass', function () {
     return gulp.src('assets/sass/**/*.scss')
-        .pipe(sass({errLogToConsole: true}))
+        .pipe(sass({
+            onError: function (err) {
+                beep(3, 150);
+                gutil.log(err);
+            }
+        }))
         .pipe(autoprefixer({
             cascade: false
         }))

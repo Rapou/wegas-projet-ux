@@ -60,12 +60,12 @@ $zone-joingrp-secondary:100%-$zone-joingrp-primary;
     }
 
     &.partial--create-session{
-        @include make-md-column(4);
+        @include make-md-column(5);
         @include make-md-column-offset(0);
     }
     &.partial--newest-sessions{
         @include make-md-column(6);
-        @include make-md-column-offset(2);
+        @include make-md-column-offset(1);
 
     }
 

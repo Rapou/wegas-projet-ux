@@ -1,7 +1,6 @@
 .btn{
     position:relative;
-    display:block;
-    float:left;
+    display:inline-block;
     background: none;
     background-color:$default-color-light;
     border:none;
@@ -14,6 +13,7 @@
     text-transform: uppercase;
     -webkit-user-select: none;
     outline: none;
+
 
     &.btn--right{
         float:right;
@@ -95,12 +95,12 @@
             @include setIconBtn($fa-var-th)
         }
 
-        .label{
+        .btn__label{
             display:none;
             position:absolute;
             top:0px;
             right:42px;
-            height:28px;
+
             border-radius:14px;
             line-height:28px;
             padding:0px 8px;
@@ -115,6 +115,25 @@
     }
     &.btn--shadow{
         @include material-shadow(2);
+    }
+    &.btn--with-label {
+        width: inherit;
+        height: inherit;
+        &:hover {
+            width: inherit;
+            height: inherit;
+        }
+
+        .btn__label {
+            display: block;
+            position: static;
+            color: $default-color;
+            opacity: 1;
+            background: none;
+            padding-left: 1.5em;
+            line-height: inherit;
+            margin-top: -0.1em;
+        }
     }
 }
 
