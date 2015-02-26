@@ -95,7 +95,7 @@
             @include setIconBtn($fa-var-th)
         }
 
-        .label{
+        .btn__label{
             display:none;
             position:absolute;
             top:0px;
@@ -115,6 +115,25 @@
     }
     &.btn--shadow{
         @include material-shadow(2);
+    }
+    &.btn--with-label {
+        width: inherit;
+        height: inherit;
+        &:hover {
+            width: inherit;
+            height: inherit;
+        }
+
+        .btn__label {
+            display: block;
+            position: static;
+            color: $default-color;
+            opacity: 1;
+            background: none;
+            padding-left: 1.5em;
+            line-height: inherit;
+            margin-top: -0.1em;
+        }
     }
 }
 
