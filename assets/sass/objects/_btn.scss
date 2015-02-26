@@ -1,7 +1,6 @@
 .btn{
     position:relative;
-    display:block;
-    float:left;
+    display:inline-block;
     background: none;
     background-color:$default-color-light;
     border:none;
@@ -14,6 +13,7 @@
     text-transform: uppercase;
     -webkit-user-select: none;
     outline: none;
+
 
     &.btn--right{
         float:right;
@@ -100,7 +100,7 @@
             position:absolute;
             top:0px;
             right:42px;
-            height:28px;
+
             border-radius:14px;
             line-height:28px;
             padding:0px 8px;
