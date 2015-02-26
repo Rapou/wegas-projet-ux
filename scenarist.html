@@ -13,12 +13,34 @@
     <body>
         <div id="view-player" class="view view--workspace view--active">
             <div class="partial partial--menu partial--open">
-                    <div class="partial--menu__workspaces"><a href="#" class="btn btn--icon btn--workspaces"><span class="btn__label">Workspaces</span></a></div>
-                    <h2>Scenarist workspace</h2>
-                    <ul class="partial--menu__action">
-                        <li class="action"><a href="#" class="btn btn--icon btn--user"><span class="btn__label">Profil</span></a></li>
-                        <li class="action"><a href="#" class="btn btn--icon btn--sign-out"><span class="btn__label">Logout</span></a></li>
-                    </ul>
+                    <div class="partial--menu__workspaces">
+                    <input type="checkbox" class="menu--toggler" id="menu-toggler" />
+                    <label class="btn--menu" for="menu-toggler"></label>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="player.html" class="btn btn--icon btn--workspaces btn--with-label"><span class="btn__label">Go to Player workspace</span></a></li>
+                            <li>
+                                <a href="trainer.html" class="btn btn--icon btn--workspaces btn--with-label"><span class="btn__label">Go to trainer workspace</span></a>
+                            </li>
+                            <li>
+                                <a href="scenarist.html" class="btn btn--icon btn--workspaces btn--with-label"><span class="btn__label">Go to Scenarist workspace</span></a>
+                            </li>
+                            <li><hr/></li>
+                            <li>
+                                <a href="#" class="btn btn--icon btn--user btn--with-label"><span class="btn__label">Edit profile</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn--icon btn--sign-out btn--with-label"><span class="btn__label">Logout</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <h2>Scenarist workspace</h2>
+
+                <ul class="partial--menu__action">
+                    <li class="action"><a href="#" class="btn btn--icon btn--user"><span class="btn__label">Profil</span></a></li>
+                    <li class="action"><a href="#" class="btn btn--icon btn--sign-out"><span class="btn__label">Logout</span></a></li>
+                </ul>
             </div>
             <div class="partial partial--workspace partial--open">
                 <div class="container">
@@ -130,6 +152,7 @@
         </div>
         <script type="text/javascript" src="assets/js/jquery-1.11.2.min.js"></script>
         <script type="text/javascript" src="assets/js/modernizr.dev.js"></script>
+        <script type="text/javascript" src="assets/js/application.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
                 // Rien
