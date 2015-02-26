@@ -49,20 +49,49 @@
                         <div class="partial partial--create-session">
                             <h3>Create new session</h3>
                             <form>
-                                <div class="input input--text input--label-off">
-                                    <label class="input__label" for="name">Session name</label>
-                                    <input class="input__entry" type="text" class="form-control" id="name" placeholder="Enter a name">
-                                </div>
-                                <div class="input input--select input--label-off">
-                                    <label class="input__label" for="select">Scenario</label>
+                                <div class="input input--select input--label-on">
+                                    <label class="input__label" for="scenario-template">Scenario</label>
                                     <div class="input__entry">
-                                        <select id="select">
-                                            <option>Choose a scenario</option>
+                                        <select id="scenario-template">
+                                            <option>Based on scenario</option>
                                             <option>Programming game</option>
                                             <option>PMG Artos</option>
                                         </select>
                                     </div>
                                 </div>
+                                <div class="input input--text input--label-on">
+                                    <label class="input__label" for="name">Session name</label>
+                                    <input class="input__entry" type="text" class="form-control" id="scenario-name" placeholder="Enter a name">
+                                </div>
+
+                                <div class="session-information">
+
+                                    <div class="input input--text input--label-on">
+                                        <label class="input__label" for="name">Set a key</label>
+                                        <input class="input__entry" type="text" class="form-control" id="name" placeholder="An empty key mean that the game is open">
+                                    </div>
+
+                                    <div class="input__entry row">
+                                        <label class="col-sm-3">Game is played...</label>
+                                        <div class="input__radio col-sm-3">
+                                            <input type="radio" id="individual" name="game-type" value="individual" checked="">
+                                            <label for="individual"><span></span>... individual</label>
+                                        </div>
+                                        <div class="input__radio col-sm-3">
+                                            <input type="radio" id="in-team" name="game-type" value="in-team">
+                                            <label for="in-team"><span></span>... in team</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="input input--text input--label-on number-of-team">
+                                        <label class="input__label" for="name">Limit number of team</label>
+                                        <input class="input__entry" type="number" class="form-control" id="name" placeholder="Session key">
+                                    </div>
+
+
+
+                                </div>
+
                                 <div class="input input--submit">
                                     <input type="submit" class="btn btn--primary btn--right" id="send" value="New session" />
                                 </div>
@@ -80,7 +109,7 @@
                                     <p>Card Description</p>
                                 </div>
                                 <ul class="card__actions">
-                                    <li class="action"><a href="#" class="btn btn--icon btn--manage"><span class="btn__label">Monitoring</span></a></li>
+                                    <li class="action"><a href="#" class="btn btn--icon btn--manage" title="Monitoring"><span class="btn__label">Monitoring</span></a></li>
                                     <li class="action"><a href="#" class="btn btn--icon btn--users"><span class="btn__label">Manage users</span></a></li>
                                     <li class="action"><a href="#" class="btn btn--icon btn--archive"><span class="btn__label">Archive</span></a></li>
                                 </ul>
@@ -94,7 +123,7 @@
                                     <p>Card Description</p>
                                 </div>
                                 <ul class="card__actions">
-                                    <li class="action"><a href="#" class="btn btn--icon btn--manage" title="Monitoring"><span class="btn__label">Monitoring</span></a></li>
+                                    <li class="action"><a href="#" class="btn btn--icon btn--manage"><span class="btn__label">Monitoring</span></a></li>
                                     <li class="action"><a href="#" class="btn btn--icon btn--users"><span class="btn__label">Manage users</span></a></li>
                                     <li class="action"><a href="#" class="btn btn--icon btn--archive"><span class="btn__label">Archive</span></a></li>
                                 </ul>
@@ -135,8 +164,42 @@
         <script type="text/javascript" src="assets/js/application.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
-                // Rien
+                var $session = $('.session-information'),
+                      $teams = $('.number-of-team');
+
+                $session.hide();
+                $teams.hide();
+
+
+                $(document).on('keyup', '#scenario-name', function () {
+                    if ($(this).val() != "" && !$session.is(':visible')) {
+                        $session.show().addClass('animated bounceIn');
+                    } else if ($(this).val() == "" && $session.is(':visible')) {
+                        $session.addClass('animated bounceOut');
+                        setTimeout(function ()  {
+                            $session.delay(1000).removeClass('animated bounceIn bounceOut').hide();
+                        }, 1000);
+                    }
+                });
+                $(document).on('change', '#scenario-template', function () {
+                    if ($(this).prop('selectedIndex') > 0 && !$session.is(':visible')) {
+                        $session.show().addClass('animated bounceIn');
+                    } else if ($(this).prop('selectedIndex') == 0 && $session.is(':visible')) {
+
+                    }
+                });
+                $(document).on('change', 'input[name=game-type]', function () {
+                    if ($(this).val() == 'in-team') {
+                        $teams.show().addClass('animated bounceIn');
+                    } else {
+                        $teams.addClass('animated bounceOut');
+                        setTimeout(function ()  {
+                            $teams.delay(1000).removeClass('animated bounceIn bounceOut').hide();
+                        }, 1000);
+                    }
+                });
+
             });
         </script>
     </body>
-</html>
+    </html>
