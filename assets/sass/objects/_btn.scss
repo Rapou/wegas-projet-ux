@@ -53,46 +53,49 @@
         @extend %initIconBtn;
 
         &.btn--trash{
-            @include setIconBtn($fa-var-trash, $danger-color, $white)
+            @include setIconBtn($fa-var-trash, $danger-color, $white);
         }
         &.btn--exit{
-            @include setIconBtn($fa-var-user-times, $danger-color, $white)
+            @include setIconBtn($fa-var-user-times, $danger-color, $white);
         }
         &.btn--archive{
-            @include setIconBtn($fa-var-archive, lighten($default-color-button, 10%))
+            @include setIconBtn($fa-var-archive, lighten($default-color-button, 10%));
         }
         &.btn--manage{
-            @include setIconBtn($fa-var-tachometer, $secondary-color, $iconSize:18px)
+            @include setIconBtn($fa-var-tachometer, $secondary-color, $iconSize:18px);
         }
         &.btn--play{
-            @include setIconBtn($fa-var-play, $secondary-color)
+            @include setIconBtn($fa-var-play, $secondary-color);
+        }
+        &.btn--search{
+            @include setIconBtn($fa-var-search, $secondary-color);
         }
         &.btn--edit{
-            @include setIconBtn($fa-var-pencil, $secondary-color)
+            @include setIconBtn($fa-var-pencil, $secondary-color);
         }
         &.btn--copy{
-            @include setIconBtn($fa-var-folder,  lighten($default-color-button, 10%))
+            @include setIconBtn($fa-var-folder,  lighten($default-color-button, 10%));
         }
         &.btn--users{
-            @include setIconBtn($fa-var-users, lighten($default-color-button, 10%))
+            @include setIconBtn($fa-var-users, lighten($default-color-button, 10%));
         }
         &.btn--go{
-            @include setIconBtn($fa-var-play, $white, $white, 16px, $secondary-color)
+            @include setIconBtn($fa-var-play, $white, $white, 16px, $secondary-color);
         }
         &.btn--players{
-            @include setIconBtn($fa-var-users, lighten($default-color-button, 10%), $white, 16px, $background-default-secondary)
+            @include setIconBtn($fa-var-users, lighten($default-color-button, 10%), $white, 16px, $background-default-secondary);
         }
         &.btn--user{
-            @include setIconBtn($fa-var-user)
+            @include setIconBtn($fa-var-user);
         }
         &.btn--unarchive{
-            @include setIconBtn($fa-var-undo, lighten($default-color-button, 10%))
+            @include setIconBtn($fa-var-undo, lighten($default-color-button, 10%));
         }
         &.btn--sign-out{
-            @include setIconBtn($fa-var-sign-out)
+            @include setIconBtn($fa-var-sign-out);
         }
         &.btn--workspaces{
-            @include setIconBtn($fa-var-th)
+            @include setIconBtn($fa-var-th);
         }
 
         .btn__label{
@@ -133,6 +136,97 @@
             padding-left: 1.5em;
             line-height: inherit;
             margin-top: -0.1em;
+        }
+    }
+}
+
+.v2{
+    .button{
+        position:relative;
+        display:inline-block;
+        width:auto;
+        height:nth($height-sizes, 1);
+        padding:nth($height-sizes, 1)/3 nth($height-sizes, 1)/2;
+        margin:nth($height-sizes, 1)/12;
+        border-radius:nth($height-sizes, 1)/3;
+        border:none;
+
+        background-color:$default-color-button;
+
+        color:$white;
+        font-size: nth($height-sizes, 1)/4;
+        text-transform: uppercase;
+        text-decoration:none;
+        
+        outline: none;
+        -webkit-user-select: none;
+        transition: 0.8s;
+        &:hover{
+            background-color:lighten($default-color-button, 10%);
+        }
+        &.button--icon{
+            width:nth($height-sizes, 1);
+            border-radius:nth($height-sizes, 1)/2;
+            &:before{
+                content:"A";
+                display:block;
+                position:absolute; 
+                top:0px;
+                left:0px;
+                text-align:center;
+                padding:nth($height-sizes, 1)/8 0px;
+                margin:0px;
+                font-size:nth($height-sizes, 1)/2;
+                width:nth($height-sizes, 1);
+                height:nth($height-sizes, 1);   
+                background:none;    
+                border-radius:nth($height-sizes, 1)/2;
+                color:$white;
+            }
+            .button__label{
+                display:none;
+            }
+        }
+
+        @for $i from 1 through length($buttons-types){
+            &.button--#{nth($buttons-types, $i)}{
+                background-color:nth($buttons-colors, $i);
+            }
+            &.button--#{nth($buttons-types, $i)}-reverse{
+                background:none;
+                color:nth($buttons-colors, $i);
+                &:before{
+                    color:nth($buttons-colors, $i);
+                }
+            }
+        }
+
+        @for $i from 1 through length($sizes){
+            $size-name:nth($sizes, $i);
+            $size-pixel:nth($height-sizes, $i);
+            &.button--#{$size-name}{
+                height:$size-pixel;
+                padding:$size-pixel/3 $size-pixel/2;
+                margin:$size-pixel/12;
+                border-radius:$size-pixel/3;
+                font-size: $size-pixel/4;
+                &.button--icon{
+                    width:$size-pixel;
+                    border-radius:$size-pixel/2;
+                    &:before{
+                        padding:$size-pixel/8 0px;
+                        font-size:$size-pixel/2;
+                        width:$size-pixel;
+                        height:$size-pixel;   
+                        border-radius:$size-pixel/2;
+                    }
+                }
+            }
+
+        }
+
+        &.button--shadow{
+            @include material-shadow(2);
         }
     }
 }

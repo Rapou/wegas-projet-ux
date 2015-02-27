@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web game authoring system - Wegas</title>
+	<!--[if lt IE 9]>
+	<script src="./assets/js/html5shiv.js"></script>
+	<![endif]-->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./assets/css/application.css" /> 
+</head>
+<body class="v2">
+	<div id="view-player" class="view view--main view--background-default">
+		<div class="view view--size-8 view--reverse-top">
+			<h1 class="view__first-header">Bienvenue dans wegas</h1>
+			<div class="view__public-nav"><a class="link link--reverse" href="public_signup.html">Sign up</a> <a class="link link--reverse" href="public_password.html">Password forgotten</a></div>
+		</div>
+		<div class="view view--reverse-top view--size-4">
+			<form class="view__login-form form" action="player_v2_1session.html">
+				<div class="form__row">
+	            	<input class="form__row__entry input input--small input--primary" type="text" class="form-control" id="login" placeholder="Enter your login" autocomplete="off">
+            	</div>
+				<div class="form__row">
+	            	<input class="form__row__entry input input--small input--primary" type="password" class="form-control" id="password" placeholder="Enter your password" autocomplete="off">
+            	</div>
+            	<div class="form__row form__row--right">
+	            	<input class="form__row__btn btn btn--default btn--shadow" type="submit" class="form-control" value="Login" />
+            	</div>
+            </form>
+		</div>
+	</div>
+    <script type="text/javascript" src="assets/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="assets/js/modernizr.dev.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Rien
+        });
+    </script>
+</body>
+</html>

@@ -13,78 +13,161 @@
 @keyframes moveFromTop {
     from { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
 }
+.v1{
+    .view {
+        display:block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
 
-.view {
-    display:block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+        &.view--active{
+            visibility: visible;
+            z-index: 1;
+        }
+        &.view--ontop{
+            z-index: 999;
+        }
 
-    &.view--active{
-        visibility: visible;
-        z-index: 1;
-    }
-    &.view--ontop{
-        z-index: 999;
-    }
+        &.view--workspace {
+            background-color:$background-default;
+        }
 
-    &.view--workspace {
-        background-color:$background-default;
-    }
-
-    &.view-moveToBottomEasing {
-        -webkit-animation: moveToBottom .7s ease-in-out both;
-        animation: moveToBottom .7s ease-in-out both;
-    }
-    
-    &.view-moveFromTop {
-        -webkit-animation: moveFromTop .6s ease both;
-        animation: moveFromTop .6s ease both;
+        &.view-moveToBottomEasing {
+            -webkit-animation: moveToBottom .7s ease-in-out both;
+            animation: moveToBottom .7s ease-in-out both;
+        }
+        
+        &.view-moveFromTop {
+            -webkit-animation: moveFromTop .6s ease both;
+            animation: moveFromTop .6s ease both;
+        }
     }
 }
 
-/*
-.pt-page-delay100 {
-        -webkit-animation-delay: .1s;
-        animation-delay: .1s;
+.v2{
+    .view{
+        display:block;
+        position:relative;
+        overflow-x:hidden;
+        overflow-y:auto;
+        
+        // Styles de positionnements 
+        &.view--main{
+            width:100%;
+            height:100%;
+            @include make-row(0px);
+        }
+        &.view--menu{
+            @include make-row(0px);
+            width:100%;
+            height:48px;
+            z-index:4;
+        }
+
+        &.view--workspace{
+            @include make-row(0px);
+            width:100%;
+            height:calc(100% - 48px);
+            z-index:3;
+        }
+
+        @for $i from 1 through 12 {
+            &.view--size-#{$i}{
+                height:100%;
+                @include make-sm-column($i);
+                @include make-xs-column(12);
+                @media screen and (max-width: $screen-sm) {
+                    height: auto;
+                }
+            }
+        } 
+
+        // Styles de décorations
+        @for $i from 1 through 3 {
+            .view--reverse-#{nth($levels, $i)} {
+                background-color: nth($backgrounds-levels-reverse, $i);
+                color:$white;
+            }
+            .view--#{nth($levels, $i)}{
+                background-color: nth($backgrounds-levels, $i);    
+            }
+        }
+
+        .view--separate-primary {
+            border-top: solid 5px $primary-color;
+        }
+
+        @each $position in $positions {
+          .view--separate-#{$position} {
+            border-#{$position}: solid 1px $border;
+          }
+          .view--separate-#{$position}-reverse {
+            border-#{$position}: solid 1px $border-reverse;
+          }
+        }
+        .view--separate-shadow{
+            @include material-shadow(2);
+        }
+
+        // Elements 
+        .view__first-header{
+            display:block;
+            position:relative;
+            top:40%;
+            margin-top:-22px;
+            padding:0px 32px;
+            text-align:right;
+        }
+
+        .view__public-nav{
+            display:block;
+            position:relative;
+            top:40%;
+            margin-top:48px;
+            padding:0px 32px;
+            text-align:right;
+        }
+
+        .view__login-form{
+            width:100%;
+            top:40%;
+            padding:0px 64px;
+            margin-top:-22px;
+        } 
+
+        .view__password-form{
+            width:100%;
+            top:40%;
+            padding:0px 64px;
+            margin-top:-72px;
+        }
+        .view__signup-form{
+            width:100%;
+            top:40%;
+            padding:0px 64px;
+            margin-top:-136px;
+        }
+
+        .view__form--choose-team{
+            @include make-sm-column(6);
+            @include make-sm-column-offset(3);
+            @include make-md-column(4);
+            @include make-md-column-offset(4);
+            margin-top:128px;
+
+        }
+
+    }
 }
-.pt-page-delay180 {
-        -webkit-animation-delay: .180s;
-        animation-delay: .180s;
-}
-.pt-page-delay200 {
-        -webkit-animation-delay: .2s;
-        animation-delay: .2s;
-}
-.pt-page-delay300 {
-        -webkit-animation-delay: .3s;
-        animation-delay: .3s;
-}
-.pt-page-delay400 {
-        -webkit-animation-delay: .4s;
-        animation-delay: .4s;
-}
-.pt-page-delay500 {
-        -webkit-animation-delay: .5s;
-        animation-delay: .5s;
-}
-.pt-page-delay700 {
-        -webkit-animation-delay: .7s;
-        animation-delay: .7s;
-}
-.pt-page-delay1000 {
-        -webkit-animation-delay: 1s;
-        animation-delay: 1s;
-}*/
