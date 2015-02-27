@@ -6628,6 +6628,45 @@ table td[class*="col-"], table th[class*="col-"] {
       border-radius: 24px;
       opacity: 0.8; }
 
+.v2 .button.button--trash, .v2 .button.button--sign-out, .v2 .button.button--adn, .v2 .button.button--ambulance, .v2 .button.button--search, .v2 .button.button--user {
+  padding: 16px 24px 16px 54px; }
+  .v2 .button.button--trash:before, .v2 .button.button--sign-out:before, .v2 .button.button--adn:before, .v2 .button.button--ambulance:before, .v2 .button.button--search:before, .v2 .button.button--user:before {
+    content: "A";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    padding: 6px 0px;
+    margin: 0px;
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    background: none;
+    font-family: "FontAwesome";
+    color: #fefefe; }
+  .v2 .button--small.button.button--trash, .v2 .button--small.button.button--sign-out, .v2 .button--small.button.button--adn, .v2 .button--small.button.button--ambulance, .v2 .button--small.button.button--search, .v2 .button--small.button.button--user {
+    padding: 16px 24px 16px 54px; }
+    .v2 .button--small.button.button--trash:before, .v2 .button--small.button.button--sign-out:before, .v2 .button--small.button.button--adn:before, .v2 .button--small.button.button--ambulance:before, .v2 .button--small.button.button--search:before, .v2 .button--small.button.button--user:before {
+      padding: 13.71429px 0px;
+      font-size: 16px;
+      width: 48px;
+      height: 48px; }
+  .v2 .button--medium.button.button--trash, .v2 .button--medium.button.button--sign-out, .v2 .button--medium.button.button--adn, .v2 .button--medium.button.button--ambulance, .v2 .button--medium.button.button--search, .v2 .button--medium.button.button--user {
+    padding: 21.33333px 32px 21.33333px 72px; }
+    .v2 .button--medium.button.button--trash:before, .v2 .button--medium.button.button--sign-out:before, .v2 .button--medium.button.button--adn:before, .v2 .button--medium.button.button--ambulance:before, .v2 .button--medium.button.button--search:before, .v2 .button--medium.button.button--user:before {
+      padding: 18.28571px 0px;
+      font-size: 21.33333px;
+      width: 64px;
+      height: 64px; }
+  .v2 .button--big.button.button--trash, .v2 .button--big.button.button--sign-out, .v2 .button--big.button.button--adn, .v2 .button--big.button.button--ambulance, .v2 .button--big.button.button--search, .v2 .button--big.button.button--user {
+    padding: 32px 48px 32px 108px; }
+    .v2 .button--big.button.button--trash:before, .v2 .button--big.button.button--sign-out:before, .v2 .button--big.button.button--adn:before, .v2 .button--big.button.button--ambulance:before, .v2 .button--big.button.button--search:before, .v2 .button--big.button.button--user:before {
+      padding: 27.42857px 0px;
+      font-size: 32px;
+      width: 96px;
+      height: 96px; }
+
 * {
   font-family: "Lato", "Helvetica", "Arial", sans-serif;
   color: #272727;
@@ -7204,6 +7243,13 @@ input[type="checkbox"] + label {
     @media (min-width: 992px) {
       .v2 .view .view__form--choose-team {
         margin-left: 33.33333%; } }
+  .v2 .view .view__menu-secondary {
+    display: block;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: right;
+    text-align: right; }
 
 .partial {
   display: block;
@@ -8038,7 +8084,7 @@ input[type="checkbox"] + label {
   width: auto;
   height: 48px;
   padding: 16px 24px;
-  margin: 4px;
+  margin: 0px;
   border: none;
   background-color: #4C4C4C;
   color: #fefefe;
@@ -8051,31 +8097,6 @@ input[type="checkbox"] + label {
   transition: 0.8s; }
   .v2 .button:hover {
     background-color: #262626; }
-  .v2 .button.button--with-icon {
-    padding: 16px 24px 16px 54px; }
-    .v2 .button.button--with-icon:before {
-      content: "A";
-      display: block;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      text-align: center;
-      padding: 6px 0px;
-      margin: 0px;
-      font-size: 24px;
-      width: 48px;
-      height: 48px;
-      background: none;
-      font-family: "FontAwesome";
-      color: #fefefe; }
-    .v2 .button.button--with-icon.button--with-icon-trash:before {
-      content: "\f1f8"; }
-    .v2 .button.button--with-icon.button--with-icon-adn:before {
-      content: "\f170"; }
-    .v2 .button.button--with-icon.button--with-icon-ambulance:before {
-      content: "\f0f9"; }
-    .v2 .button.button--with-icon.button--with-icon-search:before {
-      content: "\f002"; }
   .v2 .button .button__label {
     display: block;
     color: #fefefe; }
@@ -8083,26 +8104,40 @@ input[type="checkbox"] + label {
     padding: 16px 24px; }
     .v2 .button.button--label-off .button__label {
       display: none; }
-  .v2 .button.button--label-on-hover {
+  .v2 .button.button--label-hover-right, .v2 .button.button--label-hover-left {
     width: 48px;
     padding: 16px 24px; }
-    .v2 .button.button--label-on-hover .button__label {
+    .v2 .button.button--label-hover-right .button__label, .v2 .button.button--label-hover-left .button__label {
       display: block;
       position: absolute;
+      box-sizing: border-box;
       top: 0px;
-      left: 54px;
+      width: 576px;
       padding: 16px 0px;
       color: #272727;
+      text-shadow: 1px 0px 2px #ffffff;
       visibility: hidden;
       opacity: 0;
       -webkit-transition: .6s;
       transition: .6s; }
-    .v2 .button.button--label-on-hover:hover .button__label {
+    .v2 .button.button--label-hover-right:hover .button__label, .v2 .button.button--label-hover-left:hover .button__label {
+      display: block;
       visibility: visible;
       opacity: 1;
       padding: 16px;
       -webkit-transition: .8s;
       transition: .8s; }
+      .v2 .button.button--label-hover-right:hover .button__label:hover, .v2 .button.button--label-hover-left:hover .button__label:hover {
+        visibility: hidden;
+        opacity: 0;
+        padding: 16px 0px;
+        -webkit-transition: .6s;
+        transition: .6s; }
+  .v2 .button.button--label-hover-right .button__label {
+    left: 54px; }
+  .v2 .button.button--label-hover-left .button__label {
+    right: 54px;
+    text-align: right; }
   .v2 .button.button--default {
     background-color: #4C4C4C;
     color: #fefefe; }
@@ -8110,7 +8145,7 @@ input[type="checkbox"] + label {
       color: #fefefe; }
     .v2 .button.button--default:hover {
       background-color: #262626; }
-    .v2 .button.button--default.button--label-on-hover .button__label {
+    .v2 .button.button--default.button--label-hover-left .button__label, .v2 .button.button--default.button--label-hover-right .button__label {
       color: #272727; }
   .v2 .button.button--default-reverse {
     background: none;
@@ -8121,7 +8156,7 @@ input[type="checkbox"] + label {
       color: #4C4C4C; }
     .v2 .button.button--default-reverse:hover {
       background-color: #939393; }
-    .v2 .button.button--default-reverse.button--label-on-hover .button__label {
+    .v2 .button.button--default-reverse.button--label-hover-left .button__label, .v2 .button.button--default-reverse.button--label-hover-right .button__label {
       color: #272727; }
   .v2 .button.button--primary {
     background-color: #FA6942;
@@ -8130,7 +8165,7 @@ input[type="checkbox"] + label {
       color: #fefefe; }
     .v2 .button.button--primary:hover {
       background-color: #e93606; }
-    .v2 .button.button--primary.button--label-on-hover .button__label {
+    .v2 .button.button--primary.button--label-hover-left .button__label, .v2 .button.button--primary.button--label-hover-right .button__label {
       color: #272727; }
   .v2 .button.button--primary-reverse {
     background: none;
@@ -8141,7 +8176,7 @@ input[type="checkbox"] + label {
       color: #FA6942; }
     .v2 .button.button--primary-reverse:hover {
       background-color: #fed7cd; }
-    .v2 .button.button--primary-reverse.button--label-on-hover .button__label {
+    .v2 .button.button--primary-reverse.button--label-hover-left .button__label, .v2 .button.button--primary-reverse.button--label-hover-right .button__label {
       color: #272727; }
   .v2 .button.button--info {
     background-color: #41D2FA;
@@ -8150,7 +8185,7 @@ input[type="checkbox"] + label {
       color: #fefefe; }
     .v2 .button.button--info:hover {
       background-color: #06b7e8; }
-    .v2 .button.button--info.button--label-on-hover .button__label {
+    .v2 .button.button--info.button--label-hover-left .button__label, .v2 .button.button--info.button--label-hover-right .button__label {
       color: #272727; }
   .v2 .button.button--info-reverse {
     background: none;
@@ -8161,7 +8196,7 @@ input[type="checkbox"] + label {
       color: #41D2FA; }
     .v2 .button.button--info-reverse:hover {
       background-color: #ccf3fe; }
-    .v2 .button.button--info-reverse.button--label-on-hover .button__label {
+    .v2 .button.button--info-reverse.button--label-hover-left .button__label, .v2 .button.button--info-reverse.button--label-hover-right .button__label {
       color: #272727; }
   .v2 .button.button--success {
     background-color: #4caf50;
@@ -8170,7 +8205,7 @@ input[type="checkbox"] + label {
       color: #fefefe; }
     .v2 .button.button--success:hover {
       background-color: #357a38; }
-    .v2 .button.button--success.button--label-on-hover .button__label {
+    .v2 .button.button--success.button--label-hover-left .button__label, .v2 .button.button--success.button--label-hover-right .button__label {
       color: #272727; }
   .v2 .button.button--success-reverse {
     background: none;
@@ -8181,7 +8216,7 @@ input[type="checkbox"] + label {
       color: #4caf50; }
     .v2 .button.button--success-reverse:hover {
       background-color: #aedcb0; }
-    .v2 .button.button--success-reverse.button--label-on-hover .button__label {
+    .v2 .button.button--success-reverse.button--label-hover-left .button__label, .v2 .button.button--success-reverse.button--label-hover-right .button__label {
       color: #272727; }
   .v2 .button.button--warning {
     background-color: #ff9800;
@@ -8190,7 +8225,7 @@ input[type="checkbox"] + label {
       color: #fefefe; }
     .v2 .button.button--warning:hover {
       background-color: #b36a00; }
-    .v2 .button.button--warning.button--label-on-hover .button__label {
+    .v2 .button.button--warning.button--label-hover-left .button__label, .v2 .button.button--warning.button--label-hover-right .button__label {
       color: #272727; }
   .v2 .button.button--warning-reverse {
     background: none;
@@ -8201,7 +8236,7 @@ input[type="checkbox"] + label {
       color: #ff9800; }
     .v2 .button.button--warning-reverse:hover {
       background-color: #ffd28f; }
-    .v2 .button.button--warning-reverse.button--label-on-hover .button__label {
+    .v2 .button.button--warning-reverse.button--label-hover-left .button__label, .v2 .button.button--warning-reverse.button--label-hover-right .button__label {
       color: #272727; }
   .v2 .button.button--danger {
     background-color: #e51c23;
@@ -8210,7 +8245,7 @@ input[type="checkbox"] + label {
       color: #fefefe; }
     .v2 .button.button--danger:hover {
       background-color: #a21318; }
-    .v2 .button.button--danger.button--label-on-hover .button__label {
+    .v2 .button.button--danger.button--label-hover-left .button__label, .v2 .button.button--danger.button--label-hover-right .button__label {
       color: #272727; }
   .v2 .button.button--danger-reverse {
     background: none;
@@ -8221,74 +8256,74 @@ input[type="checkbox"] + label {
       color: #e51c23; }
     .v2 .button.button--danger-reverse:hover {
       background-color: #f49c9f; }
-    .v2 .button.button--danger-reverse.button--label-on-hover .button__label {
+    .v2 .button.button--danger-reverse.button--label-hover-left .button__label, .v2 .button.button--danger-reverse.button--label-hover-right .button__label {
       color: #272727; }
   .v2 .button.button--small {
     height: 48px;
     padding: 16px 24px;
-    margin: 4px;
     font-size: 12px; }
-    .v2 .button.button--small.button--with-icon {
-      padding: 16px 24px 16px 54px; }
-      .v2 .button.button--small.button--with-icon:before {
-        padding: 13.71429px 0px;
-        font-size: 16px;
-        width: 48px;
-        height: 48px; }
     .v2 .button.button--small.button--label-off {
       padding: 16px 24px; }
-    .v2 .button.button--small.button--label-on-hover {
+    .v2 .button.button--small.button--label-hover-left, .v2 .button.button--small.button--label-hover-right {
       width: 48px;
       padding: 16px 24px; }
-      .v2 .button.button--small.button--label-on-hover .button__label {
-        left: 54px;
+      .v2 .button.button--small.button--label-hover-left .button__label, .v2 .button.button--small.button--label-hover-right .button__label {
         padding: 16px 0px; }
-      .v2 .button.button--small.button--label-on-hover:hover .button__label {
+      .v2 .button.button--small.button--label-hover-left:hover .button__label, .v2 .button.button--small.button--label-hover-right:hover .button__label {
         padding: 16px 12px; }
+    .v2 .button.button--small.button--label-hover-right .button__label {
+      left: 54px; }
+    .v2 .button.button--small.button--label-hover-left .button__label {
+      right: 54px;
+      text-align: right; }
   .v2 .button.button--medium {
     height: 64px;
     padding: 21.33333px 32px;
-    margin: 5.33333px;
     font-size: 16px; }
-    .v2 .button.button--medium.button--with-icon {
-      padding: 21.33333px 32px 21.33333px 72px; }
-      .v2 .button.button--medium.button--with-icon:before {
-        padding: 18.28571px 0px;
-        font-size: 21.33333px;
-        width: 64px;
-        height: 64px; }
     .v2 .button.button--medium.button--label-off {
       padding: 21.33333px 32px; }
-    .v2 .button.button--medium.button--label-on-hover {
+    .v2 .button.button--medium.button--label-hover-left, .v2 .button.button--medium.button--label-hover-right {
       width: 64px;
       padding: 21.33333px 32px; }
-      .v2 .button.button--medium.button--label-on-hover .button__label {
-        left: 72px;
+      .v2 .button.button--medium.button--label-hover-left .button__label, .v2 .button.button--medium.button--label-hover-right .button__label {
         padding: 21.33333px 0px; }
-      .v2 .button.button--medium.button--label-on-hover:hover .button__label {
+      .v2 .button.button--medium.button--label-hover-left:hover .button__label, .v2 .button.button--medium.button--label-hover-right:hover .button__label {
         padding: 21.33333px 16px; }
+    .v2 .button.button--medium.button--label-hover-right .button__label {
+      left: 72px; }
+    .v2 .button.button--medium.button--label-hover-left .button__label {
+      right: 72px;
+      text-align: right; }
   .v2 .button.button--big {
     height: 96px;
     padding: 32px 48px;
-    margin: 8px;
     font-size: 24px; }
-    .v2 .button.button--big.button--with-icon {
-      padding: 32px 48px 32px 108px; }
-      .v2 .button.button--big.button--with-icon:before {
-        padding: 27.42857px 0px;
-        font-size: 32px;
-        width: 96px;
-        height: 96px; }
     .v2 .button.button--big.button--label-off {
       padding: 32px 48px; }
-    .v2 .button.button--big.button--label-on-hover {
+    .v2 .button.button--big.button--label-hover-left, .v2 .button.button--big.button--label-hover-right {
       width: 96px;
       padding: 32px 48px; }
-      .v2 .button.button--big.button--label-on-hover .button__label {
-        left: 108px;
+      .v2 .button.button--big.button--label-hover-left .button__label, .v2 .button.button--big.button--label-hover-right .button__label {
         padding: 32px 0px; }
-      .v2 .button.button--big.button--label-on-hover:hover .button__label {
+      .v2 .button.button--big.button--label-hover-left:hover .button__label, .v2 .button.button--big.button--label-hover-right:hover .button__label {
         padding: 32px 24px; }
+    .v2 .button.button--big.button--label-hover-right .button__label {
+      left: 108px; }
+    .v2 .button.button--big.button--label-hover-left .button__label {
+      right: 108px;
+      text-align: right; }
+  .v2 .button.button--trash:before {
+    content: "\f1f8"; }
+  .v2 .button.button--sign-out:before {
+    content: "\f08b"; }
+  .v2 .button.button--adn:before {
+    content: "\f170"; }
+  .v2 .button.button--ambulance:before {
+    content: "\f0f9"; }
+  .v2 .button.button--search:before {
+    content: "\f002"; }
+  .v2 .button.button--user:before {
+    content: "\f007"; }
   .v2 .button.button--round {
     border-radius: 50%; }
   .v2 .button.button--round-square {
@@ -8750,6 +8785,16 @@ input[type="checkbox"] + label {
       -webkit-transition: .8s;
       transition: .8s;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19); }
+.v2 .input--group .input {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 0px; }
+.v2 .input--group .button {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 6px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 6px; }
 
 .link {
   display: inline-block;

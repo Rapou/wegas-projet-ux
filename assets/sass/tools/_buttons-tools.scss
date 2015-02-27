@@ -74,21 +74,47 @@ $btn-size-big: $btn-size-default*3/2;
         }
     }
 }
+// ---- V2 ----
 
-@mixin createButtonsIcon(){
-    $buttons-icon : (
-        (trash, $fa-var-trash),
-        (adn, $fa-var-adn),
-        (ambulance, $fa-var-ambulance),
-        (search, $fa-var-search)
-    );
-    @each $button-icon in $buttons-icon{
-        $icon-name : nth($button-icon, 1);
-        $icon-content : nth($button-icon, 2);
-    
-        &.button--with-icon-#{$icon-name}{
+$buttons-icon : (
+    (trash, $fa-var-trash),
+    (sign-out, $fa-var-sign-out),
+    (adn, $fa-var-adn),
+    (ambulance, $fa-var-ambulance),
+    (search, $fa-var-search),
+    (user, $fa-var-user)
+);
+
+%button--with-icon{
+    $btn-default-size: nth(nth($sizes, 1),2);
+    padding:$btn-default-size/3 $btn-default-size/2 $btn-default-size/3 ($btn-default-size + $btn-default-size/8);
+    &:before{
+        content:"A";
+        display:block;
+        position:absolute; 
+        top:0px;
+        left:0px;
+        text-align:center;
+        padding:$btn-default-size/8 0px;
+        margin:0px;
+        font-size:$btn-default-size/2;
+        width:$btn-default-size;
+        height:$btn-default-size;   
+        background:none;  
+        font-family:"FontAwesome";  
+        color:$white;
+    }
+
+    @each $size in $sizes{
+        $size-name:nth($size, 1);
+        $size-pixel:nth($size, 2);
+        &.button--#{$size-name}{
+            padding:$size-pixel/3 $size-pixel/2 $size-pixel/3 ($size-pixel + $size-pixel/8);
             &:before{
-                content: $icon-content;
+                padding:$size-pixel/3.5 0px;
+                font-size:$size-pixel/3;
+                width:$size-pixel;
+                height:$size-pixel;   
             }
         }
     }

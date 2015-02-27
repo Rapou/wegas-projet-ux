@@ -170,7 +170,15 @@
             @include make-md-column(4);
             @include make-md-column-offset(4);
             margin-top:128px;
+        }
 
+        .view__menu-secondary{
+            display:block;
+            position:relative;
+            width:50%;
+            height:100%;
+            float:right;
+            text-align:right;
         }
 
     }

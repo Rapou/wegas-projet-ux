@@ -143,6 +143,8 @@
     }
 }
 
+// ---- Button V2 ---- 
+
 .v2{
     .button{
         $btn-default-size: nth(nth($sizes, 1),2);
@@ -152,7 +154,7 @@
         width:auto;
         height:$btn-default-size;
         padding:$btn-default-size/3 $btn-default-size/2;
-        margin:$btn-default-size/12;
+        margin:0px; // $btn-default-size/12;
         border:none;
         background-color:$default-color-button;
         color:$white;
@@ -167,28 +169,6 @@
         &:hover{
             background-color:darken($default-color-button, 15%);
         }
-        // Ajout d'un icon en btn small
-        &.button--with-icon{
-            padding:$btn-default-size/3 $btn-default-size/2 $btn-default-size/3 ($btn-default-size + $btn-default-size/8);
-            &:before{
-                content:"A";
-                display:block;
-                position:absolute; 
-                top:0px;
-                left:0px;
-                text-align:center;
-                padding:$btn-default-size/8 0px;
-                margin:0px;
-                font-size:$btn-default-size/2;
-                width:$btn-default-size;
-                height:$btn-default-size;   
-                background:none;  
-                font-family:"FontAwesome";  
-                color:$white;
-            }
-            @include createButtonsIcon();
-        }
-
         // Affichage du label par défaut.
         .button__label{
             display:block;
@@ -204,31 +184,55 @@
         }
 
         // Montre le label en hover
-        &.button--label-on-hover{
+        &.button--label-hover-right, &.button--label-hover-left{
             width: $btn-default-size;
             padding:$btn-default-size/3 $btn-default-size/2;
             .button__label{
                 display:block;
                 position:absolute;
+                box-sizing: border-box;
                 top:0px;
-                left:$btn-default-size + $btn-default-size/8;
+                width:$btn-default-size*12;
                 padding:$btn-default-size/3 0px;
                 color:$default-color;
+                text-shadow: 1px 0px 2px #ffffff;
+
                 visibility:hidden;
                 opacity:0;
                 transition:.6s;
             }
             &:hover{
                 .button__label{
+                    display:block;
                     visibility:visible;
                     opacity:1;
                     padding:$btn-default-size/3;
                     transition:.8s;
+                    &:hover{
+                        visibility:hidden;
+                        opacity:0;
+                        padding:$btn-default-size/3 0px;
+                        transition:.6s;
+                    }
 
                 }
             }
         } 
+        &.button--label-hover-right{
+            .button__label{
+                left:$btn-default-size + $btn-default-size/8;
+            }
+        }
 
+        // Montre le label en hover à droite
+        &.button--label-hover-left{
+            .button__label{
+                right:$btn-default-size + $btn-default-size/8;
+                text-align: right;
+            }
+        } 
+
+        // Modifie la couleur selon le type de bouton (Default, Info, Primary, Success, Warning, Danger)
         @each $button-type in $buttons-types{
             $type-name : nth($button-type, 1); 
             $type-color : nth($button-type, 2);
@@ -243,7 +247,7 @@
                 &:hover{
                     background-color:darken($type-color, 15%);
                 }
-                &.button--label-on-hover{
+                &.button--label-hover-left, &.button--label-hover-right{
                     .button__label{
                         color:$default-color;
                     }
@@ -261,7 +265,7 @@
                 &:hover{
                     background-color:lighten($type-color, 28%);
                 }
-                &.button--label-on-hover{
+                &.button--label-hover-left, &.button--label-hover-right{
                     .button__label{
                         color:$default-color;
                     }
@@ -275,25 +279,14 @@
             &.button--#{$size-name}{
                 height:$size-pixel;
                 padding:$size-pixel/3 $size-pixel/2;
-                margin:$size-pixel/12;
                 font-size: $size-pixel/4;
-                &.button--with-icon{
-                    padding:$size-pixel/3 $size-pixel/2 $size-pixel/3 ($size-pixel + $size-pixel/8);
-                    &:before{
-                        padding:$size-pixel/3.5 0px;
-                        font-size:$size-pixel/3;
-                        width:$size-pixel;
-                        height:$size-pixel;   
-                    }
-                }
                 &.button--label-off{
                     padding:$size-pixel/3 $size-pixel/2;
                 }
-                &.button--label-on-hover{
+                &.button--label-hover-left, &.button--label-hover-right{
                     width: $size-pixel;
                     padding:$size-pixel/3 $size-pixel/2;
                     .button__label{
-                        left:$size-pixel + $size-pixel/8;
                         padding:$size-pixel/3 0px;
                     }
                     &:hover{
@@ -302,6 +295,31 @@
                         }
                     }
                 } 
+                &.button--label-hover-right{
+                    .button__label{                     
+                        left:$size-pixel + $size-pixel/8;
+                    }
+                }
+
+                &.button--label-hover-left{
+                    .button__label{
+                        right:$size-pixel + $size-pixel/8;
+                        text-align: right;
+                    }
+                } 
+            }
+        }
+
+        // Ajout d'un icon en btn small
+        @each $button-icon in $buttons-icon{
+            $icon-name : nth($button-icon, 1);
+            $icon-content : nth($button-icon, 2);
+        
+            &.button--#{$icon-name}{
+                @extend %button--with-icon;
+                &:before{
+                    content: $icon-content;
+                }
             }
         }
 
