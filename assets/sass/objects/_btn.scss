@@ -143,12 +143,15 @@
     }
 }
 
+// -------------------
 // ---- Button V2 ---- 
+// -------------------
 
 .v2{
     .button{
         $btn-default-size: nth(nth($sizes, 1),2);
-        // Initialisation des couleurs default à la taille small avec forme round-square
+
+        // Initialisation des couleurs "default" à la taille "small"
         position:relative;
         display:inline-block;
         width:auto;
@@ -169,6 +172,7 @@
         &:hover{
             background-color:darken($default-color-button, 15%);
         }
+
         // Affichage du label par défaut.
         .button__label{
             display:block;
@@ -195,7 +199,7 @@
                 width:$btn-default-size*12;
                 padding:$btn-default-size/3 0px;
                 color:$default-color;
-                text-shadow: 1px 0px 2px #ffffff;
+                // text-shadow: 1px 0px 2px #ffffff;
 
                 visibility:hidden;
                 opacity:0;
@@ -218,13 +222,15 @@
                 }
             }
         } 
+
+        // Montre le label en hover à droite
         &.button--label-hover-right{
             .button__label{
                 left:$btn-default-size + $btn-default-size/8;
             }
         }
 
-        // Montre le label en hover à droite
+        // Montre le label en hover à gauche
         &.button--label-hover-left{
             .button__label{
                 right:$btn-default-size + $btn-default-size/8;
@@ -253,6 +259,7 @@
                     }
                 }
             }
+
             &.button--#{$type-name}-reverse{
                 background:none;
                 color:$type-color;
@@ -273,6 +280,7 @@
             }
         }
 
+        // Modifie le bouton selon la taille voulue (small, medium, big)
         @each $size in $sizes{
             $size-name:nth($size, 1);
             $size-pixel:nth($size, 2);
@@ -310,7 +318,7 @@
             }
         }
 
-        // Ajout d'un icon en btn small
+        // Ajout d'un icon au bouton
         @each $button-icon in $buttons-icon{
             $icon-name : nth($button-icon, 1);
             $icon-content : nth($button-icon, 2);
@@ -323,14 +331,17 @@
             }
         }
 
+        // Donne une forme arrondie au bouton
         &.button--round{
             border-radius:50%;
         }
 
+        // Arrondi les angles du bouton. 
         &.button--round-square{
             border-radius:6px;
         }
 
+        // Donne une ombre au bouton.
         &.button--shadow{
             @include material-shadow(2);
         }

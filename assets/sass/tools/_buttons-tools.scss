@@ -82,7 +82,12 @@ $buttons-icon : (
     (adn, $fa-var-adn),
     (ambulance, $fa-var-ambulance),
     (search, $fa-var-search),
-    (user, $fa-var-user)
+    (user, $fa-var-user),
+    (user-plus, $fa-var-user-plus),
+    (workspaces, $fa-var-th),
+    (player, $fa-var-gamepad),
+    (trainer, $fa-var-tachometer),
+    (scenarist, $fa-var-magic)
 );
 
 %button--with-icon{
@@ -95,9 +100,9 @@ $buttons-icon : (
         top:0px;
         left:0px;
         text-align:center;
-        padding:$btn-default-size/8 0px;
+        padding:$btn-default-size/4.5 0px;
         margin:0px;
-        font-size:$btn-default-size/2;
+        font-size:$btn-default-size/2.5;
         width:$btn-default-size;
         height:$btn-default-size;   
         background:none;  
@@ -111,8 +116,8 @@ $buttons-icon : (
         &.button--#{$size-name}{
             padding:$size-pixel/3 $size-pixel/2 $size-pixel/3 ($size-pixel + $size-pixel/8);
             &:before{
-                padding:$size-pixel/3.5 0px;
-                font-size:$size-pixel/3;
+                padding:$size-pixel/4.5 0px;
+                font-size:$size-pixel/2.5;
                 width:$size-pixel;
                 height:$size-pixel;   
             }

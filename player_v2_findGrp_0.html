@@ -11,35 +11,40 @@
     </head>
     <body  class="v2">
         <div id="view-player" class="view view--main">
-            <div class="view view--menu view--reverse-top view--separate-shadow ">
-                <div class="partial partial--menu__workspaces">
+            <div class="view view--menu view--reverse-top view--separate-shadow">
+                <div class="view view__menu-workspaces">
                     <input type="checkbox" class="menu--toggler" id="menu-toggler" />
                     <label class="btn--menu" for="menu-toggler"></label>
                     <div class="menu">
                         <ul>
-                            <li><a href="player.html" class="btn btn--icon btn--workspaces btn--with-label"><span class="btn__label">Go to Player workspace</span></a></li>
+                            <li><a href="player.html" class="button button--default-reverse button--player"><span class="button__label">Go to Player workspace</span></a></li>
                             <li>
-                                <a href="trainer.html" class="btn btn--icon btn--workspaces btn--with-label"><span class="btn__label">Go to trainer workspace</span></a>
+                                <a href="trainer.html" class="button button--default-reverse button--trainer"><span class="button__label">Go to trainer workspace</span></a>
                             </li>
                             <li>
-                                <a href="scenarist.html" class="btn btn--icon btn--workspaces btn--with-label"><span class="btn__label">Go to Scenarist workspace</span></a>
+                                <a href="scenarist.html" class="button button--default-reverse button--scenarist"><span class="button__label">Go to Scenarist workspace</span></a>
                             </li>
                             <li><hr/></li>
                             <li>
-                                <a href="#" class="btn btn--icon btn--user btn--with-label"><span class="btn__label">Edit profile</span></a>
+                                <a href="#" class="button button--default-reverse button--user"><span class="button__label">Edit profile</span></a>
                             </li>
                             <li>
-                                <a href="#" class="btn btn--icon btn--sign-out btn--with-label"><span class="btn__label">Logout</span></a>
+                                <a href="public_login.html" class="button button--default-reverse button--sign-out"><span class="button__label">Logout</span></a>
                             </li>
                         </ul>
                     </div>
+                    <h2 class="view__headding-workspace">Player workspace</h2>
                 </div>
-                <h2>Player workspace</h2>
-                <ul class="partial--menu__action">
-                    <li class="action"><a href="#" class="btn btn--icon btn--user"><span class="btn__label">Profil</span></a></li>
-                    <li class="action"><a href="#" class="btn btn--icon btn--sign-out"><span class="btn__label">Logout</span></a></li>
-                </ul>
+                <div class="view view__menu-secondary">
+                    <a class="button button--primary button--user button--label-hover-left" href="#">
+                        <span class="button__label">My account</span>
+                    </a>
+                    <a class="button button--primary button--sign-out button--label-hover-left" href="#">
+                        <span class="button__label">Log out</span>
+                    </a>
+                </div>  
             </div>
+                
             <div class="view view--workspace">
                 <form class="view__form--choose-team form">
                     <h3 class="form__title">Join a team</h3>
@@ -48,7 +53,7 @@
                         <p class="form__row__description">Cours MIT42 - Programming game</p>
                     </div>
                     <div class="form__row">
-                        <a class="form__row__btn button button--round button--info button--big button--search button--label-hover-left" href="#" id="search">
+                        <a class="form__row__btn button button--round button--info button--big button--search button--label-hover-left" href="player_v2_findGrp_1.html" id="search">
                             <span class="button__label">Search</span>
                         </a>
                     </div>

@@ -60,8 +60,8 @@
     .view{
         display:block;
         position:relative;
-        overflow-x:hidden;
-        overflow-y:auto;
+        overflow-x:visible;
+        overflow-y:visible;
         
         // Styles de positionnements 
         &.view--main{
@@ -171,7 +171,19 @@
             @include make-md-column-offset(4);
             margin-top:128px;
         }
-
+        .view__menu-workspaces{
+            display:block;
+            position:relative;
+            width:50%;
+            height:100%;
+            float:left;
+        }
+        .view__headding-workspace{
+            margin:0px;
+            padding:14px 0px;
+            float:left;
+            color:white;
+        }
         .view__menu-secondary{
             display:block;
             position:relative;

@@ -6628,42 +6628,42 @@ table td[class*="col-"], table th[class*="col-"] {
       border-radius: 24px;
       opacity: 0.8; }
 
-.v2 .button.button--trash, .v2 .button.button--sign-out, .v2 .button.button--adn, .v2 .button.button--ambulance, .v2 .button.button--search, .v2 .button.button--user {
+.v2 .button.button--trash, .v2 .button.button--sign-out, .v2 .button.button--adn, .v2 .button.button--ambulance, .v2 .button.button--search, .v2 .button.button--user, .v2 .button.button--user-plus, .v2 .button.button--workspaces, .v2 .button.button--player, .v2 .button.button--trainer, .v2 .button.button--scenarist {
   padding: 16px 24px 16px 54px; }
-  .v2 .button.button--trash:before, .v2 .button.button--sign-out:before, .v2 .button.button--adn:before, .v2 .button.button--ambulance:before, .v2 .button.button--search:before, .v2 .button.button--user:before {
+  .v2 .button.button--trash:before, .v2 .button.button--sign-out:before, .v2 .button.button--adn:before, .v2 .button.button--ambulance:before, .v2 .button.button--search:before, .v2 .button.button--user:before, .v2 .button.button--user-plus:before, .v2 .button.button--workspaces:before, .v2 .button.button--player:before, .v2 .button.button--trainer:before, .v2 .button.button--scenarist:before {
     content: "A";
     display: block;
     position: absolute;
     top: 0px;
     left: 0px;
     text-align: center;
-    padding: 6px 0px;
+    padding: 10.66667px 0px;
     margin: 0px;
-    font-size: 24px;
+    font-size: 19.2px;
     width: 48px;
     height: 48px;
     background: none;
     font-family: "FontAwesome";
     color: #fefefe; }
-  .v2 .button--small.button.button--trash, .v2 .button--small.button.button--sign-out, .v2 .button--small.button.button--adn, .v2 .button--small.button.button--ambulance, .v2 .button--small.button.button--search, .v2 .button--small.button.button--user {
+  .v2 .button--small.button.button--trash, .v2 .button--small.button.button--sign-out, .v2 .button--small.button.button--adn, .v2 .button--small.button.button--ambulance, .v2 .button--small.button.button--search, .v2 .button--small.button.button--user, .v2 .button--small.button.button--user-plus, .v2 .button--small.button.button--workspaces, .v2 .button--small.button.button--player, .v2 .button--small.button.button--trainer, .v2 .button--small.button.button--scenarist {
     padding: 16px 24px 16px 54px; }
-    .v2 .button--small.button.button--trash:before, .v2 .button--small.button.button--sign-out:before, .v2 .button--small.button.button--adn:before, .v2 .button--small.button.button--ambulance:before, .v2 .button--small.button.button--search:before, .v2 .button--small.button.button--user:before {
-      padding: 13.71429px 0px;
-      font-size: 16px;
+    .v2 .button--small.button.button--trash:before, .v2 .button--small.button.button--sign-out:before, .v2 .button--small.button.button--adn:before, .v2 .button--small.button.button--ambulance:before, .v2 .button--small.button.button--search:before, .v2 .button--small.button.button--user:before, .v2 .button--small.button.button--user-plus:before, .v2 .button--small.button.button--workspaces:before, .v2 .button--small.button.button--player:before, .v2 .button--small.button.button--trainer:before, .v2 .button--small.button.button--scenarist:before {
+      padding: 10.66667px 0px;
+      font-size: 19.2px;
       width: 48px;
       height: 48px; }
-  .v2 .button--medium.button.button--trash, .v2 .button--medium.button.button--sign-out, .v2 .button--medium.button.button--adn, .v2 .button--medium.button.button--ambulance, .v2 .button--medium.button.button--search, .v2 .button--medium.button.button--user {
+  .v2 .button--medium.button.button--trash, .v2 .button--medium.button.button--sign-out, .v2 .button--medium.button.button--adn, .v2 .button--medium.button.button--ambulance, .v2 .button--medium.button.button--search, .v2 .button--medium.button.button--user, .v2 .button--medium.button.button--user-plus, .v2 .button--medium.button.button--workspaces, .v2 .button--medium.button.button--player, .v2 .button--medium.button.button--trainer, .v2 .button--medium.button.button--scenarist {
     padding: 21.33333px 32px 21.33333px 72px; }
-    .v2 .button--medium.button.button--trash:before, .v2 .button--medium.button.button--sign-out:before, .v2 .button--medium.button.button--adn:before, .v2 .button--medium.button.button--ambulance:before, .v2 .button--medium.button.button--search:before, .v2 .button--medium.button.button--user:before {
-      padding: 18.28571px 0px;
-      font-size: 21.33333px;
+    .v2 .button--medium.button.button--trash:before, .v2 .button--medium.button.button--sign-out:before, .v2 .button--medium.button.button--adn:before, .v2 .button--medium.button.button--ambulance:before, .v2 .button--medium.button.button--search:before, .v2 .button--medium.button.button--user:before, .v2 .button--medium.button.button--user-plus:before, .v2 .button--medium.button.button--workspaces:before, .v2 .button--medium.button.button--player:before, .v2 .button--medium.button.button--trainer:before, .v2 .button--medium.button.button--scenarist:before {
+      padding: 14.22222px 0px;
+      font-size: 25.6px;
       width: 64px;
       height: 64px; }
-  .v2 .button--big.button.button--trash, .v2 .button--big.button.button--sign-out, .v2 .button--big.button.button--adn, .v2 .button--big.button.button--ambulance, .v2 .button--big.button.button--search, .v2 .button--big.button.button--user {
+  .v2 .button--big.button.button--trash, .v2 .button--big.button.button--sign-out, .v2 .button--big.button.button--adn, .v2 .button--big.button.button--ambulance, .v2 .button--big.button.button--search, .v2 .button--big.button.button--user, .v2 .button--big.button.button--user-plus, .v2 .button--big.button.button--workspaces, .v2 .button--big.button.button--player, .v2 .button--big.button.button--trainer, .v2 .button--big.button.button--scenarist {
     padding: 32px 48px 32px 108px; }
-    .v2 .button--big.button.button--trash:before, .v2 .button--big.button.button--sign-out:before, .v2 .button--big.button.button--adn:before, .v2 .button--big.button.button--ambulance:before, .v2 .button--big.button.button--search:before, .v2 .button--big.button.button--user:before {
-      padding: 27.42857px 0px;
-      font-size: 32px;
+    .v2 .button--big.button.button--trash:before, .v2 .button--big.button.button--sign-out:before, .v2 .button--big.button.button--adn:before, .v2 .button--big.button.button--ambulance:before, .v2 .button--big.button.button--search:before, .v2 .button--big.button.button--user:before, .v2 .button--big.button.button--user-plus:before, .v2 .button--big.button.button--workspaces:before, .v2 .button--big.button.button--player:before, .v2 .button--big.button.button--trainer:before, .v2 .button--big.button.button--scenarist:before {
+      padding: 21.33333px 0px;
+      font-size: 38.4px;
       width: 96px;
       height: 96px; }
 
@@ -6707,7 +6707,7 @@ h1 {
   margin-top: 16px; }
 
 h2 {
-  float: left;
+  display: inline-block;
   font-size: 16px;
   font-weight: 300;
   margin: 16px 0px 16px 8px; }
@@ -6893,8 +6893,8 @@ input[type="checkbox"] + label {
 .v2 .view {
   display: block;
   position: relative;
-  overflow-x: hidden;
-  overflow-y: auto; }
+  overflow-x: visible;
+  overflow-y: visible; }
   .v2 .view.view--main {
     width: 100%;
     height: 100%;
@@ -7243,6 +7243,17 @@ input[type="checkbox"] + label {
     @media (min-width: 992px) {
       .v2 .view .view__form--choose-team {
         margin-left: 33.33333%; } }
+  .v2 .view .view__menu-workspaces {
+    display: block;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: left; }
+  .v2 .view .view__headding-workspace {
+    margin: 0px;
+    padding: 14px 0px;
+    float: left;
+    color: white; }
   .v2 .view .view__menu-secondary {
     display: block;
     position: relative;
@@ -8115,7 +8126,6 @@ input[type="checkbox"] + label {
       width: 576px;
       padding: 16px 0px;
       color: #272727;
-      text-shadow: 1px 0px 2px #ffffff;
       visibility: hidden;
       opacity: 0;
       -webkit-transition: .6s;
@@ -8324,6 +8334,16 @@ input[type="checkbox"] + label {
     content: "\f002"; }
   .v2 .button.button--user:before {
     content: "\f007"; }
+  .v2 .button.button--user-plus:before {
+    content: "\f234"; }
+  .v2 .button.button--workspaces:before {
+    content: "\f00a"; }
+  .v2 .button.button--player:before {
+    content: "\f11b"; }
+  .v2 .button.button--trainer:before {
+    content: "\f0e4"; }
+  .v2 .button.button--scenarist:before {
+    content: "\f0d0"; }
   .v2 .button.button--round {
     border-radius: 50%; }
   .v2 .button.button--round-square {
@@ -8836,8 +8856,9 @@ input[type="checkbox"] + label {
   left: -9999999px; }
 
 .btn--menu {
-  padding: 5px 1em;
-  display: inline-block;
+  float: left;
+  padding: 12px 1em;
+  display: block;
   width: 60px; }
   .btn--menu:hover {
     cursor: pointer; }
@@ -8846,15 +8867,15 @@ input[type="checkbox"] + label {
     display: inline-block;
     width: 30px;
     height: 5px;
-    background: #000;
-    color: #FFFFFF;
+    background: #fff;
+    color: #fff;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0px -7.5px #000, 0 7.5px #000; }
+    box-shadow: 0px -7.5px #fff, 0 7.5px #fff; }
   .menu--toggler:checked ~ .btn--menu:before, .menu--toggler.menu--toggler_active ~ .btn--menu:before {
     width: 10px;
     height: 10px;
-    box-shadow: -10px 0px #000, 10px 0px #000, 0px -10px #000, 0px 10px #000;
+    box-shadow: -10px 0px #fff, 10px 0px #fff, 0px -10px #fff, 0px 10px #fff;
     -webkit-transform: rotate3d(0, 0, 1, -45deg) scale3d(0.8, 0.8, 0.8) translate(5px, 7.5px);
     transform: rotate3d(0, 0, 1, -45deg) scale3d(0.8, 0.8, 0.8) translate(5px, 7.5px); }
 
@@ -8864,9 +8885,8 @@ input[type="checkbox"] + label {
   top: 48px;
   background: white;
   margin: 0;
-  border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  border: 1px solid #d7d7d7;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
   border-top: none;
   padding: 1em;
   z-index: 30;
@@ -8887,6 +8907,58 @@ input[type="checkbox"] + label {
     margin: 0;
     list-style-type: none; }
   .menu hr {
+    margin: 0; }
+
+.v2 .btn--menu {
+  float: left;
+  padding: 12px 1em;
+  display: block;
+  width: 60px; }
+  .v2 .btn--menu:hover {
+    cursor: pointer; }
+  .v2 .btn--menu:before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 5px;
+    background: #fefefe;
+    color: #fefefe;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px -7.5px #fefefe, 0 7.5px #fefefe; }
+.v2 .menu {
+  visibility: hidden;
+  position: absolute;
+  top: 48px;
+  background: white;
+  margin: 0;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  border-top: none;
+  padding: 0;
+  z-index: 30;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease, width 0s ease;
+  transition: all 0.5s ease, width 0s ease;
+  overflow: hidden; }
+  .menu--toggler:checked ~ .v2 .menu, .menu--toggler.menu--toggler_active ~ .v2 .menu {
+    visibility: visible;
+    min-width: 305px;
+    min-height: 100px;
+    height: auto;
+    opacity: 1; }
+  .v2 .menu ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: 320px; }
+    .v2 .menu ul li {
+      width: 100%; }
+      .v2 .menu ul li .button {
+        width: 100%; }
+  .v2 .menu hr {
     margin: 0; }
 
 .animated {
