@@ -74,3 +74,22 @@ $btn-size-big: $btn-size-default*3/2;
         }
     }
 }
+
+@mixin createButtonsIcon(){
+    $buttons-icon : (
+        (trash, $fa-var-trash),
+        (adn, $fa-var-adn),
+        (ambulance, $fa-var-ambulance),
+        (search, $fa-var-search)
+    );
+    @each $button-icon in $buttons-icon{
+        $icon-name : nth($button-icon, 1);
+        $icon-content : nth($button-icon, 2);
+    
+        &.button--with-icon-#{$icon-name}{
+            &:before{
+                content: $icon-content;
+            }
+        }
+    }
+}

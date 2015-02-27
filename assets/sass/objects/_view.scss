@@ -95,13 +95,17 @@
         } 
 
         // Styles de décorations
-        @for $i from 1 through 3 {
-            .view--reverse-#{nth($levels, $i)} {
-                background-color: nth($backgrounds-levels-reverse, $i);
+        @each $level in $backgrounds-levels {
+            $level-name : nth($level, 1);
+            $level-color : nth($level, 2);
+            $level-color-reverse : nth($level, 3);
+
+            .view--reverse-#{$level-name} {
+                background-color: $level-color-reverse;
                 color:$white;
             }
-            .view--#{nth($levels, $i)}{
-                background-color: nth($backgrounds-levels, $i);    
+            .view--#{$level-name}{
+                background-color: $level-color;    
             }
         }
 

@@ -18,19 +18,15 @@
 	    -webkit-transform: translateY(-50%) translateX(-50%);
 	}
 
-	&.illustration--small{
-		width:48px;
-		height:48px;
+	@each $size in $sizes{
+		$size-nom: nth($size, 1);
+		$size-value: nth($size, 2);
+		&.illustration--#{$size-nom}{
+			width:$size-value;
+			height:$size-value;
+		}
 	}
-
-	&.illustration--medium{
-		width:64px;
-		height:64px;
-	}
-	&.illustration--big{
-		width:96px;
-		height:96px;
-	}
+	
 	&.illustration--round{
 		border-radius:50%;
 	}

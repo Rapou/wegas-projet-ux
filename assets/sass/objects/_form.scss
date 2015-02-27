@@ -41,13 +41,15 @@
                 @include make-xs-column(12);
                 @include make-md-column(4); 
 
-                @for $i from 1 through 3 {
-                    &.form__row__label--#{nth($sizes, $i)}{
-                        height: nth($height-sizes, $i);
-                        padding:nth($height-sizes, $i)/3 nth($height-sizes, $i)/2;
-                        font-size: nth($height-sizes, $i) / 3;
-                        line-height: nth($height-sizes, $i)/3;
-                        border-radius: nth($height-sizes, $i)/8;
+                @each $size in $sizes {
+                    $size-name: nth($size, 1);
+                    $size-value: nth($size, 2);
+                    &.form__row__label--#{$size-name}{
+                        height: $size-value;
+                        padding:$size-value/3 $size-value/2;
+                        font-size: $size-value / 3;
+                        line-height: $size-value/3;
+                        border-radius: $size-value/8;
                     }
                 }
 

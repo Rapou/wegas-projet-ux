@@ -116,9 +116,12 @@
             transition:0.5s;
         }
     }
+    // Integré dans button
     &.btn--shadow{
         @include material-shadow(2);
     }
+
+    // Defaut avec label -> on parametre ensuite si on veut un icon avec label ou un icon sans label
     &.btn--with-label {
         width: inherit;
         height: inherit;
@@ -142,31 +145,31 @@
 
 .v2{
     .button{
+        $btn-default-size: nth(nth($sizes, 1),2);
+        // Initialisation des couleurs default à la taille small avec forme round-square
         position:relative;
         display:inline-block;
         width:auto;
-        height:nth($height-sizes, 1);
-        padding:nth($height-sizes, 1)/3 nth($height-sizes, 1)/2;
-        margin:nth($height-sizes, 1)/12;
-        border-radius:nth($height-sizes, 1)/3;
+        height:$btn-default-size;
+        padding:$btn-default-size/3 $btn-default-size/2;
+        margin:$btn-default-size/12;
         border:none;
-
         background-color:$default-color-button;
-
         color:$white;
-        font-size: nth($height-sizes, 1)/4;
-        text-transform: uppercase;
-        text-decoration:none;
-        
+
         outline: none;
+        font-size: $btn-default-size/4;
+        text-decoration:none;
+        text-transform: uppercase;
         -webkit-user-select: none;
         transition: 0.8s;
+
         &:hover{
-            background-color:lighten($default-color-button, 10%);
+            background-color:darken($default-color-button, 15%);
         }
-        &.button--icon{
-            width:nth($height-sizes, 1);
-            border-radius:nth($height-sizes, 1)/2;
+        // Ajout d'un icon en btn small
+        &.button--with-icon{
+            padding:$btn-default-size/3 $btn-default-size/2 $btn-default-size/3 ($btn-default-size + $btn-default-size/8);
             &:before{
                 content:"A";
                 display:block;
@@ -174,55 +177,140 @@
                 top:0px;
                 left:0px;
                 text-align:center;
-                padding:nth($height-sizes, 1)/8 0px;
+                padding:$btn-default-size/8 0px;
                 margin:0px;
-                font-size:nth($height-sizes, 1)/2;
-                width:nth($height-sizes, 1);
-                height:nth($height-sizes, 1);   
-                background:none;    
-                border-radius:nth($height-sizes, 1)/2;
+                font-size:$btn-default-size/2;
+                width:$btn-default-size;
+                height:$btn-default-size;   
+                background:none;  
+                font-family:"FontAwesome";  
                 color:$white;
             }
+            @include createButtonsIcon();
+        }
+
+        // Affichage du label par défaut.
+        .button__label{
+            display:block;
+            color:$white;
+        }
+
+        // Cache le label
+        &.button--label-off{
+            padding:$btn-default-size/3 $btn-default-size/2;
             .button__label{
                 display:none;
             }
         }
 
-        @for $i from 1 through length($buttons-types){
-            &.button--#{nth($buttons-types, $i)}{
-                background-color:nth($buttons-colors, $i);
+        // Montre le label en hover
+        &.button--label-on-hover{
+            width: $btn-default-size;
+            padding:$btn-default-size/3 $btn-default-size/2;
+            .button__label{
+                display:block;
+                position:absolute;
+                top:0px;
+                left:$btn-default-size + $btn-default-size/8;
+                padding:$btn-default-size/3 0px;
+                color:$default-color;
+                visibility:hidden;
+                opacity:0;
+                transition:.6s;
             }
-            &.button--#{nth($buttons-types, $i)}-reverse{
+            &:hover{
+                .button__label{
+                    visibility:visible;
+                    opacity:1;
+                    padding:$btn-default-size/3;
+                    transition:.8s;
+
+                }
+            }
+        } 
+
+        @each $button-type in $buttons-types{
+            $type-name : nth($button-type, 1); 
+            $type-color : nth($button-type, 2);
+
+            &.button--#{$type-name}{
+                background-color:$type-color;
+                color:$white;
+
+                .button__label{
+                    color: $white;
+                }
+                &:hover{
+                    background-color:darken($type-color, 15%);
+                }
+                &.button--label-on-hover{
+                    .button__label{
+                        color:$default-color;
+                    }
+                }
+            }
+            &.button--#{$type-name}-reverse{
                 background:none;
-                color:nth($buttons-colors, $i);
+                color:$type-color;
+                .button__label{
+                    color:$type-color;
+                }
                 &:before{
-                    color:nth($buttons-colors, $i);
+                    color:$type-color;
+                }
+                &:hover{
+                    background-color:lighten($type-color, 28%);
+                }
+                &.button--label-on-hover{
+                    .button__label{
+                        color:$default-color;
+                    }
                 }
             }
         }
 
-        @for $i from 1 through length($sizes){
-            $size-name:nth($sizes, $i);
-            $size-pixel:nth($height-sizes, $i);
+        @each $size in $sizes{
+            $size-name:nth($size, 1);
+            $size-pixel:nth($size, 2);
             &.button--#{$size-name}{
                 height:$size-pixel;
                 padding:$size-pixel/3 $size-pixel/2;
                 margin:$size-pixel/12;
-                border-radius:$size-pixel/3;
                 font-size: $size-pixel/4;
-                &.button--icon{
-                    width:$size-pixel;
-                    border-radius:$size-pixel/2;
+                &.button--with-icon{
+                    padding:$size-pixel/3 $size-pixel/2 $size-pixel/3 ($size-pixel + $size-pixel/8);
                     &:before{
-                        padding:$size-pixel/8 0px;
-                        font-size:$size-pixel/2;
+                        padding:$size-pixel/3.5 0px;
+                        font-size:$size-pixel/3;
                         width:$size-pixel;
                         height:$size-pixel;   
-                        border-radius:$size-pixel/2;
                     }
                 }
+                &.button--label-off{
+                    padding:$size-pixel/3 $size-pixel/2;
+                }
+                &.button--label-on-hover{
+                    width: $size-pixel;
+                    padding:$size-pixel/3 $size-pixel/2;
+                    .button__label{
+                        left:$size-pixel + $size-pixel/8;
+                        padding:$size-pixel/3 0px;
+                    }
+                    &:hover{
+                        .button__label{
+                            padding:$size-pixel/3 $size-pixel/4;
+                        }
+                    }
+                } 
             }
+        }
 
+        &.button--round{
+            border-radius:50%;
+        }
+
+        &.button--round-square{
+            border-radius:6px;
         }
 
         &.button--shadow{

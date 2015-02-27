@@ -1,9 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
 
-$positions: bottom top left right;
-$sizes : small medium big;
-$height-sizes: 48px 64px 96px; // In order : small, medium, big
-$levels : bottom middle top;
+
 
 // Fonts 
 $font-family: "Lato", "Helvetica", "Arial", sans-serif;
@@ -24,8 +21,7 @@ $background-default:#f0f0f0; // ebebeb; A remplacer par lvl bottom
 $background-default-secondary:#F9F9F9;
 $background-white:$white;
 
-$backgrounds-levels: $background-default $background-default-secondary $background-white; // In order : bottom, middle, top 
-$backgrounds-levels-reverse: lighten($primary-color-light, 10%) $primary-color-light $primary-color; // In order : bottom, middle, top
+
 
 $background-reverse:$primary-color; // Remplacer par top
 $background-reverse-light:$primary-color-light; // remplacer par bottom 
@@ -49,6 +45,23 @@ $input-height:38px;
 $input-big-height:48px;
 $box-size:18px;
 
-// --- Buttons -----
-$buttons-types : default primary info success warning danger;
-$buttons-colors : $default-color-button $primary-color $secondary-color $success-color $warning-color $danger-color;
+// --- Lists -----
+$positions: bottom top left right;
+$buttons-types : (
+	(default, $default-color-button),
+	(primary, $primary-color),
+	(info, $secondary-color),
+	(success, $success-color),
+	(warning, $warning-color),
+	(danger, $danger-color)
+);
+$sizes : (
+	(small, 48px), 
+	(medium, 64px), 
+	(big, 96px)
+);
+$backgrounds-levels : (
+	(bottom, $background-default, lighten($primary-color-light, 10%)), 
+	(middle, $background-default-secondary, $primary-color-light), 
+	(top, $background-white, $primary-color)
+);
