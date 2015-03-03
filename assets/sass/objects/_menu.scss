@@ -1,4 +1,4 @@
-$color-btn-menu: #fff;
+$color-btn-menu: #000;
 
 .menu--toggler {
   position: absolute;
@@ -79,31 +79,10 @@ $color-btn-menu: #fff;
 }
 
 .v2{
-  $color-btn-menu: $white;
   .btn--menu {
     // padding: 5px 1em;
     float:left;
-    padding: nth(nth($sizes, 1),2)/4 1em;
-    display: block; // Will inherit :before size
-    width: 60px;
-    &:hover {
-      cursor: pointer;
-    }
-    &:before {
-      content: "";
-      display: inline-block;
-      width: 30px;
-      height: 5px;
-      background: $color-btn-menu;
-      //color: #FFFFFF;
-      color:$color-btn-menu;
-      transition: all 0.3s ease-in-out;
-      box-shadow: 0px -7.5px $color-btn-menu, 0 7.5px $color-btn-menu;
 
-      // box-shadow: 0px -7.5px #000,
-      //        0 7.5px #000,
-      //        ;
-    }
   }
   .menu {
     visibility: hidden;
