@@ -14,27 +14,27 @@
 	<div id="view-player" class="view view--main view--background-default">
 		<div class="view view--size-8 view--reverse-top">
 			<h1 class="view__first-header">Bienvenue dans wegas</h1>
-			<div class="view__public-nav"><a class="link link--reverse" href="public_password.html">Password forgotten</a></div>
+			<div class="view__public-nav"><a class="link link--reverse" href="public_login.html">Login</a> <a class="link link--reverse" href="public_signup.html">Sign up</a> <a class="link link--reverse" href="public_password.html">Password forgotten</a></div>
 		</div>
 		<div class="view view--reverse-top view--size-4">
 			<form class="view__signup-form form">
 				<div class="form__row form__row--small">
-	            	<a class="link link--reverse" href="public_login.html">Cancel</a>
+	            	<input class="form__row__entry input input--small input--primary" type="text" id="email" placeholder="email *" autocomplete="off">
             	</div>
 				<div class="form__row form__row--small">
-	            	<input class="form__row__entry input input--small input--primary" type="text" id="email" placeholder="Enter your email" autocomplete="off">
-            	</div>
-				<div class="form__row form__row--small">
-	            	<input class="form__row__entry input input--small input--primary" type="password" id="password" placeholder="Enter a password" autocomplete="off">
+	            	<input class="form__row__entry input input--small input--primary" type="password" id="password" placeholder="password *" autocomplete="off">
             	</div>
             	<div class="form__row form__row--small">
-	            	<input class="form__row__entry input input--small input--primary" type="text" id="name" placeholder="Enter your first name" autocomplete="off">
+	            	<input class="form__row__entry input input--small input--primary" type="text" id="username" placeholder="username" autocomplete="off">
             	</div>
             	<div class="form__row form__row--small">
-	            	<input class="form__row__entry input input--small input--primary" type="text" id="name" placeholder="Enter your last name" autocomplete="off">
+	            	<input class="form__row__entry input input--small input--primary" type="text" id="name" placeholder="first name" autocomplete="off">
+            	</div>
+            	<div class="form__row form__row--small">
+	            	<input class="form__row__entry input input--small input--primary" type="text" id="name" placeholder="last name" autocomplete="off">
             	</div>
             	<div class="form__row form__row--right">
-	            	<input class="form__row__btn button button--default" type="submit" value="Create account" />
+	            	label with * is required <input class="form__row__btn button button--default" type="submit" value="Create account" />
             	</div>
             </form>
 		</div>
