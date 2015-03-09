@@ -51,10 +51,10 @@ $color-btn-menu: #000;
   border-top: none;
   padding: 1em;
   z-index: 30;
-  width: 0;
+  // width: 0;
   height: 0;
   opacity: 0;
-  transition: all 0.5s ease, width 0s ease;
+  transition: all 0.1s ease, width 0s ease;
   overflow: hidden;
 
 
